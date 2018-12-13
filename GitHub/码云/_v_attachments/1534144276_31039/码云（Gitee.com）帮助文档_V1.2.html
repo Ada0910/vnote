@@ -1,0 +1,4289 @@
+			<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<title>码云（Gitee.com）帮助文档_V1.2</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<style>
+		        body {
+            color: #666666;
+            font-family: 微软雅黑,Verdana,sans-serif,宋体;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #999999;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #16B28F;
+        }
+        .sin_navi ul {
+            list-style: none outside none;
+            margin: 0;
+            padding: 0 0 0 10px;
+        }
+        .sin_navi ul li {
+            line-height: 30px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        li {
+            line-height: 24px;
+        }
+        table {
+            border-left: 1px solid #CCCCCC;
+            border-top: 1px solid #CCCCCC;
+            margin: 5px 10px;
+            text-align: left;
+            width: 678px;
+        }
+        table th {
+            background-color: #EEEEEE;
+            border-bottom: 1px solid #CCCCCC;
+            border-right: 1px solid #CCCCCC;
+            padding: 10px;
+        }
+        table td {
+            border-bottom: 1px solid #CCCCCC;
+            border-right: 1px solid #CCCCCC;
+        }
+        p {
+            line-height: 24px;
+            margin: 10px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #111111;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 26px;
+        }
+        h2 {
+            border-bottom: 1px dashed #CCCCCC;
+            font-size: 24px;
+            padding: 10px 0;
+        }
+        h3 {
+            font-size: 20px;
+            padding: 8px 0;
+        }
+        h4 {
+            font-size: 18px;
+            margin-left: 10px;
+            padding: 5px 0;
+        }
+        h5 {
+            font-size: 16px;
+            margin-left: 10px;
+            padding: 5px 0;
+        }
+        h6 {
+            font-size: 16px;
+            margin-left: 10px;
+            padding: 5px 0;
+        }
+        blockquote {
+            background: url("../../../img/blockquote.gif") no-repeat scroll left top #F4F5F7;
+            margin: 5px 10px;
+            padding: 10px 10px 10px 30px;
+        }
+        pre {
+            background: none repeat scroll 0 0 #EEEEEE;
+            margin: 5px 10px;
+            padding: 10px;
+        }
+        .sin_callout {
+            margin: 5px 10px;
+        }
+        .sin_header {
+            background-color: #F7F7F7;
+            border-bottom: 1px solid #CCCCCC;
+            height: 80px;
+            width: 100%;
+        }
+        .sin_title {
+            margin: 0 auto;
+            width: 1000px;
+        }
+        .sin_title_text {
+            color: #000000;
+            float: left;
+            line-height: 80px;
+        }
+        .sin_version {
+            color: #999999;
+            float: left;
+            font-size: 14px;
+            padding-top: 25px;
+            margin-left: 10px;
+        }
+        .sin_main {
+            margin: 0 auto;
+            width: 1000px;
+        }
+        .sin_navi {
+            float: left;
+            margin-bottom: 20px;
+            overflow-y: scroll;
+            padding: 0;
+            position: relative;
+            width: 279px;
+            z-index: 1;
+        }
+        .sin_navi_nomove {
+            position: fixed;
+            top: 0;
+        }
+        .sin_navi_ca a {
+            color: #333333;
+        }
+        .sin_navi_ca a:hover {
+            color: #16B28F;
+        }
+        .sin_navi_current {
+            border-right: 3px solid #16B28F;
+        }
+        .sin_navi_current a {
+            color: #16B28F;
+        }
+        .sin_content {
+            background-color: #FFFFFF;
+            border-left: 1px solid #CCCCCC;
+            float: left;
+            margin-left: -20px;
+            padding: 10px 20px;
+            position: relative;
+            width: 699px;
+            z-index: 2;
+        }
+        .sin_content_mar {
+            margin-left: 259px;
+        }
+        .sin_footer {
+            border-top: 1px solid #CCCCCC;
+            color: #999999;
+            height: 80px;
+            line-height: 80px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .sin_info {
+            background: none repeat scroll 0 0 #FFFFCC;
+            border: 1px solid #D5D4D4;
+            border-radius: 4px 4px 4px 4px;
+            color: #999999;
+            margin: 10px 0;
+            padding: 14px;
+        }
+        .sin_link_logo {
+            color: #16B28F;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .sin_text {
+            margin-bottom: 10px;
+        }
+        .d_callout {
+            margin-bottom: 10px;
+        }
+        .d_callout_info {
+            background: none repeat scroll 0 0 #F4F8FA;
+            border-left: 4px solid #5BC0DE;
+            padding: 10px;
+        }
+        .d_callout_warn {
+            background: none repeat scroll 0 0 #FCF8F2;
+            border-left: 4px solid #F0AD4E;
+            padding: 10px;
+        }
+        .d_callout_danger {
+            background: none repeat scroll 0 0 #FDF7F7;
+            border-left: 4px solid #D9534F;
+            padding: 10px;
+        }
+        .d_callout_success {
+            background: none repeat scroll 0 0 #F3F8F3;
+            border-left: 4px solid #50AF51;
+            padding: 10px;
+        }
+        .d_callout input {
+            background-color: rgba(0, 0, 0, 0);
+            font-size: 15px;
+            margin-bottom: 5px;
+            padding: 10px 5px 0 10px;
+        }
+        .d_callout textarea {
+            background-color: rgba(0, 0, 0, 0);
+        }
+        .d_callout_icons a {
+            color: #AAAAAA;
+            margin-left: 10px;
+        }
+        a.d_callout_icon_info {
+            color: #5BC0DE;
+        }
+        a.d_callout_icon_warn {
+            color: #F0AD4E;
+        }
+        a.d_callout_icon_danger {
+            color: #D9534F;
+        }
+        a.d_callout_icon_success {
+            color: #50AF51;
+        }
+        .clear {
+            clear: both;
+        }
+
+	</style>
+</head>
+<body>
+	<div class="sin_header">
+		<div class="sin_title">
+			<h1 class="sin_title_text">码云（Gitee.com）帮助文档</h1>
+			<span class="sin_version">V1.2</span>
+			<div class="clear"></div>
+		</div>
+		<div id="top_end"></div>
+	</div>
+	<div class="sin_main">
+		<div class="sin_navi" id="sin_navi_id">
+			<ul style="margin: 20px 0;">
+				    																					<li class="sin_navi_ca" style="width: 246px;" id="navi_category_36955">
+								<a href="#category_36955">
+									码云使用手册
+								</a>
+							</li>
+										<ul>
+									<li class="sin_navi_ca" style="width:236px" id="navi_category_36981">
+					<a href="#category_36981">
+						1、什么是码云
+					</a>
+				</li>
+							<ul>
+																								<li style="width:226px" id="navi_text_153684">
+						<a href="#text_153684">
+							1.1、什么是码云（Gitee.com）
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_173589">
+						<a href="#text_173589">
+							1.2、码云亮点
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_173591">
+						<a href="#text_173591">
+							1.3、探索码云
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153739">
+						<a href="#text_153739">
+							1.4、码云平台IDEA系列的插件使用
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153687">
+						<a href="#text_153687">
+							1.5、常用工具及插件教程
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_224387">
+						<a href="#text_224387">
+							1.6、码云使用容量说明
+						</a>	
+					</li>
+																					<li style="width:226px">
+						<a href="https://gitee.com/all-about-git" target="_blank">
+							1.7、Git 大全
+						</a>
+						<em class="fa fa-link sin_link_logo"></em>
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_43466">
+					<a href="#category_43466">
+						2、创建码云账号
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_179267">
+						<a href="#text_179267">
+							2.1、创建码云账号
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_222246">
+						<a href="#text_222246">
+							2.2、CSDN CODE 项目整体迁移到码云平台
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_43717">
+					<a href="#category_43717">
+						3、代码托管
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_180676">
+						<a href="#text_180676">
+							3.1、创建第一个项目
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_180845">
+						<a href="#text_180845">
+							3.2、公钥认证管理
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_180861">
+						<a href="#text_180861">
+							3.3、建立主页
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_43718">
+					<a href="#category_43718">
+						4、协同工作
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_180700">
+						<a href="#text_180700">
+							4.1、Fork + Pull 模式
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_180819">
+						<a href="#text_180819">
+							4.2、组织和团队
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_223172">
+						<a href="#text_223172">
+							4.3、文档协作
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_31608">
+					<a href="#category_31608">
+						码云特性
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_154713">
+						<a href="#text_154713">
+							码云SVN支持
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_239343">
+						<a href="#text_239343">
+							克隆 Pull Request
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_154711">
+						<a href="#text_154711">
+							WebHook
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_223424">
+						<a href="#text_223424">
+							码云的 WebHook 增加对钉钉的支持
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_154714">
+						<a href="#text_154714">
+							码云Pages
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_154712">
+						<a href="#text_154712">
+							生成并部署SSH key
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_154698">
+						<a href="#text_154698">
+							项目成员权限说明
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_130991">
+						<a href="#text_130991">
+							Commit关联issue
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_135440">
+						<a href="#text_135440">
+							Pull Request关联issue
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_148482">
+						<a href="#text_148482">
+							在线重命名或删除文件
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_256282">
+						<a href="#text_256282">
+							项目转移
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_292625">
+						<a href="#text_292625">
+							issue和pr模板
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_235436">
+						<a href="#text_235436">
+							为项目添加LICENSE
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_144052">
+						<a href="#text_144052">
+							什么是 G 币？
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_35338">
+					<a href="#category_35338">
+						码云企业版
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_146518">
+						<a href="#text_146518">
+							企业版简介
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_281989">
+						<a href="#text_281989">
+							创建企业 VS 升级为企业
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_265570">
+						<a href="#text_265570">
+							转移组织至企业账号
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_217410">
+						<a href="#text_217410">
+							设置企业信息
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_217415">
+						<a href="#text_217415">
+							企业通知&amp;告警设置
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_217417">
+						<a href="#text_217417">
+							安全设置
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_217386">
+						<a href="#text_217386">
+							添加企业成员
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_217412">
+						<a href="#text_217412">
+							设置企业成员管理权限
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_217405">
+						<a href="#text_217405">
+							导入企业项目
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_269558">
+						<a href="#text_269558">
+							转移项目至企业账号
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_262179">
+						<a href="#text_262179">
+							企业项目权限说明
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_252281">
+						<a href="#text_252281">
+							企业项目成员权限说明
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_262215">
+						<a href="#text_262215">
+							企业外包说明
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_267719">
+						<a href="#text_267719">
+							企业账号付费说明
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_227873">
+						<a href="#text_227873">
+							企业账号开具发票
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_266896">
+						<a href="#text_266896">
+							查看发票快递信息
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_225924">
+						<a href="#text_225924">
+							企业版仓库快照功能简介
+						</a>	
+					</li>
+																<li class="sin_navi_ca" style="width:226px" id="navi_category_53257">
+					<a href="#category_53257">
+						服务问题
+					</a>
+				</li>
+							<ul>
+																			<li style="width:216px" id="navi_text_217399">
+						<a href="#text_217399">
+							如果合同到期终止，代码资产怎么处理？
+						</a>	
+					</li>
+																										<li style="width:216px" id="navi_text_217400">
+						<a href="#text_217400">
+							企业免费版会有赔付机制么？
+						</a>	
+					</li>
+											</ul>
+																							<li style="width:226px" id="navi_text_307581">
+						<a href="#text_307581">
+							码云企业版代码推拉方式设置功能介绍
+						</a>	
+					</li>
+											</ul>
+								</ul>
+																									<li class="sin_navi_ca" style="width: 246px;" id="navi_category_19223">
+								<a href="#category_19223">
+									FAQ
+								</a>
+							</li>
+										<ul>
+									<li class="sin_navi_ca" style="width:236px" id="navi_category_36987">
+					<a href="#category_36987">
+						 Git 操作管理
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_154701">
+						<a href="#text_154701">
+							新手小白如何快速的在码云平台注册账号并完成第一次提交
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_154710">
+						<a href="#text_154710">
+							http(s)方式如何自动记住密码
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_154702">
+						<a href="#text_154702">
+							如何处理代码冲突
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_154703">
+						<a href="#text_154703">
+							如何进行版本回退
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_154700">
+						<a href="#text_154700">
+							git submodule
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153712">
+						<a href="#text_153712">
+							为什么在push的时候，出现了413错误，push失败
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153711">
+						<a href="#text_153711">
+							为什么pull request合并不了
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153749">
+						<a href="#text_153749">
+							如何对一个项目提交Pull Request
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153746">
+						<a href="#text_153746">
+							git clone git@osc项目出错 server aborted the ssl handshake
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_293493">
+						<a href="#text_293493">
+							如何导入Github仓库到码云
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_37193">
+					<a href="#category_37193">
+						用户账户
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_154707">
+						<a href="#text_154707">
+							个性地址
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_154705">
+						<a href="#text_154705">
+							为什么我收不到激活/通知/重置密码等邮件
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_154709">
+						<a href="#text_154709">
+							怎么更改邮箱
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_154704">
+						<a href="#text_154704">
+							为什么我的网络连接不上码云？
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_154706">
+						<a href="#text_154706">
+							为什么我突然无发访问/登录码云？
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_158683">
+						<a href="#text_158683">
+							QQ登录的如何修改密码？
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_36996">
+					<a href="#category_36996">
+						代码仓库
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_289999">
+						<a href="#text_289999">
+							项目被屏蔽后如何处理？
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153752">
+						<a href="#text_153752">
+							为什么大文件推不上去
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_268479">
+						<a href="#text_268479">
+							push 代码的时候提示 fatal: Authentication failed 问题
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_36985">
+					<a href="#category_36985">
+						配置SSH公钥
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_153707">
+						<a href="#text_153707">
+							Windows下由于SSH配置文件的不匹配，导致的Permission denied (publickey)及其解决方法 
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153708">
+						<a href="#text_153708">
+							为什么我添加了公钥后仍然无法推送代码
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_36986">
+					<a href="#category_36986">
+						代码质量管理
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_153706">
+						<a href="#text_153706">
+							我该如何开启代码质量分析
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_36983">
+					<a href="#category_36983">
+						WebHook
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_153693">
+						<a href="#text_153693">
+							我该如何利用WebHook搭建自动化部署/测试平台
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_36984">
+					<a href="#category_36984">
+						SVN 支持
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_153695">
+						<a href="#text_153695">
+							我该如何使用SVN管理我的项目
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153698">
+						<a href="#text_153698">
+							我使用SVN管理我的项目但总是提示输入用户名密码
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153699">
+						<a href="#text_153699">
+							SVN 常见错误
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153694">
+						<a href="#text_153694">
+							Git 与 SVN 混用注意事项
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_36988">
+					<a href="#category_36988">
+						项目演示
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_153716">
+						<a href="#text_153716">
+							我该选择哪种paas平台
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153714">
+						<a href="#text_153714">
+							为什么我的paas演示平台打开比较慢
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153717">
+						<a href="#text_153717">
+							为什么我的mopaas演示无法启动
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153718">
+						<a href="#text_153718">
+							为什么我的MoPaaS的项目演示部署失败
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_36995">
+					<a href="#category_36995">
+						项目管理
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_153744">
+						<a href="#text_153744">
+							如何修改我的git默认的编辑器
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153743">
+						<a href="#text_153743">
+							我该如何才能使我的组织中的成员访问、管理组织中的项目
+						</a>	
+					</li>
+																										<li style="width:226px" id="navi_text_153750">
+						<a href="#text_153750">
+							为什么有的项目不能提交Issue、Pull Request
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_39010">
+					<a href="#category_39010">
+						开源指南
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_161652">
+						<a href="#text_161652">
+							开源指南
+						</a>	
+					</li>
+											</ul>
+													<li class="sin_navi_ca" style="width:236px" id="navi_category_74242">
+					<a href="#category_74242">
+						LFS 支持
+					</a>
+				</li>
+							<ul>
+																			<li style="width:226px" id="navi_text_309345">
+						<a href="#text_309345">
+							在码云中使用 Git LFS
+						</a>	
+					</li>
+											</ul>
+								</ul>
+																									<li class="sin_navi_ca" style="width: 246px;" id="navi_category_19221">
+								<a href="#category_19221">
+									Git 入门篇
+								</a>
+							</li>
+										<ul>
+																			<li style="width:236px" id="navi_text_180687">
+						<a href="#text_180687">
+							Git 是什么
+						</a>	
+					</li>
+																										<li style="width:236px" id="navi_text_180689">
+						<a href="#text_180689">
+							Git 版本控制入门
+						</a>	
+					</li>
+																										<li style="width:236px" id="navi_text_180691">
+						<a href="#text_180691">
+							Git 常用命令与名词解释
+						</a>	
+					</li>
+																										<li style="width:236px" id="navi_text_180692">
+						<a href="#text_180692">
+							Git 安装
+						</a>	
+					</li>
+																										<li style="width:236px" id="navi_text_180693">
+						<a href="#text_180693">
+							Git 使用前的配置
+						</a>	
+					</li>
+																										<li style="width:236px" id="navi_text_180695">
+						<a href="#text_180695">
+							如何克隆一个项目？
+						</a>	
+					</li>
+																										<li style="width:236px" id="navi_text_180696">
+						<a href="#text_180696">
+							Git 仓库的基本操作
+						</a>	
+					</li>
+											</ul>
+																									<li class="sin_navi_ca" style="width: 246px;" id="navi_category_19222">
+								<a href="#category_19222">
+									Git 进阶篇
+								</a>
+							</li>
+										<ul>
+																			<li style="width:236px" id="navi_text_83148">
+						<a href="#text_83148">
+							如何处理代码冲突
+						</a>	
+					</li>
+																										<li style="width:236px" id="navi_text_83149">
+						<a href="#text_83149">
+							如何进行版本回退
+						</a>	
+					</li>
+																										<li style="width:236px" id="navi_text_83150">
+						<a href="#text_83150">
+							如何进行分支合并
+						</a>	
+					</li>
+																										<li style="width:236px" id="navi_text_83151">
+						<a href="#text_83151">
+							如何从众多提交中保留只需要的提交
+						</a>	
+					</li>
+																										<li style="width:236px" id="navi_text_83152">
+						<a href="#text_83152">
+							如何进行减少提交历史数量以及修改自己的commit中的邮箱
+						</a>	
+					</li>
+																										<li style="width:236px" id="navi_text_83153">
+						<a href="#text_83153">
+							如何减小仓库体积
+						</a>	
+					</li>
+											</ul>
+																									<li class="sin_navi_ca" style="width: 246px;" id="navi_category_19224">
+								<a href="#category_19224">
+									版权以及使用条款
+								</a>
+							</li>
+										<ul>
+																			<li style="width:236px" id="navi_text_83179">
+						<a href="#text_83179">
+							本站使用说明以及用户条款
+						</a>	
+					</li>
+																										<li style="width:236px" id="navi_text_83180">
+						<a href="#text_83180">
+							版权声明
+						</a>	
+					</li>
+											</ul>
+																																									<li style="width: 246px;" id="navi_text_83141">
+									<a href="#text_83141">
+										鸣谢以及关于文档的维护
+									</a>	
+								</li>
+																																															<li style="width: 246px;" id="navi_text_83142">
+									<a href="#text_83142">
+										继续阅读
+									</a>	
+								</li>
+																									</ul>
+		</div>
+		<div class="sin_content" id="sin_content_id">
+																					<h2 id="category_36955">码云使用手册</h2>
+																		<h3 id="category_36981">1、什么是码云</h3>
+																						<h4 id="text_153684" class="sin_target">1.1、什么是码云（Gitee.com）</h4>
+<div class="sin_text">
+    					<h3>1、什么是码云（Gitee.com）</h3>
+<p>———-<br>码云（Gitee.com）是专为开发者提供的稳定、高效、安全的云端软件开发协作平台。<br>无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。</p>
+<p>码云于2013年正式推出，由开源中国基于 Gitlab 所开发，我们在 Gitlab 的基础上做了大量的改进和定制开发，致力于为国内开发者提供优质稳定的托管服务。目前已成为国内最大的代码托管系统。</p>
+<h3>2、码云主要功能</h3> 
+<hr>
+<p>码云除了提供最基础的 Git 代码托管之外，还提供代码在线查看、历史版本查看、Fork、Pull Request、打包下载任意版本、Issue、Wiki 、保护分支、代码质量检测、PaaS 项目演示等方便管理、开发、协作、共享的功能。</p>
+<h3>3、码云协作模式</h3> 
+<hr>
+<p>对于一个开源项目，从开发角度讲大体上分为两类人群，一类称为核心开发团队，他们可以向保存源代码的版本库提交，即对源代码的修改具有最终的决定权。另外一类称为贡献者，他们不属于核心开发团队，虽然也能看到源代码，但无权向版本库提交修改。</p>
+<p>采用传统的集中式版本控制系统（如 SVN ）的开源项目，这两个群体的用户体验都不是太好。如图1-1所示，项目的贡献者（非核心成员）很不“高兴”，因为他们即便有修改源代码的能力和渴望，也不能直接向版本库提交，要想成为提交者需要一个很长的建立信任的过程。然而即便是核心开发团队的成员，体验也不是太好，因为凡是涉及到版本库的操作（检入、检出、查看日志等）都需要在联网的状态下进行，网络带宽对用户体验影响相当大。</p>
+<p><img src="https://static.oschina.net/uploads/img/201705/18181722_ePPY.jpg" alt="cvcs-model" title="cvcs-model"><br>图1-1：使用集中式版本控制系统</p>
+<p>Git 等分布式版本控制系统的出现，彻底颠覆了原有代码管理的组织模式。使用 Git，不再依赖唯一的、集中式的版本库，而是每个开发者本地都拥有一份完整的版本库。Git 并不排斥集中式的使用模式，但更倾向于将集中式版本库称为共享版本库。核心开发团队的成员和贡献者（非核心成员）都可以从共享版本库克隆一份本地版本库，但只有核心团队成员才可以将自己本地版本库的提交推送到共享版本库上。如图1-2所示。</p>
+<p><img src="https://static.oschina.net/uploads/img/201705/18181743_LKNF.jpg" alt="dvcs-model" title="dvcs-model"><br>图1-2：使用分布式版本控制系统</p>
+<p>使用 Git 做版本控制（如图1-2所示），核心开发团队非常“高兴”，因为他们和共享版本库之间不必一直保持连接状态，诸如查看日志、提交、创建分支等几乎全部操作都（脱离网络）在本地的版本库中完成。项目贡献者（非核心成员）也不再那么沮丧，因为版本库人人皆可更改（当然是对本地版本库而言）。稍微让贡献者感到困难的就是如何将自己对项目的改进被核心开发团队所了解并接纳。Git 提供了多种途径，一个方法是先用 git format-patch 命令将本地提交转换为补丁文件或补丁文件序列，再通过邮件发送给核心开发团队。另外一个办法就是搭建一个自己专有的共享版本库，通过邮件创建一个拉拽请求（Pull Request），让核心团队的开发者到自己的版本库来抓取（Pull）。</p>
+<p><img src="https://static.oschina.net/uploads/img/201705/18181806_8HN7.jpg" alt="git@osc-model" title="git@osc-model"><br>图1-3：码云的协同模式</p>
+<p>使用码云，无论是项目的核心开发团队，还是普通的项目贡献者都工作得非常“愉快”。创建项目变得非常轻松，创建者只需在码云上点击一下鼠标即可创建一个新版本库，通过简单的 Web 操作即可完成项目授权进而组建项目核心团队。在码云中，非核心团队成员参与项目也很容易。先找到自己希望参与的项目，然后只需在 Web 上点击一下鼠标即可在自己的托管空间下创建一个派生（fork）的项目，并对派生项目的版本库具有读写的完全权限，就好像这个项目原本就是由自己创立的那样。当贡献者完成开发并向自己派生的版本库推送后，可以通过码云的 Web 界面向项目的核心开发团队发送一个 Pull Request，请求审核。项目的核心团队收到 Pull Request 后审核代码，审核通过后可以直接通过 Web 界面执行合并操作接纳贡献者的提交。</p>
+			</div>
+
+																						<h4 id="text_173589" class="sin_target">1.2、码云亮点</h4>
+<div class="sin_text">
+    					<p><img src="https://static.oschina.net/uploads/img/201708/17172039_0ETd.png" alt="更好的开发体验" title="更好的开发体验"></p>
+<p><img src="https://static.oschina.net/uploads/img/201708/17172208_4YSD.png" alt="最活跃的开源社区" title="最活跃的开源社区"></p>
+<p><img src="https://static.oschina.net/uploads/img/201708/17172230_QzRf.png" alt="码云于Github的对比" title="码云于Github的对比"></p>
+			</div>
+
+																						<h4 id="text_173591" class="sin_target">1.3、探索码云</h4>
+<div class="sin_text">
+    					<p>打开浏览器，访问网址：https://gitee.com。</p>
+<p><img src="https://static.oschina.net/uploads/img/201707/17191633_7H8o.png" alt="码云首页" title="码云首页"><br>图1-4：码云的首页</p> 
+<hr>
+<p>作为一个新手，如果想要了解码云上的热门开源项目，那么可以从导航条中的【发现】开始。图1-5显示通过对开源项目数据的分析得到的趋势。</p>
+<p><img src="https://static.oschina.net/uploads/img/201704/01141935_bVhT.jpg" alt="开源项目" title="开源项目"><br>图1-5：开源项目动态趋势</p> 
+<hr>
+<p>图1-6显示了码云托管项目编程语言的动态分布，可以帮助程序员在找工作时选择更热门的编程语言，实时了解行业信息。：-)</p>
+<p><img src="https://static.oschina.net/uploads/img/201704/01142502_1paf.jpg" alt="编程语言" title="编程语言"></p> 
+<hr>
+<p>导航栏中【企业服务】，是码云专门为公司提供自托管的代码存取及版本管理服务。**码云企业版**包括了码云免费版的所有主要功能，包括代码浏览、问题追踪、Wiki、质量检测、项目演示、团队协作等，此外，还提供了更强大的安全告警功能以及详细的企业资源、人员贡献、项目进度等的统计功能。</p>
+<p><img src="https://static.oschina.net/uploads/img/201707/17191202_jrPc.png" alt="码云企业版" title="码云企业版"></p>
+<p><strong>码云企业版</strong>为了满足不同团队规模的需求，灵活设置了不同的版本，甚至还提供了小额度的企业免费版。 </p>
+<p><img src="https://static.oschina.net/uploads/img/201704/01145325_xFoC.jpg" alt="企业套餐" title="企业套餐"></p>
+			</div>
+
+																						<h4 id="text_153739" class="sin_target">1.4、码云平台IDEA系列的插件使用</h4>
+<div class="sin_text">
+    					<h1>1. 插件安装</h1>
+<p><strong>注意：码云 IDEA 插件已由　<code>gitosc</code> 更名为 <code>gitee</code>。</strong><br><strong>新版插件 gitee 菜单已经和 git 菜单合并</strong></p>
+<h2>方法一</h2> 
+<ol> 
+ <li>启动 idea</li> 
+ <li>选择 <code>Configure</code> - <code>Plugins</code></li> 
+ <li>选择 <code>Browse repositories...</code></li> 
+ <li>搜索 <code>gitee</code>，安装插件</li> 
+ <li>重启 idea 即可</li> 
+</ol>
+<p><img src="https://static.oschina.net/uploads/img/201712/01141617_wXCn.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h2>方法二</h2> 
+<ol> 
+ <li>选择 <code>File</code> - <code>Settings</code></li> 
+ <li>选择 <code>Plugins</code></li> 
+ <li>选择 <code>Browse repositories...</code></li> 
+ <li>搜索 <code>gitee</code>，安装插件</li> 
+ <li>重启 idea 即可</li> 
+</ol>
+<p><img src="https://static.oschina.net/uploads/img/201712/01141922_Njrt.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h2>方法三</h2>
+<p>插件地址为：https://plugins.jetbrains.com/plugin/8383-gitee　直接下载，手动安装。</p>
+<h1>2. 登陆并拉取项目</h1>
+<h2>方法一</h2>
+<p><strong>1. 启动 idea，选择 <code>Check out from Version Control</code> - <code>码云</code></strong></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02120258_WPKq.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>最新版本发生了变更，gitee 选项和 git 已经合并：</p>
+<p><img src="https://static.oschina.net/uploads/img/201806/26175436_HJry.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><strong>2. 输入用户名和密码，登陆</strong></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02120306_MS8H.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><strong>3. 点击选框中的向下箭头，会显示当前用户在码云上的所有项目</strong></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02120321_H6TO.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><strong>4. 可选择任意项目进行 clone</strong></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02120334_8SUv.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h2>方法二</h2>
+<h3>登陆</h3>
+<p><strong>1. 选择 <code>File</code> - <code>settings</code></strong></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02123545_hTwI.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><strong>2. 选择 Version Control - 码云</strong></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02122846_XuM9.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>如果配置了公钥，可选择 ssh 方式拉取项目。</p>
+<p>Test 按钮可测试用户名和密码是否正确。</p>
+<h3>拉取项目代码</h3>
+<p><strong>1. 选择 <code>VCS</code> - <code>Checkout from Version Control</code> - <code>码云</code></strong></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02123042_mnaF.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>最新版 gitee 选项已经和 git 合并：</p>
+<p><img src="https://static.oschina.net/uploads/img/201806/26175937_Ooer.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><img src="https://static.oschina.net/uploads/img/201806/26180112_a0yC.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><strong>2. 其他步骤同上</strong></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02123754_WLFj.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h1>3. push 代码</h1>
+<p><strong>1. 添加文件</strong></p>
+<p>右键点击需要添加的文件、文件夹</p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02125128_1yZy.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><strong>2. 选择commit</strong></p>
+<p>右键点击文件、文件夹</p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02125200_Mylj.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><strong>3. 填写 commit 信息</strong></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02125215_mCBO.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><strong>4. 选择 push</strong></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02125233_YqtF.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><strong>5. 将代码 push 到线上</strong></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02125248_3yo9.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h1>4. 托管本地项目到码云</h1>
+<p>本地项目可以直接托管到码云，不需要在 web 上创建项目。</p>
+<p><strong>1. 选择 <code>VCS</code> - <code>Import into Version Control</code> - <code>托管项目到码云</code></strong> </p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02121544_480H.png" alt="将本地项目托管到码云" title="在这里输入图片标题"></p>
+<p><strong>2. 填写项目信息，可选择公有或私有</strong></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02121603_Od6p.png" alt="将本地项目托管到码云" title="在这里输入图片标题"></p>
+<p>** 3. 选择文件，填写 commit 信息。点击<code>OK</code>即可**</p>
+<p><img src="https://static.oschina.net/uploads/img/201606/02121631_xmdK.png" alt="将本地项目托管到码云" title="在这里输入图片标题"></p>
+<h1>5. Tasks 关联码云 Issue</h1>
+<p>通过插件，可将 IDEA Tasks 与码云 Issue 进行关联。</p>
+<p><strong>Tasks 关联仓库的步骤如下</strong></p> 
+<ol> 
+ <li>选择 <code>Tools</code> -&gt; <code>Tasks &amp;&amp; Contexts</code> -&gt; <code>Configure Servers...</code></li> 
+ <li>点击 <code>+</code> 后选择 <code>GitOSC</code>，输入用户名和仓库名称，这两个名称需要与仓库 url 中的名称一致。</li> 
+ <li>点击<code>Create API Token</code>，输入邮箱和密码，点击 <code>Login</code>，此时会生成 Token。</li> 
+ <li>最后确定即可。</li> 
+</ol>
+<p><img src="https://static.oschina.net/uploads/img/201711/24153109_HM6o.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><strong>打开 Tasks 步骤如下</strong></p> 
+<ol> 
+ <li>选择 <code>Tools</code> -&gt; <code>Tasks &amp;&amp; Contexts</code> -&gt; <code>Open Task...</code></li> 
+ <li>列表中会显示项目的 Issue，双击。</li> 
+ <li>设置仓库分支等，最后确定即可。</li> 
+</ol>
+<p><img src="https://static.oschina.net/uploads/img/201711/24153121_DwTZ.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><strong>操作 Issue</strong><br>1. <code>Open Task...</code> Task 与 Issue 建立关联。<br>1. <code>Close Active Task</code> 可以更新 Issue 状态。<br>1. <code>Show '***' Description</code> 可显示 Issue 的描述信息。<br>1. <code>Open '***' In Browser</code> 可在浏览器中打开 Issue 页面。<br><img src="https://static.oschina.net/uploads/img/201711/24153134_BaRU.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h1>6. 创建代码片段</h1>
+<p>打开源码文件，在文件窗口点击右键，选择<code>创建代码片段...</code>即可。</p>
+<p><img src="https://static.oschina.net/uploads/img/201711/24155948_eotH.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_153687" class="sin_target">1.5、常用工具及插件教程</h4>
+<div class="sin_text">
+    					<ul> 
+ <li><p><a href="http://my.oschina.net/songxinqiang/blog/192567" rel="nofollow">eclipse 中 egit 插件使用-图文并茂-详细</a></p></li> 
+ <li><p><a href="http://my.oschina.net/gal/blog/141442" rel="nofollow">Visual Studio 2012连接到码云</a></p></li> 
+ <li><p><a href="http://my.oschina.net/icelily/blog/141342" rel="nofollow">TortoiseGit 配合 msysGit 在码云代码托管的傻瓜教程</a></p></li> 
+ <li><p><a href="http://my.oschina.net/kzhou/blog/132146" rel="nofollow">利用 eclipse 的 git 插件 EGit 与码云交互</a></p></li> 
+ <li><p><a href="http://my.oschina.net/dxqr/blog/134811" rel="nofollow">Git 初体验</a></p></li> 
+ <li><p><a href="http://my.oschina.net/longxuu/blog/141699" rel="nofollow">在 win7 系统下使用 TortoiseGit (乌龟 git )简单操作码云</a></p></li> 
+ <li><p><a href="http://my.oschina.net/zxs/blog/142544" rel="nofollow">Xcode 连接码云</a></p></li> 
+ <li><p><a href="http://my.oschina.net/kzhou/blog/150290" rel="nofollow">码云(git)中 team 开发、fork 和 pull request 的用法</a></p></li> 
+ <li><p><a href="http://my.oschina.net/u/861562/blog/151975" rel="nofollow">eclipse 的 git 插件整合码云</a></p></li> 
+ <li><p><a href="http://my.oschina.net/China2012/blog/174874" rel="nofollow">Eclipse 使用 EGit 管理码云项目</a></p></li> 
+ <li><p><a href="http://www.oschina.net/question/82993_133520" rel="nofollow">如何导入外部 Git 仓库到中国源代码托管平台码云（Git@OSC）</a></p></li> 
+ <li><p><a href="http://gitee.com/oschina/git-osc/issues/2586" rel="nofollow">https 方式使用码云设置密码的方式</a></p></li> 
+</ul>
+			</div>
+
+																						<h4 id="text_224387" class="sin_target">1.6、码云使用容量说明</h4>
+<div class="sin_text">
+    					<h3>个人版容量说明</h3>
+<h4>1、项目数量：</h4>
+<p>创建1000个项目，不限制公私有。</p>
+<p>注：项目创建之后再删除，剩余项目数量不发生变化。如新注册用户可创建1000个项目，当创建完成第一个项目后，剩余可创建999个项目。若删除已创建的项目，则剩余可创建项目数量不变，依然是999个。</p>
+<h4>2、项目容量</h4>
+<p>单项目大小上限为1个G</p>
+<p>单文件最大 100M</p>
+<p>用户总仓库容量为5个G</p>
+<p>注：总仓库定义为用户名下以及所创建的组织下面的所有项目。</p>
+<h4>3、附件容量</h4>
+<p>单附件文件大小上限为 100MB</p>
+<p>单项目附件总容量 1G</p>
+<h4>4、成员人数</h4>
+<p>公有项目成员数量不限。</p>
+<p>私有项目5人成员上限</p> 
+<hr>
+<h3>企业版版容量说明</h3>
+<p>企业版各套餐容量说明如下所示：</p>
+<p><img src="https://static.oschina.net/uploads/img/201806/27180938_kJRU.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4>补充说明企业版附件容量：</h4>
+<p>单附件文件大小上限为 100MB</p>
+<p>单项目附件总容量 1G</p>
+			</div>
+
+																																		<h3 id="category_43466">2、创建码云账号</h3>
+																						<h4 id="text_179267" class="sin_target">2.1、创建码云账号</h4>
+<div class="sin_text">
+    					<p>注册码云账号，只要点击导航条中的“注册”，或者点击首页中那个大大的“加入码云”按钮，即可进入注册页面。</p>
+<p>收费吗？目前除企业版外均为免费。开源软件托管是码云的基础，对于开源项目的版本库（无论是公有版本库，还是私有版本库）的托管，码云都是免费的。在码云首页中，就有针对于个人用户的免费托管方案，如图2-1所示。</p>
+<p><img src="https://static.oschina.net/uploads/img/201704/18155757_fiOb.jpg" alt="免费方案" title="免费方案"><br>图2-1：针对个人用户的免费方案</p>
+<p>进入码云的注册界面，依次填入各项，需注意的是：邮箱最好填写国内的邮箱，以免因为众所周知的原因无法接收激活邮件，**个性地址一经选定,无法修改，请慎重填写。**</p>
+<p><img src="https://static.oschina.net/uploads/img/201806/27181105_kWqQ.png" alt="注册界面" title="在这里输入图片标题"><br>图2-2：注册界面</p>
+<p>我们会向您的邮箱发送一份激活邮件，请点击其中的链接激活账号，账号激活后，注册流程就算完成了。注册完毕即以新注册的账号登录，登录后即进入用户的控制面板页面。如果图2-3所示。</p>
+<p><img src="https://static.oschina.net/uploads/img/201704/18172802_RGrN.jpg" alt="控制面板" title="控制面板"><br>图2-3：登录后的码云首页</p>
+<p>控制面板页面是用户最重要的页面，因为在这个页面中不仅可以看到组织成员的动态，还可以看到自己的项目信息，代码片段，PR，Issues，以及加入的企业信息，非常方便。</p>
+<p>在页面右上方显示当前登录用户的名称和头像。图2-3中显示登录用户为 “不要404”。在页面右上方还有两个图标，从左至右分别是：通知和创建。点击头像图标进入【修改资料】对账号进行进一步设置，如图2-4所示。</p>
+<p><img src="https://static.oschina.net/uploads/img/201704/18190232_7R3K.jpg" alt="账户设置" title="账户设置"><br>图2-4：账户设置页</p>
+<p>点击菜单中的【修改账户】，可以更改私人令牌、更换登陆密码、以及修改注册邮箱，如图2-5所示。</p>
+<p><img src="https://static.oschina.net/uploads/img/201704/18181420_ix0Y.jpg" alt="修改账户" title="修改账户"><br>图2-5：账户管理</p>
+<p>其中私人令牌是和用户密码相关的密钥，当用户密码更改时私人令牌也随之更改。码云的某些应用会使用私人令牌进行身份认证，从而避免直接使用用户密码造成泄露的风险。私人令牌若泄露的危害要远远小于密码泄露，这因为私人令牌不能用于登录码云网站等，而且一旦私人令牌泄露可以很容易通过更改密码的方式更换私人令牌。</p>
+<p>码云只允许为一个账号绑定对应一个邮件地址，以便能够将 Git 版本库中的提交正确对应到码云账户。</p>
+<p>码云为用户提供可个性化配置的信息通知方式，如图2-6所以。</p>
+<p><img src="https://static.oschina.net/uploads/img/201806/27181317_OkNd.png" alt="通知方式" title="在这里输入图片标题"><br>图2-6：通知方式</p>
+<p>码云为托管的 Git 版本库提供 SSH 协议支持，即用户可以用公钥认证的方式连接到码云的 SSH 服务器。点击 <a href="http://git.mydoc.io/?t=154712" rel="nofollow">生成并部署SSH key</a> 了解具体实现步骤。</p>
+<p>码云作为一个优秀程序员的聚集地，期待着你的加入！！</p>
+			</div>
+
+																						<h4 id="text_222246" class="sin_target">2.2、CSDN CODE 项目整体迁移到码云平台</h4>
+<div class="sin_text">
+    					<p>为了更好提供可靠的代码托管平台，提升代码托管服务的体验，同时也避免重复资源投入，开源中国和CSDN达成战略合作，决定将CSDN CODE 平台的项目迁移到开源中国的码云平台，一起为中国开发者提供可靠，稳定，丰富的开发云服务。</p>
+<p>码云 (gitee.com）经过这几年的发展，码云在功能、稳定性、可靠性和安全性方面取得的进步有目共睹，同时也是国内最活跃的代码托管平台。目前已有超过 200 万的项目托管在码云，超过一万家企业在使用该平台。</p>
+<p>平台的迁移对所有的用户来说都是一件麻烦的事情，再次表示我们深深的歉意。为了让CSDN CODE 用户能够平滑的迁移，我们制定了如下的迁移准备工作：</p> 
+<ol> 
+ <li>码云平台上提供了 CODE 项目一键导入的功能，详细的使用方法请看<a href="https://my.oschina.net/gitosc/blog/1534891" rel="nofollow">这里</a>。</li> 
+ <li>CSDN 将通过 Email、短信、Q群、微信群等方式进行迁移的公告，迁移中的任何问题可通过 QQ 群（655903986）进行咨询，码云的开发人员将在第一时间解答您的问题。</li> 
+ <li>迁移过渡时间从即日起的三个月内</li> 
+</ol>
+<p>最后再次感谢大家对此次迁移工作的理解和配合，我们希望通过这次 CSDN 和码云的战略整合为广大开发者提供更专业更可靠的云开发服务。同时也非常欢迎大家对我们在这次迁移工作中提出意见和建议，对我们存在的不足提出批评。</p>
+<p>谢谢大家。</p>
+			</div>
+
+																						<h3 id="category_43717">3、代码托管</h3>
+																						<h4 id="text_180676" class="sin_target">3.1、创建第一个项目</h4>
+<div class="sin_text">
+    					<h3>1、创建项目</h3> 
+<hr>
+<p>点击右上角的<img src="https://static.oschina.net/uploads/img/201704/01152036_vITZ.jpg" alt="输入图片说明" title="在这里输入图片标题">或者<img src="https://static.oschina.net/uploads/img/201704/01152303_3MMo.jpg" alt="输入图片说明" title="在这里输入图片标题">，跳转至项目创建页面：</p>
+<p><img src="https://static.oschina.net/uploads/img/201704/01152603_Zb3l.jpg" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>依次填写各项信息然后点击创建就可以了，这样我们一个项目就创建好了如果没有意外，你将看到这个页面:</p>
+<p><img src="https://static.oschina.net/uploads/img/201704/01152726_Wux6.jpg" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>这样，我们在码云平台就创建好了一个项目</p>
+<h3>2、本地初始化一个项目</h3> 
+<hr>
+<p>首先，你需要执行下面两条命令，作为 git 的基础配置，作用是告诉 git 你是谁，你输入的信息将出现在你创建的提交中。</p> 
+<pre><code>git config --global user.name "你的名字或昵称"
+git config --global user.email "你的邮箱"
+</code></pre>
+<p>然后在你的需要初始化版本库的文件夹中执行：</p> 
+<pre><code>git init 
+git remote add origin &lt;你的项目地址&gt; //注:项目地址形式为:https://gitee.com/xxx/xxx.git或者 git@gitee.com:xxx/xxx.git
+</code></pre>
+<p>这样就完成了一次版本你的初始化。</p>
+<p>如果你想克隆一个项目，只需要执行：</p> 
+<pre><code>git clone &lt;项目地址&gt;
+</code></pre>
+<h3>3、完成第一次提交</h3> 
+<hr>
+<p>进入你已经初始化好的或者克隆项目的目录,然后执行：</p> 
+<pre><code>git pull origin master
+&lt;这里需要修改/添加文件，否则与原文件相比就没有变动&gt;
+git add .
+git commit -m "第一次提交"
+git push origin master
+</code></pre>
+<p>然后如果需要账号密码的话就输入账号密码，这样就完成了一次提交。</p>
+<p>此时，你可以在你的个人面板、项目主页查看到你的提交记录，例如：https://gitee.com/oschina/git-osc/commit/f3dd1c5bae48fa4244e2595a39e750e5606dd9be](<a href="https://gitee.com/oschina/git-osc/commit/f3dd1c5bae48fa4244e2595a39e750e5606dd9be" rel="nofollow">https://gitee.com/oschina/git-osc/commit/f3dd1c5bae48fa4244e2595a39e750e5606dd9be</a></p>
+<p>按照本文档新建的项目时，在码云平台仓库上已经存在 readme 文件，故在提交时可能会存在冲突，这时您需要选择的是保留线上的文件或者舍弃线上的文件，如果您舍弃线上的文件，则在推送时选择强制推送，强制推送需要执行下面的命令：</p> 
+<pre><code>git push origin master -f
+</code></pre>
+<p>如果您选择保留线上的 readme 文件,则需要先执行：</p> 
+<pre><code>git pull origin master
+</code></pre>
+<p>然后才可以推送,如果发生冲突，则需要先解决冲突,关于如何处理冲突，请参阅<a href="http://git.mydoc.io?v=16912&amp;t=66902" rel="nofollow">如何处理代码冲突</a>这一小节。</p>
+			</div>
+
+																						<h4 id="text_180845" class="sin_target">3.2、公钥认证管理</h4>
+<div class="sin_text">
+    					<p>开发者向码云版本库写入最常用到的协议是 SSH 协议，因为 SSH 协议使用公钥认证，可以实现无口令访问，而若使用 HTTPS 协议每次身份认证时都需要提供口令。使用 SSH 公钥认证，就涉及到公钥的管理。</p>
+<h3>1.如何生成ssh公钥</h3> 
+<hr>
+<p>你可以按如下命令来生成sshkey: </p> 
+<pre><code>ssh-keygen -t rsa -C "xxxxx@xxxxx.com"  
+
+# Generating public/private rsa key pair...
+# 三次回车即可生成 ssh key
+</code></pre>
+<p>查看你的 public key，并把他添加到码云（Gitee.com） <a href="http://git.oschina.net/profile/sshkeys" rel="nofollow">SSH key添加地址</a></p> 
+<pre><code>cat ~/.ssh/id_rsa.pub
+# ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6eNtGpNGwstc....
+</code></pre>
+<p>添加后，在终端（Terminal）中输入</p> 
+<pre><code>ssh -T git@gitee.com
+</code></pre>
+<p>若返回</p> 
+<pre><code>Welcome to Gitee.com, yourname! 
+</code></pre>
+<p>则证明添加成功。<br>* * *</p>
+<h3>2.怎么添加用户ssh key?</h3> 
+<hr> 
+<ol> 
+ <li><p>点击右上角的<img src="https://static.oschina.net/uploads/img/201604/14154017_ogkd.png" alt="输入图片说明" title="在这里输入图片标题">标志,进入个人中心,然后点击左侧的ssh公钥后在下图位置填写你的ssh公钥。</p></li> 
+ <li><p>点击确定,然后验证密码(即你的注册账号密码)就完成了ssh公钥添加。</p></li> 
+</ol>
+<p><img src="https://static.oschina.net/uploads/img/201610/18115822_miTO.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>3.项目的 ssh key 和用户的 ssh key 两处地方有什么不同?</h3> 
+<hr> 
+<blockquote>
+ <p>项目的 ssh key 只针对项目,且我们仅对项目提供了部署公钥,即<code>项目下的公钥仅能拉取项目</code>,这通常用于生产服务器拉取仓库的代码。<br>而用户的 key 则是针对用户的,用户添加了 key 就对用户名下的项目和用户参加了的项目具有权限,一般而言,用户的 key 具有推送和拉取的权限,而项目的 key 则只具有拉取权限</p> 
+</blockquote>
+			</div>
+
+																						<h4 id="text_180861" class="sin_target">3.3、建立主页</h4>
+<div class="sin_text">
+    					<p>很多开源项目托管平台都支持为托管的项目建立主页，但主页的维护方式都没有码云这么酷。大多数托管平台无非是开放一个FTP或类似服务，用户把制作好的网页或脚本上传了事，而在码云用户通过创建特殊名称的 Git 版本库或在 Git 库中建立特别的分支实现对主页的维护。</p>
+<h3>码云 <code>Pages</code> 是一个免费的静态网页托管服务，您可以使用 码云 <code>Pages</code> 托管博客、项目官网等静态网页。如果您使用过 <code>Github Pages</code> 那么您会很快上手使用码云的 <code>Pages</code>服务。</h3> 
+<blockquote>
+ <p>Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown （或者 Textile） 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 码云 Pages 上，也就是说，你可以使用码云的服务来搭建你的项目页面、博客或者网站，而且是完全免费的。</p> 
+</blockquote>
+<p>Jekyll 使用文档：http://jekyll.bootcss.com/docs/home/</p>
+<h3>1. 使用前须知</h3>
+<p>1、项目必须有 index.html 才可以正常访问</p>
+<p>2、静态网页的样式可以自己写，也可以拿一些静态模版来修改，<code>Pages</code>服务本身不提供任何形式的模版，但我们后续会陆续增加例子，供大家参考使用。</p>
+<p>3、如果你想以根目录的形式访问自己的静态网站，只需要建立一个与自己个性地址同名的项目即可，如 <a href="https://gitee.com/ipvb" rel="nofollow">https://gitee.com/ipvb</a> 这个用户，想要创建一个自己的站点，但不想以子目录的方式访问，想以<code>ipvb.oschina.io</code>直接访问，那么他就可以创建一个名字为<code>ipvb</code>的项目 <a href="https://gitee.com/ipvb/ipvb" rel="nofollow">https://gitee.com/ipvb/ipvb</a> 部署完成后，就可以以 <a href="http://ipvb.oschina.io" rel="nofollow">http://ipvb.oschina.io</a> 进行访问了。</p>
+<h3>2. 一个小白的 Pages 搭建之旅</h3>
+<h4><strong>A.新建项目 test_pages</strong></h4>
+<p><img src="https://static.oschina.net/uploads/img/201606/01172928_Wv13.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>点击创建完成项目的创建</p>
+<h4><strong>B.添加文件 index.html (注意名称是index.html哦！)</strong></h4>
+<p>点击新建文件</p>
+<p><img src="https://static.oschina.net/uploads/img/201606/01173033_nL18.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>文件名输入 <code>index.html</code>，内容就是简单的 <code>html</code></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/01173322_qoin.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>点击提交，将文件提交到仓库</p>
+<h4><strong>C.选择 pages 服务</strong></h4>
+<p><img src="https://static.oschina.net/uploads/img/201606/01173449_hHY1.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4><strong>D.选择需要部署的分支，这里选择 Master 启动服务。</strong></h4>
+<p><img src="https://static.oschina.net/uploads/img/201606/01173541_QDTs.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4><strong>E.访问生成的网站地址，即可以查看你部署的静态页面啦！</strong></h4>
+<p><img src="https://static.oschina.net/uploads/img/201606/01173617_VOe9.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/01173639_s4t6.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>3. 已经有Pages项目如何部署到码云的Pages</h3>
+<p>以<code>jQuery-File-Upload</code>项目为例，项目地址：https://github.com/blueimp/jQuery-File-Upload</p>
+<p>它在Github上的Pages地址是：https://blueimp.github.io/jQuery-File-Upload/</p>
+<p>如果想把它转移到码云<code>Pages</code>，只需要登录你的码云账户，点击右上角的 <code>+</code> 号，选择新建项目</p>
+<p><img src="https://static.oschina.net/uploads/img/201606/01170937_93rs.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/01170914_Vb4Q.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>然后点击创建，项目会在后台自动导入，导入成功后，点击菜单栏的 <code>Pages</code></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/01171047_x3BN.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><img src="https://static.oschina.net/uploads/img/201606/01171113_lM7g.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>这里我们默认的<code>Pages</code>服务分支是<code>osc-pages</code>，但是你也已选择自己静态页面所在的分支，这里<code>jQuery-File-Upload</code>项目的静态页面分支是<code>gh-pages</code>，选择<code>gh-pages</code>并点击启动服务。</p>
+<p><img src="https://static.oschina.net/uploads/img/201606/01171334_7QAP.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>至此，静态网页已经部署成功，访问提供的地址：http://silentboy.oschina.io/jQuery-File-Upload/ 即可查看到<code>jQuery-File-Upload</code>项目的静态官网。</p>
+<p><img src="https://static.oschina.net/uploads/img/201606/01171535_B1u8.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>4. Pages 进阶，使用 Jekyll 生成自己的静态网页</h3>
+<p>Jekyll 究竟是什么？</p>
+<p>Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown （或者 Textile） 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 码云Pages上，也就是说，你可以使用码云的服务来搭建你的项目页面、博客或者网站，而且是完全免费的。</p>
+<p>Jekyll 使用文档：http://jekyll.bootcss.com/docs/home/</p>
+<h3>其他帮助:</h3>
+<p>如何自定义404？</p>
+<p>答：在项目根目录新建 404.html 文件即可。</p>
+			</div>
+
+																						<h3 id="category_43718">4、协同工作</h3>
+																						<h4 id="text_180700" class="sin_target">4.1、Fork + Pull 模式</h4>
+<div class="sin_text">
+    					<p>参与码云中的项目开发，最常用和推荐的首选方式是“Fork + Pull”模式。在“Fork + Pull”模式下，项目参与者不必向项目创建者申请提交权限，而是在自己的托管空间下建立项目的派生（Fork）。至于在派生项目中创建的提交，可以非常方便地利用码云的 Pull Request 工具向原始项目的维护者发送 Pull Request。</p>
+<h3>1、什么是 Pull Request？</h3>
+<p>Pull Request 是两个仓库提交变更的一种方式，通常用于 fork 项目与被 fork 项目的差异提交，同时也是一种非常好的团队协作方式，下面，就来讲解如何在码云平台提交 Pull Request：</p>
+<p>PS：码云平台限制 Pull Request 源项目与目标项目需存在 fork 与被 fork 关系，故如果你要提交 Pull Request，必须先 fork 一个项目，然后才能对该项目提交 Pull Request，同时，以该项目为父项目的所有项目，您也均可以提交 Pull Request。</p>
+<h3>2、如何 fork 项目</h3>
+<p>fork 项目时非常简单的，进到项目页面，然后找到右上角的 fork 按钮，点击后再次点击确定，等待系统在后台完成仓库克隆操作，你就完成了 fork 操作，如图：</p>
+<p><img src="https://static.oschina.net/uploads/img/201607/11170038_5Rzf.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>3、如何提交 Pull Request</h3>
+<p>首先，您的项目与目标项目必须存在差异，这样才能提交,比如这样：</p>
+<p><img src="https://static.oschina.net/uploads/img/201607/11164020_j8To.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>如果不存在差异，或者目标分支比你提Pull Request的分支还要新，则会得到这样的提示：</p>
+<p><img src="https://static.oschina.net/uploads/img/201607/11164209_LfgW.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>然后，填入Pull Request的说明，点击提交Pull Request，就可以提交一个Pull Request了，就想下图所示的那样：</p>
+<p><img src="https://static.oschina.net/uploads/img/201607/11171413_x7Jh.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>4、如何对已经存在的 Pull Request 的进行管理</h3>
+<p>首先，对于一个已经存在的 Pull Request，如果只是观察者，报告者等权限，那么访问将会受到限制，具体权限限制请参考码云平台关于角色权限的内容，下文涉及的部分，仅针对管理员权限，如果您发现不太一样的地方，请检查您的权限是不是管理员或该 Pull Request 的创建者。</p>
+<h3>5、如何修改一个已经存在的 Pull Request</h3>
+<p>点击 Pull Request 的详情界面右上角的编辑按钮，就会弹出编辑框，在编辑框中修改你需要修改的信息，然后点击保存即可修改该 Pull Request，如下图所示：</p>
+<p><img src="https://static.oschina.net/uploads/img/201607/11182105_veIB.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>请注意，在该界面，可以对 Pull Request 进行指派负责人，指派测试者等等操作，每一个操作均会通知对应的人员</p>
+<h3>6、对 Pull Request 的 bug 修改如何提交到该 Pull Request 中</h3>
+<p>对于 Pull Request 中的 bug 修复或者任何更新动作，均不必要提交新的 Pull Request，仅仅只需要推送到您提交 Pull Request 的分支上，稍后我们后台会自动更新这些提交，将其加入到这个 Pull Request 中去</p>
+<h3>7、Pull Request 不能自动合并该如何处理</h3>
+<p>在提交完 Pull Request 的后，在这个 Pull Request 处理期间，由原本的能自动合并变成不能自动合并，这是一件非常正常的事情，那么，这时，我们有两种选择，一种，继续合并到目标，然后手动处理冲突部分，另一种则是先处理冲突，使得该 Pull Request 处于可以自动合并状态，然后采用自动合并，一般来讲，我们官方推荐第二种，即先处理冲突，然后再合并。具体操作为：</p>
+<p>先在本地切换到提交 Pull Request 的分支，然后拉取目标分支到本地，这时，会发生冲突，参考<a href="http://git.mydoc.io?v=16912&amp;t=83148" rel="nofollow">如何处理代码冲突</a> 这一小节将冲突处理完毕，然后提交到 Pull Request 所在的分支，等待系统后台完成Pull Request的更新后，Pull Request 就变成了可自动合并状态</p>
+<h3>8、Pull Request 不小心合并了，可否回退</h3>
+<p>对于错误合并的 Pull Request，我们提供了回退功能，该功能会产生一个回退 XXX 的 Pull Request，接受该 Pull Request 即可完成回退动作，注意，回退本质上是提交一个完全相反的 Pull Request，所以，你仍然需要进行测试来保证完整性，另，为了不破坏其他 Pull Request，建议只有需回退的 Pull Request 处于最后一次合并操作且往上再无提交时执行回退动作，否则请手动处理。</p>
+			</div>
+
+																						<h4 id="text_180819" class="sin_target">4.2、组织和团队</h4>
+<div class="sin_text">
+    					<p>首先，在码云平台，组织功能设计上是为了满足大型开发团队的需要，是一堆人员与项目的集合。成员与项目中间并没有直接的权限关系，故组织成员不可以直接管理项目，不对项目具有直接的管理权限，所以，要想让组织成员能访问、管理您组织的中项目，您需要将该成员添加到项目成员中。具体的您可以这样做：</p>
+<p>首先点击您的组织中的那个项目，如图：</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/18111502_0YFX.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>然后点击管理，如图：</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/18111538_aZH5.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>点击下图所示的任意一个条目：</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/18111704_RbIm.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>然后点击从组织中添加成员</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/18111746_7KXj.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>你就能看到下图类似的界面：</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/18112206_YcFu.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>然后选择好成员，选择好权限，点击添加用户，该用户就可以访问或管理这个组织中的项目了。</p>
+<p><strong>【注】：组织拥有者可以创建任意多的团队（Team）即角色，对属于组织的用户进行管理。组织拥有者就是组织中权限最高的角色。组织和用户一样可以创建项目，但是组织没有 SSH 公钥配置，也不能以组织的身份操作版本库。</strong></p>
+			</div>
+
+																						<h4 id="text_223172" class="sin_target">4.3、文档协作</h4>
+<div class="sin_text">
+    					<p>之前码云的解析器基于用户的反馈做了很多定制化的修改，但是随着使用码云的用户越来越多，以及越来越多的 Github 用户往码云上迁移，我们收到了很多用户反馈，在 Github 正常解析渲染的 Readme 在码云上渲染出来的结果却有所出入，讨论再三，我们决定将码云的 Markdown 解析器更换为 CommonMark。 </p>
+<p>更改后的差异如下： </p>
+<h3>标题#后面需要有空格才会正确渲染标题</h3>
+<p><img src="https://static.oschina.net/uploads/img/201709/14162417_MBeF.png" alt="标题" title="标题"></p>
+<h3>正确解析形如 Map&lt;String, Collection&lt;Object.toString&gt;&gt; 的文本</h3>
+<p><img src="https://static.oschina.net/uploads/img/201709/14163530_K0X4.png" alt="文本" title="文本"></p>
+<h3>解决代码块标签前后没有空行导致不换行显示</h3>
+<p><img src="https://static.oschina.net/uploads/img/201709/14164246_FtbX.png" alt="标签" title="标签"></p>
+<h3>解决Readme中注释显示的问题</h3>
+<p><img src="https://static.oschina.net/uploads/img/201709/14164312_L8Sr.png" alt="注释" title="在这里输入图片标题"></p>
+<h3>解决 Html colspan、rowspan 标签无效的问题</h3>
+<p><img src="https://static.oschina.net/uploads/img/201709/14164520_lKEK.png" alt="标签无效的问题" title="标签无效的问题"></p>
+<h3>解决标题中不支持 Code 块的问题</h3>
+<p><img src="https://static.oschina.net/uploads/img/201709/14164603_kibi.png" alt="Code 块" title="Code 块"></p>
+<h3>解决内容中不留空格无法加粗的问题</h3>
+<p><img src="https://static.oschina.net/uploads/img/201709/14164625_suY2.png" alt="解决内容中不留空格无法加粗的问题" title="解决内容中不留空格无法加粗的问题"></p>
+<h3>支持–构建表格</h3>
+<p><img src="https://static.oschina.net/uploads/img/201709/14164657_LPI3.png" alt="构建表格" title="构建表格"></p>
+<h3>不再支持[TOC]</h3>
+<p>标准的 Markdown 是不支持 [TOC] 标签的，可以通过 a 标签的方式自行创建目录</p>
+<p><img src="https://static.oschina.net/uploads/img/201709/14164719_Bri7.png" alt="自行创建目录" title="自行创建目录"></p>
+<h3>码云上 Readme 后缀说明</h3>
+<p>码云为了适应不同种类的开源项目的 Readme 显示，有不同的优先显示规则，如下：</p> 
+<ul> 
+ <li>如一个项目有 Readme.osc.md 也有 Readme.md，那么在码云上则优先显示 Readme.osc.md。</li> 
+</ul>
+<p>再比如一个项目有 Readme.zh-CN.md 又有 Readme.en.md 如果浏览器是英文，则显示 Readme.en.md，如果浏览器是中文，则显示 Readme.zh-CN.md。</p>
+<p>具体规则如下： </p> 
+<ul> 
+ <li>有 osc 标示优先 如Readme.osc.md；</li> 
+ <li>其次对应语言优先 简体中文[zh CH cn zh-cn zh_cn] 繁体中文 [zh-hk zh-tw zh-yue zh_hk zh_tw zh_yue] 英文 [en] 如 Readme.zh.md；</li> 
+ <li>没有以上规则以后缀优先 [mdown md mkdn mdwn markdown textile rdoc creole mediawiki rst rest adoc asciidoc pod org txt html htm] 如readme.mdown。</li> 
+</ul>
+<p>如果您在使用中遇到问题，欢迎反馈 <a href="https://gitee.com/oschina/git-osc/issues/new。" rel="nofollow">https://gitee.com/oschina/git-osc/issues/new。</a></p>
+<p>附 CommonMark 语法文档 <a href="http://commonmark.org/help/。" rel="nofollow">http://commonmark.org/help/。</a></p>
+			</div>
+
+																						<h3 id="category_31608">码云特性</h3>
+																						<h4 id="text_154713" class="sin_target">码云SVN支持</h4>
+<div class="sin_text">
+    					<p>现在 <strong>码云</strong> 目前支持使用 Subversion 对仓库进行操作，以下是使用指南和注意事项。 </p>
+<h2>使用前注意</h2> 
+<ol> 
+ <li><p>仓库体积超过 <code>300 MB</code> 不建议使用 Subversion 操作仓库，存储库容量达到 400 MB，或者 300 MB 并且存储大量非文本数据时，我们将关闭仓库的 Subversion 支持。</p></li> 
+ <li><p>由于 GIT 不支持空目录的提交，在存储机器上，无论是普通仓库还是开启 Subversion 接入的仓库存储时都是 GIT 仓库，Subversion 的 commit 是提交到 git 仓库上的，所以码云的 Subversion <code>不支持空目录的提交</code>。 </p></li> 
+ <li><p>第一次开启 Subversion， 操作一个仓库，如果仓库体积较大或者提交次数较多，由于缓存的缘故，响应时间会比较长。 </p></li> 
+ <li><p>不支持 Subversion 的 Hook 机制，请使用 WebHook 替代。</p></li> 
+ <li><p>Subversion 属性不完全支持。 </p></li> 
+ <li><p>客户端需要开启 SASL 支持，不支持的客户端无法访问。 </p></li> 
+ <li><p>部分 svn 命令不支持。可以查看 <strong>Subversion 客户端的兼容性。</strong> </p></li> 
+ <li><p>版本号的映射，目前 Subversion 的版本号计算依据为本分支所有的commit 数目减一 不包括 merge ，如果使用了在 git 中强制回退等操作，请重新检出。</p></li> 
+</ol>
+<p><em>WARNING:</em> </p> 
+<blockquote>
+ <p>由于 git 在设计上就没有考虑空文件 <a href="https://git.wiki.kernel.org/index.php/GitFaq#Can_I_add_empty_directories.3F" rel="nofollow">Kernel.org: Git FAQ</a></p>
+ <p>我们设计的原则就是不破坏，不主动修改用户的仓库，我们的后端存储的完全是一个 git 仓库，如果我们添加了，一次提交内容也不会一致了，建议你在添加目录的时候添加 .keep 之类的占位文件，空文件即可。</p>
+ <p>Git 与 SVN 混用时尽量不要使用 Git 强制推送。<a href="https://git.mydoc.io/?t=122635" rel="nofollow">Git 与 SVN 混用注意事项</a></p> 
+</blockquote>
+<h2>关于改版</h2>
+<p>Subversion 功能的最终解释权归 OSChina.NET 所有。Subversion 接入的规则可能在下一次改版中发生改变。</p>
+<h2>开启方式</h2> 
+<ol> 
+ <li>在项目的设置界面开启</li> 
+</ol>
+<p><img src="https://static.oschina.net/uploads/img/201701/17151858_hFcd.png" alt="设置开启 svn " title="在这里输入图片标题"></p> 
+<ol> 
+ <li>如果是空仓库：</li> 
+</ol>
+<p><img src="https://static.oschina.net/uploads/img/201701/17152124_TZe7.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h2>使用指南</h2>
+<p>码云 支持的是 svn 协议。 对于 svn 而言，获取一个仓库的代码通常是 checkout，在项目主页我们通常可以获得 URL： </p>
+<p><img src="http://static.oschina.net/uploads/space/2015/0318/152207_DRMJ_139664.png" alt="svn-url"> </p>
+<p>这个仓库地址为： </p> 
+<pre><code>svn://git.oschina.net/svnserver/newos
+</code></pre>
+<h3>1.获取仓库代码：</h3> 
+<pre><code>svn checkout svn://git.oschina.net/svnserver/newos newos
+</code></pre>
+<p><strong>注意信息</strong> 码云的 SVN 接入后端是通过 git 存储库实现，URL 规则为 <a rel="nofollow">svn://域名/用户名/项目名</a> .</p>
+<p>使用上述命令，我们将得到项目<code>默认分支的代码</code>。并将本地的工作目录命名为 <em>newos</em> </p>
+<p>如果最后不带 newos，svn 默认把本地工作目录命名为 项目名 </p> 
+<pre><code>svn checkout svn://git.oschina.net/svnserver/newos
+</code></pre>
+<p>如果要<code>获得任意分支代码</code>，例如获取 newos 的 dev 分支，请输入近似如下的命令：</p> 
+<ul> 
+ <li><p>此时地址为： <code>svn://域名/用户名/项目名/branches/分支名</code>.</p> <pre><code>svn checkout svn://git.oschina.net/svnserver/newos/branches/dev
+</code></pre></li> 
+</ul>
+<p>特别的说明，获取主干分支，也就是 master 分支可以使用下面的分支格式 </p> 
+<pre><code>svn checkout svn://git.oschina.net/svnserver/newos/trunk newos
+</code></pre>
+<p>svn trunk 分支对应 master 分支 用户应当尽量不使用下面格式 </p> 
+<pre><code>svn checkout svn://git.oschina.net/svnserver/newos 
+</code></pre>
+<h2>操作说明</h2>
+<p>如果部分检出仓库，并且仓库根目录下包含 branches/tags/trunk 这样的目录，请使用完整的路径 layout，如下：</p> 
+<pre><code>svn://git.oschina.net/username/example/trunk/tags/hello
+svn://git.oschina.net/username/example/branches/dev/trunk
+svn://git.oschina.net/username/example/branches/dev/branches 
+</code></pre>
+<p>如果没有 master 分支，也就没有 trunk 分支，检出的 URL 不能省略分支名。比如只有一个 dev 分支,必须使用下列格式，否则会提示仓库不存在。 </p> 
+<pre><code>svn co svn://git.oschina.net/svnserver/newos/branches/dev  svnserver_dev  
+</code></pre>
+<p>打开终端,输入上述命令，出现以下下面提示。其中第一个认证领域是用户的密码，这个可以留空。而用户名是用户在 码云（Gitee.com）登陆时使用<code>邮箱地址</code>。密码则是用户登陆 码云 所使用的密码。</p>
+<p>一般而言，svn 会加密缓存用户的用户名密码，所以，对仓库的操作只需要第一次输入用户邮箱和密码。</p>
+<p>清除密码缓存，用户目录下的 <code>.subversion/auth/svn.simple</code> 文件夹下的文件。</p>
+<p><img src="http://static.oschina.net/uploads/space/2015/0318/153828_ptt4_139664.png" alt="image"></p>
+<p>下图则是成功的拉取了项目代码。</p>
+<p><img src="https://static.oschina.net/uploads/img/201701/17152908_GJy9.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>查看本地工作目录信息： </p> 
+<pre><code>svn info
+</code></pre>
+<p><img src="https://static.oschina.net/uploads/img/201701/17153454_IO8A.png" alt="输入图片说明" title="在这里输入图片标题"></p> 
+<pre><code>cd helloworld
+echo "test" &gt; SVNReadMe.md
+#svn add SVNReadMe.md
+#svn add * --force类似于git add -A
+svn add * --force
+svn update .
+svn commit -m "first svn commit"
+</code></pre>
+<p>Subversion 在提交前建议先使用 svn update 更新工作拷贝。也就相当于 git pull 后再 git push。</p>
+<p>Subversion 的提交是在线的，如果机器已经离线，那么提交会失败，这个过程用git的方式理解就是 git commit+git push。</p>
+<p>用户使用 svn 提交代码同样会有动态显示。</p>
+<p>列出版本库中的目录内容: </p> 
+<pre><code>svn list svn://git.net/svnserver/newos/trunk
+</code></pre>
+<p>导出仓库指定分支的所有文件，不含版本控制信息： </p> 
+<pre><code>svn export svn://git.net/svnserver/newos/trunk newos
+</code></pre>
+<h2>备注</h2>
+<h3>安装 Subversion 客户端</h3>
+<p>在 Apache 基金会的 Subversion 官网： </p>
+<p><a href="http://subversion.apache.org" rel="nofollow">http://subversion.apache.org</a></p>
+<p>二进制下载提示页面： </p>
+<p><a href="http://subversion.apache.org/packages.html" rel="nofollow">http://subversion.apache.org/packages.html</a> </p>
+<h4>Windows 系统：</h4>
+<p>与资源管理起集成的 SVN 客户端：<a href="http://tortoisesvn.net/downloads.html" rel="nofollow">TortoiseSVN</a>,通常被叫做“海龟”，为 msi 安装包。可以使用 <a href="http://pan.baidu.com/s/1szHIn" rel="nofollow">ExtractMSI</a> 解压缩。</p>
+<p>很诡异的是，在 Apache 上并没有推荐 TortoiseSVN。</p>
+<p>另外还有 SlikSVN，下载地址：<a href="https://sliksvn.com/download/" rel="nofollow">https://sliksvn.com/download/</a></p>
+<p>其他的也就不一一介绍了。 </p>
+<h4>Linux 系统</h4>
+<p>一般而言 Linux 系统自带的包控制软件能够安装 Subversion，如果版本低于1.8，就建议用户下载预编译的二进制或者自己动手编译 Subversion。这里不做过多说明。</p>
+<h4>OS X</h4>
+<p>XCode 自带的 Subversion 版本为1.7.x，太老，而 码云（Gitee.com）只支持1.8以上的 SVN 客户端。</p>
+<p>如果安装了 Homebrew</p> 
+<pre><code>brew install subversion
+</code></pre>
+<p>或者使用 WANdisco 的预编译版本</p>
+<p><a href="http://www.wandisco.com/subversion/download#osx" rel="nofollow">http://www.wandisco.com/subversion/download#osx</a></p>
+<h3>Subversion 客户端的兼容性</h3>
+<p>我们支持 Apache Subversion 1.8 或者更高的版本，当你安装一个 Subversion 客户端时，如果错误提示是“无法协商验证验证方式” 请确保你的客户端支持 SASL 验证，比如在 Ubuntu 上，你可以安装 libsasl2-dev 然后编译 Subversion, 这样的话客户端是支持 SASL 验证的。</p> 
+<blockquote>
+ <p>sudo apt-get install libsasl2-dev</p> 
+</blockquote>
+<p>当你使用 svnkit 或者 SubversionJavaHl 这类 IDE 集成客户端，请确保支持 SASL 验证。</p>
+<h3>关于 GIT 与 SVN 的转换</h3>
+<p>如果用户存在一个基于 Subversion 托管的项目，要迁移到 码云（Gitee.com），可以使用 git-svn 将项目转变为基于 git 的仓库，然后推送到码云（Gitee.com），这样你依然能够使用SVN对项目进行操作。请记得先在码云（Gitee.com）上新建一个项目</p> 
+<pre><code> git svn clone http://myhost/repo -T trunk -b branches -t tags 
+ git remote add oscgit https://git.oschina.net/user/repo
+ git push -u oscgit --all
+</code></pre>
+<p>通常来说，如果本地存在 SVN 仓库，则可以：</p> 
+<pre><code>git svn clone file:///tmp/svn-repo -T trunk -b branches -t tags 
+git remote add oscgit https://git.oschina.net/user/repo
+git push -u oscgit  --all
+</code></pre>
+<p>将项目转移到 <a href="mailto:GIT@OSC" rel="nofollow">GIT@OSC</a> 上以后，使用 svn 命令 checkout 即可对项目进行操作。</p>
+<p>高级指南：</p>
+<p><a href="http://git-scm.com/book/zh/ch8-2.html" rel="nofollow">http://git-scm.com/book/zh/ch8-2.html</a></p>
+<h3>安装 git，git-svn</h3>
+<h4>Windows</h4>
+<p>msysgit 官网 <a href="http://msysgit.github.io/" rel="nofollow">http://msysgit.github.io/</a>,版本比较低。 </p>
+<p>Github for Windows 提供的 git 工具和 msysgit 一致。 </p>
+<p>MSYS2 git 下载地址: <a href="http://sourceforge.net/projects/msys2" rel="nofollow">http://sourceforge.net/projects/msys2</a>，然后启动终端,安装 git，目前版本为2.4.3。</p> 
+<pre><code>pacman -S git
+</code></pre>
+<p>Cygwin git 下载地址: <a href="http://www.cygwin.com/" rel="nofollow">http://www.cygwin.com/</a>,然后使用包管理软件或者直接下载 git 源码编译 git。<br> </p>
+<pre><code><br>make configure
+./configure --prefix=/usr/local
+make 
+make install 
+</code></pre>
+<p></p>
+<h4>Linux</h4>
+<p>有包管理器的直接用包管理器安装。</p>
+<p>如 Ubuntu</p> 
+<pre><code>sudo apt-get install git git-svn
+</code></pre>
+<p>也可以手动编译。</p>
+<h4>Mac OSX</h4>
+<p>下载地址：<a href="http://git-scm.com/download/mac" rel="nofollow">http://git-scm.com/download/mac</a></p>
+			</div>
+
+																						<h4 id="text_239343" class="sin_target">克隆 Pull Request</h4>
+<div class="sin_text">
+    					<h3>克隆 Pull Request 源分支代码到本地</h3>
+<h4>在任意开启的 Pull Request 页面可找到当前 PR 的克隆地址</h4>
+<p><img src="https://static.oschina.net/uploads/img/201711/16114014_T5Jw.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4>通过一键复制功能，把地址复制到粘贴板</h4>
+<p><img src="https://static.oschina.net/uploads/img/201711/16114050_wREf.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4>进入到对应的 Git 项目，执行该命令，Git会基于当前 Pull Request 的源分支创建一个新分支，切换至该分支，即可获取到此分支的所有提交代码</h4>
+<p><img src="https://static.oschina.net/uploads/img/201711/16114241_bgum.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_154711" class="sin_target">WebHook</h4>
+<div class="sin_text">
+    					<p>码云 WebHook 功能是帮助用户 push 代码后，自动回调一个您设定的 http 地址。 这是一个通用的解决方案，用户可以自己根据不同的需求，来编写自己的脚本程序(比如发邮件，自动部署等)。</p>
+<h3>添加 WebHook</h3>
+<h4>设置页面</h4>
+<p>项目主页 &gt; 管理页面 &gt; WebHooks</p>
+<p><img src="https://static.oschina.net/uploads/img/201806/06224100_WX2H.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4>参数说明</h4> 
+<ul> 
+ <li><p>URL(*): 接收 WebHook 数据的 http 地址。码云将发送 Post 请求到这个地址</p></li> 
+ <li><p>密码: 为了保证安全以及识别数据来源，建议设置一个密码。码云将会在 Post 数据中携带这个密码。注意， <strong>密码是明文</strong></p></li> 
+ <li><p>钩子: 用户在码云上可触发的 WebHook，支持添加多个钩子</p></li> 
+</ul>
+<h4>钩子类型</h4>
+<p>目前, 码云支持以下 5 种钩子：</p> 
+<ul> 
+ <li><p>Push: 项目推送代码、推送 / 删除分支</p></li> 
+ <li><p>Tag Push: 新建 / 删除 tag</p></li> 
+ <li><p>Issue: 新建任务、变更任务状态、更改任务指派人</p></li> 
+ <li><p>Pull Request: 新建、更新pr代码、合并 Pull Request</p></li> 
+ <li><p>评论: 评论项目、任务、Pull Request、Commit</p></li> 
+</ul>
+<h4>测试 WebHook</h4>
+<p>在添加 WebHook 后，可测试 WebHook 是否可正常使用。码云将发送测试数据到指定的 URL</p>
+<p><img src="https://static.oschina.net/uploads/img/201806/06230805_P7P4.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>支持第三方应用</h3>
+<p>我们为了方便用户在第三方平台接收到码云的推送，已通过 WebHook 支持以下第三方应用</p> 
+<ul> 
+ <li><p>钉钉机器人: 设置 WebHook URL 为钉钉机器人地址。 具体请查看 <a href="http://git.mydoc.io/?t=223424" rel="nofollow">码云的 WebHook 增加对钉钉的支持</a></p></li> 
+ <li><p>Slack 机器人: 设置 WebHook URL 为 Slack 机器人地址</p></li> 
+</ul>
+<h3>WebHook 推送数据</h3>
+<h4>Request Headers</h4>
+<p>WebHook request headers 包含以下一些关键数据</p> 
+<pre><code>Content-Type: application/json    # 默认为 application/json , 若是旧版钩子(已不维护)为 application/x-www-form-urlencoded
+
+User-Agent: git-oschina-hook 　　 # 固定为 git-oschina-hook，可用于标识为来自 gitee 的请求
+
+X-Gitee-Token: webhook password　 # 用户新建 WebHook 时提供的密码
+
+X-Gitee-Event: Merge Request Hook # 标识触发的钩子类型
+</code></pre>
+<h4>Request Payload</h4>
+<p>Webhook request payload 根据不同钩子，分为 4 种类型 payload， 以下是各钩子推送的示范数据（仅供参考，请以实际收到的数据为准）</p>
+<h5>Push / Tag Push 钩子</h5>
+<p>以下是一次推送代码触发的钩子数据</p> 
+<pre><code>{
+  "hook_name": "push_hooks", 
+  "password": "pwd"，
+  "ref": "refs/heads/change_commitlint_config",
+  "before": "0000000000000000000000000000000000000000",
+  "after": "1cdcd819599cbb4099289dbbec762452f006cb40",
+  "created": true,
+  "deleted": false,
+  "compare": "https://gitee.com/oschina/gitee/compare/0000000000000000000000000000000000000000...1cdcd819599cbb4099289dbbec762452f006cb40",
+  "commits": [
+    {
+      "id": "1cdcd819599cbb4099289dbbec762452f006cb40",
+      "tree_id": "db78f3594ec0683f5d857ef731df0d860f14f2b2",
+      "distinct": true,
+      "message": "Update README.md",
+      "timestamp": "2018-02-05T23:46:46+08:00",
+      "url": "https://gitee.com/oschina/gitee/commit/1cdcd819599cbb4099289dbbec762452f006cb40",
+      "author": {
+        "time": "2018-02-05T23:46:46+08:00",
+        "name": "robot",
+        "email": "robot@gitee.com",
+        "username": "robot",
+        "user_name": "robot",
+        "url": "https://gitee.com/robot"
+      },
+      "committer": {
+        "name": "robot",
+        "email": "robot@gitee.com",
+        "username": "robot",
+        "user_name": "robot",
+        "url": "https://gitee.com/robot"
+      },
+      "added": null,
+      "removed": null,
+      "modified": [
+        "README.md"
+      ]
+    }
+  ],
+  "head_commit": {
+    "id": "1cdcd819599cbb4099289dbbec762452f006cb40",
+    "tree_id": "db78f3594ec0683f5d857ef731df0d860f14f2b2",
+    "distinct": true,
+    "message": "Update README.md",
+    "timestamp": "2018-02-05T23:46:46+08:00",
+    "url": "https://gitee.com/oschina/gitee/commit/1cdcd819599cbb4099289dbbec762452f006cb40",
+    "author": {
+      "time": "2018-02-05T23:46:46+08:00",
+      "name": "robot",
+      "email": "robot@gitee.com",
+      "username": "robot",
+      "user_name": "robot",
+      "url": "https://gitee.com/robot"
+    },
+    "committer": {
+      "name": "robot",
+      "email": "robot@gitee.com",
+      "username": "robot",
+      "user_name": "robot",
+      "url": "https://gitee.com/robot"
+    },
+    "added": null,
+    "removed": null,
+    "modified": [
+      "README.md"
+    ]
+  },
+  "total_commits_count": 0,
+  "commits_more_than_ten": false,
+  "repository": {
+    "id": 120249025,
+    "name": "Gitee",
+    "path": "gitee",
+    "full_name": "开源中国/Gitee",
+    "owner": {
+      "id": 1,
+      "login": "robot",
+      "avatar_url": "https://gitee.com/assets/favicon.ico",
+      "html_url": "https://gitee.com/robot",
+      "type": "User",
+      "site_admin": false,
+      "name": "robot",
+      "email": "robot@gitee.com",
+      "username": "robot",
+      "user_name": "robot",
+      "url": "https://gitee.com/robot"
+    },
+    "private": false,
+    "html_url": "https://gitee.com/oschina/gitee",
+    "url": "https://gitee.com/oschina/gitee",
+    "description": "",
+    "fork": false,
+    "created_at": "2018-02-05T23:46:46+08:00",
+    "updated_at": "2018-02-05T23:46:46+08:00",
+    "pushed_at": "2018-02-05T23:46:46+08:00",
+    "git_url": "git://gitee.com:oschina/gitee.git",
+    "ssh_url": "git@gitee.com:oschina/gitee.git",
+    "clone_url": "https://gitee.com/oschina/gitee.git",
+    "svn_url": "svn://gitee.com/oschina/gitee",
+    "git_http_url": "https://gitee.com/oschina/gitee.git",
+    "git_ssh_url": "git@gitee.com:oschina/gitee.git",
+    "git_svn_url": "svn://gitee.com/oschina/gitee",
+    "homepage": null,
+    "stargazers_count": 11,
+    "watchers_count": 12,
+    "forks_count": 0,
+    "language": "ruby",
+    "has_issues": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "license": null,
+    "open_issues_count": 0,
+    "default_branch": "master",
+    "namespace": "oschina",
+    "name_with_namespace": "开源中国/Gitee",
+    "path_with_namespace": "oschina/gitee"
+  },
+  "sender": {
+    "id": 1,
+    "login": "robot",
+    "avatar_url": "https://gitee.com/assets/favicon.ico",
+    "html_url": "https://gitee.com/robot",
+    "type": "User",
+    "site_admin": false,
+    "name": "robot",
+    "email": "robot@gitee.com",
+    "username": "robot",
+    "user_name": "robot",
+    "url": "https://gitee.com/robot"
+  },
+  "enterprise": {
+    "name": "开源中国",
+    "url": "https://gitee.com/oschina"
+  }
+}
+</code></pre>
+<h5>Issue 钩子</h5>
+<p>以下是一次新建任务操作触发的钩子数据</p> 
+<pre><code>{
+  "hook_name": "issue_hooks", 
+  "password": "pwd"，
+  "issue": {
+    "html_url": "https://gitee.com/oschina/gitee/issues/IG6E9",
+    "id": 295024870,
+    "number": "IG6E9",
+    "title": "IE浏览器，js报错",
+    "body": "新建任务js报错",
+    "state": "open",
+    "comments": 0,
+    "created_at": "2018-02-07T23:46:46+08:00",
+    "updated_at": "2018-02-07T23:46:46+08:00",
+    "user": {
+      "id": 1,
+      "login": "robot",
+      "avatar_url": "https://gitee.com/assets/favicon.ico",
+      "html_url": "https://gitee.com/robot",
+      "type": "User",
+      "site_admin": false,
+      "name": "robot",
+      "email": "robot@gitee.com",
+      "username": "robot",
+      "user_name": "robot",
+      "url": "https://gitee.com/robot"
+    },
+    "labels": [
+      {
+        "id": 827033694,
+        "name": "bug",
+        "color": "d73a4a"
+      }
+    ],
+    "assignee": {
+      "id": 1,
+      "login": "robot",
+      "avatar_url": "https://gitee.com/assets/favicon.ico",
+      "html_url": "https://gitee.com/robot",
+      "type": "User",
+      "site_admin": false,
+      "name": "robot",
+      "email": "robot@gitee.com",
+      "username": "robot",
+      "user_name": "robot",
+      "url": "https://gitee.com/robot"
+    },
+    "milestone": {
+      "html_url": "https://gitee.com/oschina/gitee/milestones/1",
+      "id": 3096855,
+      "number": 1,
+      "title": "问题反馈",
+      "description": null,
+      "open_issues": 13,
+      "started_issues": 6,
+      "closed_issues": 31,
+      "approved_issues": 42,
+      "state": "open",
+      "created_at": "2018-02-01T23:46:46+08:00",
+      "updated_at": "2018-02-02T23:46:46+08:00",
+      "due_on": null
+    }
+  },
+  "repository": {
+    "id": 120249025,
+    "name": "Gitee",
+    "path": "gitee",
+    "full_name": "开源中国/Gitee",
+    "owner": {
+      "id": 1,
+      "login": "robot",
+      "avatar_url": "https://gitee.com/assets/favicon.ico",
+      "html_url": "https://gitee.com/robot",
+      "type": "User",
+      "site_admin": false,
+      "name": "robot",
+      "email": "robot@gitee.com",
+      "username": "robot",
+      "user_name": "robot",
+      "url": "https://gitee.com/robot"
+    },
+    "private": false,
+    "html_url": "https://gitee.com/oschina/gitee",
+    "url": "https://gitee.com/oschina/gitee",
+    "description": "",
+    "fork": false,
+    "created_at": "2018-02-05T23:46:46+08:00",
+    "updated_at": "2018-02-05T23:46:46+08:00",
+    "pushed_at": "2018-02-05T23:46:46+08:00",
+    "git_url": "git://gitee.com:oschina/gitee.git",
+    "ssh_url": "git@gitee.com:oschina/gitee.git",
+    "clone_url": "https://gitee.com/oschina/gitee.git",
+    "svn_url": "svn://gitee.com/oschina/gitee",
+    "git_http_url": "https://gitee.com/oschina/gitee.git",
+    "git_ssh_url": "git@gitee.com:oschina/gitee.git",
+    "git_svn_url": "svn://gitee.com/oschina/gitee",
+    "homepage": null,
+    "stargazers_count": 11,
+    "watchers_count": 12,
+    "forks_count": 0,
+    "language": "ruby",
+    "has_issues": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "license": null,
+    "open_issues_count": 0,
+    "default_branch": "master",
+    "namespace": "oschina",
+    "name_with_namespace": "开源中国/Gitee",
+    "path_with_namespace": "oschina/gitee"
+  },
+  "sender": {
+    "id": 1,
+    "login": "robot",
+    "avatar_url": "https://gitee.com/assets/favicon.ico",
+    "html_url": "https://gitee.com/robot",
+    "type": "User",
+    "site_admin": false,
+    "name": "robot",
+    "email": "robot@gitee.com",
+    "username": "robot",
+    "user_name": "robot",
+    "url": "https://gitee.com/robot"
+  },
+  "enterprise": {
+    "name": "开源中国",
+    "url": "https://gitee.com/oschina"
+  }
+}
+</code></pre>
+<h5>Pull Request 钩子</h5>
+<p>以下是一次提交 Pull Request 触发的钩子数据</p> 
+<pre><code>{
+  "hook_name": "merge_request_hooks", 
+  "password": "pwd"，
+  "pull_request": {
+    "id": 167750879,
+    "number": 1,
+    "state": "open",
+    "html_url": "https://gitee.com/oschina/giteeb/pulls/1",
+    "diff_url": "https://gitee.com/oschina/giteeb/pulls/1.diff",
+    "patch_url": "https://gitee.com/oschina/giteeb/pulls/1.patch",
+    "title": "三方登陆的账号无密码问题",
+    "body": null,
+    "created_at": "2018-02-07T23:46:46+08:00",
+    "updated_at": "2018-02-07T23:46:46+08:00",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": "5ccc31cda7aad7ddc59a6bdbb8a8bd61959dc71c",
+    "user": {
+      "id": 1,
+      "login": "robot",
+      "avatar_url": "https://gitee.com/assets/favicon.ico",
+      "html_url": "https://gitee.com/robot",
+      "type": "User",
+      "site_admin": false,
+      "name": "robot",
+      "email": "robot@gitee.com",
+      "username": "robot",
+      "user_name": "robot",
+      "url": "https://gitee.com/robot"
+    },
+    "assignee": {
+      "id": 1,
+      "login": "robot",
+      "avatar_url": "https://gitee.com/assets/favicon.ico",
+      "html_url": "https://gitee.com/robot",
+      "type": "User",
+      "site_admin": false,
+      "name": "robot",
+      "email": "robot@gitee.com",
+      "username": "robot",
+      "user_name": "robot",
+      "url": "https://gitee.com/robot"
+    },
+    "tester": null,
+    "milestone": {
+      "html_url": "https://gitee.com/oschina/gitee/milestones/1",
+      "id": 3096855,
+      "number": 1,
+      "title": "问题反馈",
+      "description": null,
+      "open_issues": 13,
+      "started_issues": 6,
+      "closed_issues": 31,
+      "approved_issues": 42,
+      "state": "open",
+      "created_at": "2018-02-01T23:46:46+08:00",
+      "updated_at": "2018-02-02T23:46:46+08:00",
+      "due_on": null
+    },
+    "head": {
+      "label": "gitee:login_should_complete_info",
+      "ref": "login_should_complete_info",
+      "sha": "5ccc31cda7aad7ddc59a6bdbb8a8bd61959dc71c",
+      "user": {
+        "id": 1,
+        "login": "robot",
+        "avatar_url": "https://gitee.com/assets/favicon.ico",
+        "html_url": "https://gitee.com/robot",
+        "type": "User",
+        "site_admin": false,
+        "name": "robot",
+        "email": "robot@gitee.com",
+        "username": "robot",
+        "user_name": "robot",
+        "url": "https://gitee.com/robot"
+      },
+      "repo": {
+        "id": 120249025,
+        "name": "Gitee",
+        "path": "gitee",
+        "full_name": "开源中国/Gitee",
+        "owner": {
+          "id": 1,
+          "login": "robot",
+          "avatar_url": "https://gitee.com/assets/favicon.ico",
+          "html_url": "https://gitee.com/robot",
+          "type": "User",
+          "site_admin": false,
+          "name": "robot",
+          "email": "robot@gitee.com",
+          "username": "robot",
+          "user_name": "robot",
+          "url": "https://gitee.com/robot"
+        },
+        "private": false,
+        "html_url": "https://gitee.com/oschina/gitee",
+        "url": "https://gitee.com/oschina/gitee",
+        "description": "",
+        "fork": false,
+        "created_at": "2018-02-05T23:46:46+08:00",
+        "updated_at": "2018-02-05T23:46:46+08:00",
+        "pushed_at": "2018-02-05T23:46:46+08:00",
+        "git_url": "git://gitee.com:oschina/gitee.git",
+        "ssh_url": "git@gitee.com:oschina/gitee.git",
+        "clone_url": "https://gitee.com/oschina/gitee.git",
+        "svn_url": "svn://gitee.com/oschina/gitee",
+        "git_http_url": "https://gitee.com/oschina/gitee.git",
+        "git_ssh_url": "git@gitee.com:oschina/gitee.git",
+        "git_svn_url": "svn://gitee.com/oschina/gitee",
+        "homepage": null,
+        "stargazers_count": 11,
+        "watchers_count": 12,
+        "forks_count": 0,
+        "language": "ruby",
+        "has_issues": true,
+        "has_wiki": true,
+        "has_pages": false,
+        "license": null,
+        "open_issues_count": 0,
+        "default_branch": "master",
+        "namespace": "oschina",
+        "name_with_namespace": "开源中国/Gitee",
+        "path_with_namespace": "oschina/gitee"
+      }
+    },
+    "base": {
+      "label": "gitee:master",
+      "ref": "master",
+      "sha": "7324ba0e3f19236bf4ddc6003168fbddf8f723a5",
+      "user": {
+        "id": 1,
+        "login": "robot",
+        "avatar_url": "https://gitee.com/assets/favicon.ico",
+        "html_url": "https://gitee.com/robot",
+        "type": "User",
+        "site_admin": false,
+        "name": "robot",
+        "email": "robot@gitee.com",
+        "username": "robot",
+        "user_name": "robot",
+        "url": "https://gitee.com/robot"
+      },
+      "repo": {
+        "id": 120249025,
+        "name": "Gitee",
+        "path": "gitee",
+        "full_name": "开源中国/Gitee",
+        "owner": {
+          "id": 1,
+          "login": "robot",
+          "avatar_url": "https://gitee.com/assets/favicon.ico",
+          "html_url": "https://gitee.com/robot",
+          "type": "User",
+          "site_admin": false,
+          "name": "robot",
+          "email": "robot@gitee.com",
+          "username": "robot",
+          "user_name": "robot",
+          "url": "https://gitee.com/robot"
+        },
+        "private": false,
+        "html_url": "https://gitee.com/oschina/gitee",
+        "url": "https://gitee.com/oschina/gitee",
+        "description": "",
+        "fork": false,
+        "created_at": "2018-02-05T23:46:46+08:00",
+        "updated_at": "2018-02-05T23:46:46+08:00",
+        "pushed_at": "2018-02-05T23:46:46+08:00",
+        "git_url": "git://gitee.com:oschina/gitee.git",
+        "ssh_url": "git@gitee.com:oschina/gitee.git",
+        "clone_url": "https://gitee.com/oschina/gitee.git",
+        "svn_url": "svn://gitee.com/oschina/gitee",
+        "git_http_url": "https://gitee.com/oschina/gitee.git",
+        "git_ssh_url": "git@gitee.com:oschina/gitee.git",
+        "git_svn_url": "svn://gitee.com/oschina/gitee",
+        "homepage": null,
+        "stargazers_count": 11,
+        "watchers_count": 12,
+        "forks_count": 0,
+        "language": "ruby",
+        "has_issues": true,
+        "has_wiki": true,
+        "has_pages": false,
+        "license": null,
+        "open_issues_count": 0,
+        "default_branch": "master",
+        "namespace": "oschina",
+        "name_with_namespace": "开源中国/Gitee",
+        "path_with_namespace": "oschina/gitee"
+      }
+    },
+    "merged": false,
+    "mergeable": null,
+    "comments": 0,
+    "commits": 1,
+    "additions": 7,
+    "deletions": 0,
+    "changed_files": 1
+  },
+  "author": {
+    "id": 1,
+    "login": "robot",
+    "avatar_url": "https://gitee.com/assets/favicon.ico",
+    "html_url": "https://gitee.com/robot",
+    "type": "User",
+    "site_admin": false,
+    "name": "robot",
+    "email": "robot@gitee.com",
+    "username": "robot",
+    "user_name": "robot",
+    "url": "https://gitee.com/robot"
+  },
+  "sender": {
+    "id": 1,
+    "login": "robot",
+    "avatar_url": "https://gitee.com/assets/favicon.ico",
+    "html_url": "https://gitee.com/robot",
+    "type": "User",
+    "site_admin": false,
+    "name": "robot",
+    "email": "robot@gitee.com",
+    "username": "robot",
+    "user_name": "robot",
+    "url": "https://gitee.com/robot"
+  },
+  "enterprise": {
+    "name": "开源中国",
+    "url": "https://gitee.com/oschina"
+  }
+}
+</code></pre>
+<h5>评论钩子</h5>
+<p>以下是一次评论任务操作触发的钩子数据，其中 <code>notable_type</code> 表示评论的不同类型： Comment(项目评论)、Commit、PullRequest、Issue</p> 
+<pre><code>{
+  "hook_name": "note_hooks", 
+  "password": "pwd"，
+  "comment": {
+    "html_url": "https://gitee.com/oschina/gitee/issues/IG6E9#note_1",
+    "id": 1,
+    "body": "Fixed",
+    "user": {
+      "id": 1,
+      "login": "robot",
+      "avatar_url": "https://gitee.com/assets/favicon.ico",
+      "html_url": "https://gitee.com/robot",
+      "type": "User",
+      "site_admin": false,
+      "name": "robot",
+      "email": "robot@gitee.com",
+      "username": "robot",
+      "user_name": "robot",
+      "url": "https://gitee.com/robot"
+    },
+    "created_at": "2018-02-08T23:46:46+08:00",
+    "updated_at": "2018-02-08T23:46:46+08:00"
+  },
+  "noteable_type": "Issue", 
+  "issue": {
+    "html_url": "https://gitee.com/oschina/gitee/issues/IG6E9",
+    "id": 295024870,
+    "number": "IG6E9",
+    "title": "IE浏览器，js报错",
+    "user": {
+      "id": 1,
+      "login": "robot",
+      "avatar_url": "https://gitee.com/assets/favicon.ico",
+      "html_url": "https://gitee.com/robot",
+      "type": "User",
+      "site_admin": false,
+      "name": "robot",
+      "email": "robot@gitee.com",
+      "username": "robot",
+      "user_name": "robot",
+      "url": "https://gitee.com/robot"
+    },
+    "labels": [
+      {
+        "id": 827033694,
+        "name": "bug",
+        "color": "d73a4a"
+      }
+    ],
+    "state": "open",
+    "assignee": {
+      "id": 1,
+      "login": "robot",
+      "avatar_url": "https://gitee.com/assets/favicon.ico",
+      "html_url": "https://gitee.com/robot",
+      "type": "User",
+      "site_admin": false,
+      "name": "robot",
+      "email": "robot@gitee.com",
+      "username": "robot",
+      "user_name": "robot",
+      "url": "https://gitee.com/robot"
+    },
+    "milestone": {
+      "html_url": "https://gitee.com/oschina/gitee/milestones/1",
+      "id": 3096855,
+      "number": 1,
+      "title": "问题反馈",
+      "description": null,
+      "open_issues": 13,
+      "started_issues": 6,
+      "closed_issues": 31,
+      "approved_issues": 42,
+      "state": "open",
+      "created_at": "2018-02-01T23:46:46+08:00",
+      "updated_at": "2018-02-02T23:46:46+08:00",
+      "due_on": null
+    },
+    "comments": 0,
+    "created_at": "2018-02-07T23:46:46+08:00",
+    "updated_at": "2018-02-07T23:46:46+08:00",
+    "body": "新建任务js报错"
+  },
+  "repository": {
+    "id": 120249025,
+    "name": "Gitee",
+    "path": "gitee",
+    "full_name": "开源中国/Gitee",
+    "owner": {
+      "id": 1,
+      "login": "robot",
+      "avatar_url": "https://gitee.com/assets/favicon.ico",
+      "html_url": "https://gitee.com/robot",
+      "type": "User",
+      "site_admin": false,
+      "name": "robot",
+      "email": "robot@gitee.com",
+      "username": "robot",
+      "user_name": "robot",
+      "url": "https://gitee.com/robot"
+    },
+    "private": false,
+    "html_url": "https://gitee.com/oschina/gitee",
+    "url": "https://gitee.com/oschina/gitee",
+    "description": "",
+    "fork": false,
+    "created_at": "2018-02-05T23:46:46+08:00",
+    "updated_at": "2018-02-05T23:46:46+08:00",
+    "pushed_at": "2018-02-05T23:46:46+08:00",
+    "git_url": "git://gitee.com:oschina/gitee.git",
+    "ssh_url": "git@gitee.com:oschina/gitee.git",
+    "clone_url": "https://gitee.com/oschina/gitee.git",
+    "svn_url": "svn://gitee.com/oschina/gitee",
+    "git_http_url": "https://gitee.com/oschina/gitee.git",
+    "git_ssh_url": "git@gitee.com:oschina/gitee.git",
+    "git_svn_url": "svn://gitee.com/oschina/gitee",
+    "homepage": null,
+    "stargazers_count": 11,
+    "watchers_count": 12,
+    "forks_count": 0,
+    "language": "ruby",
+    "has_issues": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "license": null,
+    "open_issues_count": 0,
+    "default_branch": "master",
+    "namespace": "oschina",
+    "name_with_namespace": "开源中国/Gitee",
+    "path_with_namespace": "oschina/gitee"
+  },
+  "sender": {
+    "id": 1,
+    "login": "robot",
+    "avatar_url": "https://gitee.com/assets/favicon.ico",
+    "html_url": "https://gitee.com/robot",
+    "type": "User",
+    "site_admin": false,
+    "name": "robot",
+    "email": "robot@gitee.com",
+    "username": "robot",
+    "user_name": "robot",
+    "url": "https://gitee.com/robot"
+  },
+  "enterprise": {
+    "name": "开源中国",
+    "url": "https://gitee.com/oschina"
+  }
+}
+</code></pre>
+			</div>
+
+																						<h4 id="text_223424" class="sin_target">码云的 WebHook 增加对钉钉的支持</h4>
+<div class="sin_text">
+    					<h3>1.在钉钉机器人管理页面选择“自定义”机器人，输入机器人名字并选择要发送消息的群。如果需要的话，可以为机器人设置一个头像，然后点击下一步</h3>
+<p>![](<a href="https://static.oschina.net/uploads/img/201709/13105628_c3J9.png" rel="nofollow">https://static.oschina.net/uploads/img/201709/13105628_c3J9.png</a> “在这里输入图片标题”)<br><img src="https://static.oschina.net/uploads/img/201709/13105659_9dh9.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>点击“复制”按钮，即可获得这个机器人对应的 WebHooks 地址，其格式如下<br> </p>
+<pre><code><br>https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx
+</code></pre>
+<p></p>
+<h3>2.在 Gitee 中设置项目的 WebHooks</h3>
+<p>进入你的 Gitee 项目，点管理然后点击左侧的 WebHooks，ULR中填入 WebHooks 地址即可，**不勾选 old format**，密码可设置也可不设置。<br><img src="https://static.oschina.net/uploads/img/201709/14151941_GrYH.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>3.以下操作会触发钉钉 WebHooks</h3> 
+<ul> 
+ <li>Push: 项目推送代码，推送分支，删除分支</li> 
+ <li>Tag push: 新建 tag，删除 tag</li> 
+ <li>Issue ： 新建、关闭、重新打开、删除任务 或 修改任务指派人</li> 
+ <li>Pull request : 新建pull request、更新pull request、合并 pull request</li> 
+ <li>评论: 评论项目、issue（任务）、pull request、commit</li> 
+</ul>
+<p><img src="https://static.oschina.net/uploads/img/201709/13114033_47Je.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_154714" class="sin_target">码云Pages</h4>
+<div class="sin_text">
+    					<h4>码云 <code>Pages</code> 是一个免费的静态网页托管服务，您可以使用 码云 <code>Pages</code> 托管博客、项目官网等静态网页。如果您使用过 <code>Github Pages</code> 那么您会很快上手使用码云的 <code>Pages</code>服务。目前码云 <code>Pages</code> 支持 Jekyll、Hugo、Hexo编译静态资源。</h4>
+<h3>Jekyll、Hugo、Hexo 编译判断依据</h3> 
+<ol> 
+ <li>编译 Hugo 依据：项目编译目录下存在<code>config.toml|json|yaml</code>文件和<code>content</code>目录的时候，会使用<code>hugo</code>生成静态文件。</li> 
+ <li>编译 Hexo 依据：项目编译目录下存在<code>package.json</code>，<code>_config.yml</code>文件和<code>scaffolds</code>目录的，会使用<code>hexo generate</code>生成静态文件，由于每次部署编译需要重新克隆编译并进行<code>npm install</code>，所以使用 Hexo 的时间相对 Hugo 和 Jekyll 会长一些。</li> 
+ <li>当不符合上述1和2条件的时候，就默认使用Jekyll编译。</li> 
+</ol>
+<h3>常见问题</h3> 
+<ol> 
+ <li>如何创建一个首页访问地址不带二级目录的 pages，如ipvb.gitee.io？</li> 
+</ol>
+<p>答：如果你想你的 pages 首页访问地址不带二级目录，如ipvb.gitee.io，**你需要建立一个与自己个性地址同名的项目**，如 <a href="https://gitee.com/ipvb" rel="nofollow">https://gitee.com/ipvb</a> 这个用户，想要创建一个自己的站点，但不想以子目录的方式访问，想以<code>ipvb.oschina.io</code>直接访问，那么他就可以创建一个名字为<code>ipvb</code>的项目 <a href="https://gitee.com/ipvb/ipvb" rel="nofollow">https://gitee.com/ipvb/ipvb</a> 部署完成后，就可以以 <a href="https://ipvb.gitee.io" rel="nofollow">https://ipvb.gitee.io</a> 进行访问了。</p> 
+<ol> 
+ <li>当要部署的项目与自己的个性地址不一致时，部署完成后存在一些资源访问404？</li> 
+</ol>
+<p>答：当需要部署的项目和自己的个性地址不一致时，如：https://gitee.com/ipvb/blog ，生成的pages url 为 <a href="https://ipvb.gitee.io/blog" rel="nofollow">https://ipvb.gitee.io/blog</a> ，而访问的资源404，如 <a href="https://ipvb.gitee.io/style.css" rel="nofollow">https://ipvb.gitee.io/style.css</a> 。这是因为相应配置文件的相对路径存在问题导致的，生成的资源 url 应该为 <a href="https://ipvb.gitee.io/blog/style.css" rel="nofollow">https://ipvb.gitee.io/blog/style.css</a> 才对。对于不同的静态资源生成器，配置如下：<br> - Hugo 配置文件<code>config.toml</code>的baseURL修改如下<br> </p>
+<pre><code><br>       baseURL = "https://ipvb.gitee.io/blog"
+       </code></pre>
+<br> - Hexo 配置文件
+<code>_config.yml</code>的
+<code>url</code>和
+<code>root</code>修改如下：
+<br> 
+<pre><code><br>       url: https://ipvb.gitee.io/blog
+       root: /blog
+       </code></pre>
+<br> - Jekyll 配置文件
+<code>_config.yml</code>的 
+<code>baseurl</code>修改如下：
+<br> 
+<pre><code><br>       baseurl: "/blog" # the subpath of your site, e.g. /blog
+       </code></pre>
+<p></p> 
+<ol> 
+ <li><p>Jekyll 中带有下划线开头文件夹或者文件无法访问，例如：_layouts<br> 答：需要在项目目录下新建_config.yml，编写：include: [_layouts] 即可。</p></li> 
+ <li><p>如何自定义404？<br> 答：在项目根目录新建 404.html 文件即可。</p></li> 
+</ol>
+<h3>1. 使用前须知</h3>
+<p>1、项目必须有 index.html 才可以正常访问</p>
+<p>2、静态网页的样式可以自己写，也可以拿一些静态模版来修改，<code>Pages</code>服务本身不提供任何形式的模版，但我们后续会陆续增加例子，供大家参考使用。</p>
+<h3>2. 一个小白的Pages搭建之旅</h3>
+<h4><strong>A.新建项目 test_pages</strong></h4>
+<p><img src="https://static.oschina.net/uploads/img/201806/26173338_Pmcg.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>点击创建完成项目的创建</p>
+<h4><strong>B.添加文件 index.html (注意名称是index.html哦！)</strong></h4>
+<p>点击新建文件</p>
+<p><img src="https://static.oschina.net/uploads/img/201806/26172523_5GI8.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>文件名输入<code>index.html</code>，内容就是简单的<code>html</code></p>
+<p><img src="https://static.oschina.net/uploads/img/201806/26173106_Jn2d.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>点击提交，将文件提交到仓库</p>
+<h4><strong>C.选择 pages 服务</strong></h4>
+<p><img src="https://static.oschina.net/uploads/img/201806/26173423_zzeF.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4><strong>D.选择需要部署的分支，这里选择 Master 启动服务。</strong></h4>
+<p><img src="https://static.oschina.net/uploads/img/201806/26173508_e3TE.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4><strong>E.访问生成的网站地址，即可以查看你部署的静态页面啦！</strong></h4>
+<p><img src="https://static.oschina.net/uploads/img/201806/26173825_h9D1.png" alt="输入图片说明" title="在这里输入图片标题"><br><img src="https://static.oschina.net/uploads/img/201806/26173847_USPU.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>3. 已经有 Pages 项目如何部署到码云的 Pages</h3>
+<p>以<code>jQuery-File-Upload</code>项目为例，项目地址：https://github.com/blueimp/jQuery-File-Upload</p>
+<p>它在Github上的Pages地址是：https://blueimp.github.io/jQuery-File-Upload/</p>
+<p>如果想把它转移到码云<code>Pages</code>，只需要登录你的码云账户，点击右上角的<code>+</code>号，选择新建项目</p>
+<p><img src="https://static.oschina.net/uploads/img/201806/26174500_j9HQ.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><img src="https://static.oschina.net/uploads/img/201806/26174556_lc6V.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><img src="https://static.oschina.net/uploads/img/201806/26174630_Kpri.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>然后点击创建，项目会在后台自动导入，导入成功后，点击菜单栏的服务下拉<code>Gitee Pages</code></p>
+<p><img src="https://static.oschina.net/uploads/img/201806/26175015_PomW.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><img src="https://static.oschina.net/uploads/img/201806/26175207_KKZ0.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>这里我们默认的<code>Pages</code>服务分支是项目的默认分支，但是你也已选择自己静态页面所在的分支，这里<code>jQuery-File-Upload</code>项目的静态页面分支是<code>gh-pages</code>，选择<code>gh-pages</code>并点击启动服务。</p>
+<p><img src="https://static.oschina.net/uploads/img/201806/26175333_xxzm.png" alt="输入图片说明" title="在这里输入图片标题"><br>至此，静态网页已经部署成功，访问提供的地址：https://frech.gitee.io/jquery-file-upload/ 即可查看到<code>jQuery-File-Upload</code>项目的静态官网。</p>
+<p><img src="https://static.oschina.net/uploads/img/201806/26175421_ikZP.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>4. Pages 进阶，使用 Jekyll、Hugo、Hexo 生成自己的静态网页</h3>
+<p>Jekyll、Hugo、Hexo 究竟是什么？</p>
+<p>Jekyll、Hugo、Hexo 是简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll、Hugo、Hexo 也可以运行在 码云（Gitee.com） Pages 上，也就是说，你可以使用码云的服务来搭建你的项目页面、博客或者网站，而且是完全免费的。</p>
+<p>Jekyll 使用文档：https://www.jekyll.com.cn/docs/home/<br>Hugo 使用文档：https://gohugo.io/documentation/<br>Hexo 使用文档：https://hexo.io/docs/</p>
+			</div>
+
+																						<h4 id="text_154712" class="sin_target">生成并部署SSH key</h4>
+<div class="sin_text">
+    					<h3>1.如何生成ssh公钥</h3>
+<p>你可以按如下命令来生成 sshkey: </p> 
+<pre><code>ssh-keygen -t rsa -C "xxxxx@xxxxx.com"  
+
+# Generating public/private rsa key pair...
+# 三次回车即可生成 ssh key
+</code></pre>
+<p>查看你的 public key，并把他添加到码云（Gitee.com） SSH key添加地址:https://gitee.com/profile/sshkeys)</p> 
+<pre><code>cat ~/.ssh/id_rsa.pub
+# ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6eNtGpNGwstc....
+</code></pre>
+<p>添加后，在终端（Terminal）中输入</p> 
+<pre><code>ssh -T git@gitee.com
+</code></pre>
+<p>若返回</p> 
+<pre><code>Welcome to Gitee.com, yourname! 
+</code></pre>
+<p>则证明添加成功。<br>* * *</p>
+<h3>2.怎么添加用户 ssh key?</h3> 
+<ol> 
+ <li>进入个人设置页面—》SSH 公钥添加，<a href="https://gitee.com/profile/sshkeys" rel="nofollow">具体链接</a></li> 
+ <li>截图如下<br><img src="https://static.oschina.net/uploads/img/201709/28152030_EgY9.png" alt="输入图片说明" title="在这里输入图片标题"></li> 
+</ol>
+<h3>3.项目的 ssh key 和用户的 ssh key 两处地方有什么不同？</h3> 
+<blockquote>
+ <p>项目的 sshkey 只针对项目，且我们仅对项目提供了部署公钥，即<code>项目下的公钥仅能拉取项目</code>，这通常用于生产服务器拉取仓库的代码。<br>而用户的 key 则是针对用户的，用户添加了 key 就对用户名下的项目和用户参加了的项目具有权限，一般而言，用户的key具有推送和拉取的权限，而项目的 key 则只具有拉取权限。</p> 
+</blockquote>
+			</div>
+
+																						<h4 id="text_154698" class="sin_target">项目成员权限说明</h4>
+<div class="sin_text">
+    					<h3>在码云平台，项目成员一共有4种权限如下:</h3>
+<h4>访客（登录用户）</h4>
+<p>对于公有项目：<br>* 创建 Issue<br>* 评论<br>* Clone 和 Pull 项目<br>* 打包下载代码<br>* Fork 项目<br>* Fork 项目提交 Pull Request<br>* 下载附件</p>
+<h4>报告者</h4> 
+<ul> 
+ <li>继承访客的权限</li> 
+ <li>私有项目：不能查看代码</li> 
+ <li>私有项目：不能下载代码</li> 
+ <li>私有项目：不能 Push</li> 
+ <li>私有项目：不能 Fork</li> 
+ <li>私有项目：不能提交 Pull Request</li> 
+ <li>可下载附件，不能上传附件，不能删除附件</li> 
+</ul>
+<h4>观察者</h4> 
+<ul> 
+ <li>继承报告者权限</li> 
+ <li>私有项目：创建 Wiki</li> 
+ <li>私有项目：可以 Clone 下载代码</li> 
+ <li>私有项目：可以 Pull</li> 
+ <li>私有项目：不能 Fork</li> 
+</ul>
+<h4>开发者</h4> 
+<ul> 
+ <li>创建 Issue</li> 
+ <li>评论</li> 
+ <li>Clone 和 Pull 项目</li> 
+ <li>Fork 项目</li> 
+ <li>打包下载代码</li> 
+ <li>创建 Pull Request</li> 
+ <li>创建分支</li> 
+ <li>推送分支</li> 
+ <li>删除分支</li> 
+ <li>创建标签（里程碑）</li> 
+ <li>创建 Wiki</li> 
+ <li>可上传附件，可删除自己上传的附件，不能删除他人上传的附件</li> 
+</ul>
+<h4>管理员</h4> 
+<ul> 
+ <li>创建 Issue</li> 
+ <li>评论</li> 
+ <li>Clone 和 Pull 项目</li> 
+ <li>打包下载代码</li> 
+ <li>创建 Pull Request</li> 
+ <li>创建分支</li> 
+ <li>推送分支</li> 
+ <li>删除分支</li> 
+ <li>创建标签（里程碑）</li> 
+ <li>创建 Wiki</li> 
+ <li>添加项目成员</li> 
+ <li>强制推送分支</li> 
+ <li>编辑项目属性</li> 
+ <li>可上传附件，可删除自己或他人上传的附件</li> 
+ <li>不能转移/清空/删除项目</li> 
+</ul>
+<h4>组织管理员</h4> 
+<ul> 
+ <li>编辑组织属性</li> 
+ <li>增加成员</li> 
+ <li>添加／删除项目</li> 
+ <li>设置组织管理员</li> 
+ <li>更改成员项目权限</li> 
+</ul>
+			</div>
+
+																						<h4 id="text_130991" class="sin_target">Commit关联issue</h4>
+<div class="sin_text">
+    					<blockquote>
+ <p>注意码云新的方案已经不采用issue的id标识issue，而是使用ident。<a href="https://gitee.com/oschina/git-osc/issues/IE5CI" rel="nofollow">具体说明查看这里</a>，为了避免手动输入issueident错误的情况，建议直接复制#issueident）</p> 
+</blockquote> 
+<ul> 
+ <li>说明：</li> 
+</ul> 
+<ol> 
+ <li>本地推送时，请确保本地配置的邮箱和码云账号的注册邮箱保持一致，才能正确的关联issue</li> 
+ <li>个人版和企业版的区别： 个人项目的commit只能关联该项目的任务；企业项目的commit可以关联企业的所有任务。</li> 
+</ol> 
+<ul> 
+ <li>下面中的issue_ident和issue_url指的是<br><img src="https://static.oschina.net/uploads/img/201806/26162847_Dhiz.png" alt="输入图片说明" title="在这里输入图片标题"></li> 
+</ul>
+<h3>1. commit message关联任务</h3> 
+<ul> 
+ <li>关键字： link, linked, linking, relate, related, relating</li> 
+ <li>形式： commit message中输入 <strong>link #issue_ident</strong>，**link issue_ident**</li> 
+ <li>效果如下<br><img src="https://static.oschina.net/uploads/img/201806/26162010_bnON.png" alt="输入图片说明" title="在这里输入图片标题"></li> 
+</ul>
+<h3>2. 通过 commit 关闭任务</h3> 
+<ul> 
+ <li>关键字: close, closes, closing, closed, fixed, fix, resolved</li> 
+ <li>形式: commit message中输入： <strong>close #issue_ident</strong>，**close issue_url** 就可以关闭 issue 了。</li> 
+ <li>效果图如下<br><img src="https://static.oschina.net/uploads/img/201806/26162643_Rlg2.png" alt="输入图片说明" title="在这里输入图片标题"></li> 
+</ul>
+<h3>3. 通过 commit 评论任务</h3> 
+<ul> 
+ <li>关键字： comment, reply</li> 
+ <li>形式： commit message中输入： <strong>comment #issueident</strong>， <strong>comment issue_url</strong> ， 就可以评论 issue 了。</li> 
+ <li>效果如下：<br><img src="https://static.oschina.net/uploads/img/201806/26162619_VN49.png" alt="输入图片说明" title="在这里输入图片标题"></li> 
+</ul>
+			</div>
+
+																						<h4 id="text_135440" class="sin_target">Pull Request关联issue</h4>
+<div class="sin_text">
+    					<h3>通过 Pull Request 关闭 issue</h3> 
+<ol> 
+ <li>一个 PR 可以关联多个 issue，例如同时关联 issue1 , issue2 格式为：<code>#issue1ident, #issue2dent</code></li> 
+ <li>PR关联issue后，issue的状态会自动更改为进行中，当PR被合并后，issue会更改为关闭状态。</li> 
+ <li>个人版和企业版的区别：个人版，PR只能关联当前项目的任务；企业版，PP可以关联所有企业的任务。</li> 
+</ol>
+<h4>1. 在 pr 的内容里面指定需要关闭的 issue 的 ident ,例如：</h4>
+<p><img src="https://static.oschina.net/uploads/img/201708/03143732_QnmI.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4>2. 在 issue 详情页可以看到关联关系</h4>
+<p><img src="https://static.oschina.net/uploads/img/201708/03144428_B6CN.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4>3. 当 PR 合并之后其关联的 issue 被关闭</h4>
+<p><img src="https://static.oschina.net/uploads/img/201708/03144242_IGfT.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_148482" class="sin_target">在线重命名或删除文件</h4>
+<div class="sin_text">
+    					<h4>怎么在线修改文件或者文件夹？</h4> 
+<blockquote>
+ <p>答：选中要修改的文件或者文件夹，点击右键，就可以选择重命名或者删除功能。</p> 
+</blockquote>
+<p><img src="https://static.oschina.net/uploads/img/201709/05143740_4pwP.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_256282" class="sin_target">项目转移</h4>
+<div class="sin_text">
+    					<blockquote>
+ <p>码云现在提供3种转移：项目转移给个人，项目转移到组织，项目转移到企业</p> 
+</blockquote>
+<p><img src="https://static.oschina.net/uploads/img/201801/25142328_qzOP.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4>1. 项目转移给其他成员</h4> 
+<blockquote>
+ <p>需对方确认私信，接受转移</p> 
+</blockquote> 
+<ul> 
+ <li>对方接受转移后: 项目拥有者变成目标用户，其他成员权限不变，源项目拥有者被移出项目但默认watch公开项目</li> 
+</ul>
+<h4>2. 项目转移到组织</h4> 
+<blockquote>
+ <p>项目可以转移到自己创建的和自己加入的组织</p> 
+</blockquote> 
+<ul> 
+ <li>转移成功后：项目的拥有者变成组织的拥有者，其他成员权限不变</li> 
+</ul>
+<h4>3. 项目转移到企业</h4> 
+<blockquote>
+ <p>项目可以转移到自己创建的和自己加入的企业</p> 
+</blockquote> 
+<ul> 
+ <li>转移成功后：项目的拥有者变成企业的拥有者，其他成员权限不变</li> 
+</ul>
+			</div>
+
+																						<h4 id="text_292625" class="sin_target">issue和pr模板</h4>
+<div class="sin_text">
+    					<h3>方式1： 新建项目时勾选模板</h3>
+<p><img src="https://static.oschina.net/uploads/img/201805/31105238_094V.png" alt="输入图片说明" title="在这里输入图片标题"><br>- 勾选使用issue模板，实际上就是在仓库根目录下新建了.gitee/ISSUE_TEMPLATE.zh-CN.md文件</p>
+<h3>方式2： 项目中新建.gitee目录，然后添加模板文件</h3> 
+<ol> 
+ <li>.gitee/ISSUE_TEMPLATE.zh-CN.md，issue中文模板</li> 
+ <li>.gitee/ISSUE_TEMPLATE.en.md，issue英文模板</li> 
+ <li>.gitee/ISSUE_TEMPLATE.zh-TW.md，issue繁体模板</li> 
+ <li>.gitee/PULL_REQUEST_TEMPLATE.zh-CN.md，PR中文模板</li> 
+ <li>.gitee/PULL_REQUEST_TEMPLATE.en.md，PR英文模板</li> 
+ <li>.gitee/PULL_REQUEST_TEMPLATE.zh-TW.md，PR繁体模板</li> 
+</ol> 
+<ul> 
+ <li>Q: 不同类型的模板，有什么作用？</li> 
+ <li>A: 例如你的仓库中有3种语言类型的issue模板，提交issue的用户使用的是英文版，那么当用户勾选‘使用issue模板’，则会智能的使用英文模板，如果对方使用的是中文版则会智能的使用中文issue模板。</li> 
+</ul>
+<h3>效果：</h3> 
+<ul> 
+ <li><p>新建issue时，勾选‘使用issue模板’，则会使用模板内容填充issue内容<br><img src="https://static.oschina.net/uploads/img/201805/31105637_G9Re.png" alt="输入图片说明" title="在这里输入图片标题"></p></li> 
+ <li><p>创建PR时，勾选‘使用Pull Request模板’，则会使用模板内容填充PR内容<br><img src="https://static.oschina.net/uploads/img/201805/31111202_JOyW.png" alt="输入图片说明" title="在这里输入图片标题"></p></li> 
+</ul>
+			</div>
+
+																						<h4 id="text_235436" class="sin_target">为项目添加LICENSE</h4>
+<div class="sin_text">
+    					<h3>1.新建项目的时候添加LICENSE</h3>
+<p><img src="https://static.oschina.net/uploads/img/201711/03172022_wl0h.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>2. 项目首页，新建文件LICENSE</h3> 
+<ul> 
+ <li>问：如果已经新建了项目，想添加LICENSE怎么办呢？</li> 
+ <li>答：新建文件，文件名为LICENSE（不区分大小写），那么右侧就会有LICENSE弹出框供选择。</li> 
+</ul>
+<p><img src="https://static.oschina.net/uploads/img/201711/08102634_okH9.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_144052" class="sin_target">什么是 G 币？</h4>
+<div class="sin_text">
+    					<h3><strong>什么是 G 币？</strong></h3>
+<p>G 币是开源中国旗下码云（Gitee.com）平台推出的线上虚拟货币，可以在码云（Gitee.com）平台提出意见、邀请好友注册等动作赚取。</p>
+<h3><strong>可以用 G币做什么？</strong></h3>
+<p>可以利用 G 币兑换码云（Gitee.com）定制礼品：码云T恤、手机壳、超大鼠标垫、码客杯等。</p>
+<h3><strong>如何获取 G 币？</strong></h3> 
+<ol> 
+ <li>新注册用户获得 <strong>2G</strong> 币</li> 
+ <li>邀请一位用户完成注册并新建项目可得 <strong>1G</strong> 币</li> 
+ <li>改进码云（Gitee.com）的建议被采纳：**5G** 币(被打上标签即视为采纳)</li> 
+ <li>不定期发布的各种形式的 G币 悬赏活动（请关注 <strong>码云微博</strong> 及 <strong>码云微信公众号</strong>）</li> 
+</ol>
+			</div>
+
+																						<h3 id="category_35338">码云企业版</h3>
+																						<h4 id="text_146518" class="sin_target">企业版简介</h4>
+<div class="sin_text">
+    					<h3>一、码云企业版介绍</h3>
+<h4><strong>我已经有了码云个人版, 为什么要用码云企业版？</strong></h4>
+<p><img src="https://static.oschina.net/uploads/img/201708/24191904_o6Yu.png" alt="项目管理" title="项目管理"></p>
+<p><img src="https://static.oschina.net/uploads/img/201708/24192001_DO92.png" alt="文档协作" title="文档协作"></p>
+<p><img src="https://static.oschina.net/uploads/img/201708/24192107_B1ZH.png" alt="权限控制" title="权限控制"></p>
+<p><img src="https://static.oschina.net/uploads/img/201708/24192148_hTUY.png" alt="安全保障" title="安全保障"></p>
+<h4><strong>功能对比：</strong></h4>
+<p><img src="https://static.oschina.net/uploads/img/201708/24173325_Bcv0.png" alt="功能对比" title="功能对比"></p>
+<h4><strong>服务对比：</strong></h4>
+<p>对比页地址：https://gitee.com/enterprise_contrast?from=enterprises</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/09190454_Eawu.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>二、关于企业版套餐介绍</h3>
+<p><img src="https://static.oschina.net/uploads/img/201807/09190632_6q7j.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><img src="https://static.oschina.net/uploads/img/201807/09190719_9M2X.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4>【注】：目前已开通在线购买方式：https://gitee.com/enterprises</h4>
+			</div>
+
+																						<h4 id="text_281989" class="sin_target">创建企业 VS 升级为企业</h4>
+<div class="sin_text">
+    					<p><img src="https://static.oschina.net/uploads/img/201804/26173243_Xusw.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_265570" class="sin_target">转移组织至企业账号</h4>
+<div class="sin_text">
+    					<h3>转移已有组织至企业账号</h3>
+<p>组织账号是为了满足大型开源团队的需要，不适合企业/团队管理其内部的私有项目，为了明确私有项目的归属权和保证私有项目的安全性，强烈建议企业团队使用码云企业版来管理内部私有项目。</p>
+<p>登陆码云账号，在导航栏选择“我的码云”，进入到需要转移的组织主页。</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/05174130_d19j.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>进入组织的主页，点击右上角的“转移至企业”</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/05174641_rEc3.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>点击按钮后会出现如下所示内容，按照提示信息生成转移码。</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/05174848_ztlp.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>进入企业工作台界面，在左侧栏点击「项目」。</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/09183113_LLFQ.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>在右边出现的界面中，选择「添加项目」-「转移项目」。</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/09183540_9tpx.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>在弹出的窗口点击「生成转移码」-「复制」。</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/09183738_Ezr2.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><img src="https://static.oschina.net/uploads/img/201807/09183912_lJjJ.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>将生成的转移码填写完毕后，点击“下一步”，会出现被转移到的企业信息，这里需要勾选下图所示的对勾，然后点击“确认转移”。</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/05175815_TBi2.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>转移成功后，右上角会有提示信息。</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/05180106_tERm.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_217410" class="sin_target">设置企业信息</h4>
+<div class="sin_text">
+    					<p>在企业后台管理界面点击【企业设置】，然后按照下图所示，**依次填写“基本信息”、“开票信息”和“邮寄信息”**。</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/10101912_F7tR.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_217415" class="sin_target">企业通知&amp;告警设置</h4>
+<div class="sin_text">
+    					<p>在企业后台管理界面点击【通知&amp;告警设置】：</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/10102740_dxdP.png" alt="告警设置" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_217417" class="sin_target">安全设置</h4>
+<div class="sin_text">
+    					<p>在企业后台管理界面点击【安全设置】：</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/10102925_dYfH.png" alt="安全设置" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_217386" class="sin_target">添加企业成员</h4>
+<div class="sin_text">
+    					<p>登录个人账号，选择【我的码云】，在出现的下拉菜单中找到对应的企业点击进入，然后在左侧栏选择「成员」。</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/10103053_0UU9.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>点击【添加人员】，在出现的页面中可以根据自身需求选择相应的添加方式。</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/10103414_x0s8.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_217412" class="sin_target">设置企业成员管理权限</h4>
+<div class="sin_text">
+    					<p>再添加完企业成员之后，此时可以给部分成员分配企业管理的权限，具体步骤如下所示：</p>
+<p>在企业后台管理界面点击【企业管理员设置】：（若想设置成员在项目中的权限，可以在项目主页的【管理】-&gt;【项目成员管理】来进行设置。）</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/10103652_iZVw.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><img src="https://static.oschina.net/uploads/img/201708/24185606_pVes.png" alt="权限设置" title="权限设置"></p>
+<p><strong>【注】：</strong><br>- <strong>普通成员：</strong>可参与企业项目以及加入企业团队，不可进入企业后台。<br>- <strong>人事管理员：</strong>可管理企业成员，但不设置管理员。<br>- <strong>管理员：</strong>包含人事管理员权限，并可管理项目。<br>- <strong>超级管理员：</strong>包含管理员权限，并可设置管理员。</p>
+			</div>
+
+																						<h4 id="text_217405" class="sin_target">导入企业项目</h4>
+<div class="sin_text">
+    					<p>通过转移码可以将成员个人账号下的项目迁移到企业账号中。具体步骤如下所示：</p>
+<p>在企业工作台界面点击【项目】-&gt;【添加项目】-&gt;【转移项目】：</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/10103932_2s0a.png" alt="转移码云项目到企业" title="在这里输入图片标题"></p>
+<p>点击【生成转移码】按钮生成转移码（转移码一小时内有效）：</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/10104105_LnXe.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>然后，将转移码复制到码云项目管理页面的“转移到企业”表单，然后确认即可。</p>
+<p><img src="https://static.oschina.net/uploads/img/201703/29170511_EKgu.jpg" alt="转移" title="转移"></p>
+<p>项目转移至企业的同时也可以将该项目内的所有成员一起转移至企业。</p>
+<p><img src="https://static.oschina.net/uploads/img/201703/29170910_65cM.jpg" alt="添加成员" title="添加成员"></p>
+			</div>
+
+																						<h4 id="text_269558" class="sin_target">转移项目至企业账号</h4>
+<div class="sin_text">
+    					<p>进入企业工作台界面，在左侧栏点击「项目」。</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/09183113_LLFQ.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>在右边出现的界面中，选择「添加项目」-「转移项目」。</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/09183540_9tpx.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>在弹出的窗口点击「生成转移码」-「复制」。</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/09183738_Ezr2.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><img src="https://static.oschina.net/uploads/img/201807/09183912_lJjJ.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>进入需要导入的项目主页，选择“管理” -&gt; 转移项目 -&gt; 转移到企业 -&gt; 复制粘贴转移码，点击“下一步”，然后点击确认，完成项目的转移。</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/19111610_bC1e.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_262179" class="sin_target">企业项目权限说明</h4>
+<div class="sin_text">
+    					<h3>企业项目中的内部项目与外包项目有什么区别？</h3>
+<p>创建企业项目时会选择企业项目类型，如果该项目是自己团队负责开发则可选择内部项目，若让第三方团队负责开发则可选择外包项目，清晰的项目划分有助于后期项目管理和团队管理。</p>
+<p>其他关于外包的说明，请见：<a href="http://git.mydoc.io/?t=262215" rel="nofollow">http://git.mydoc.io/?t=262215</a></p> 
+<hr>
+<h3>企业项目中的私有项目、内部开源项目、外部开源项目有什么区别吗？</h3>
+<p><strong>私有项目</strong>：是指即便是企业成员，若非项目成员也无法访问私有项目的代码以及其他任何信息。如企业私有项目成员创建任务并关联到该企业私有项目，则此任务只能被该企业私有项目的其他成员看到，非此私有项目成员是看不到的。</p>
+<p><strong>内部开源项目</strong>：是指企业内部人员都可以访问该项目的代码和其他任何形式的资源（如该项目的 PR、任务、wiki、附件等文件）。</p>
+<p><strong>外部开源项目</strong>：是指任何人都可以访问该项目的代码和其他任何形式的资源（如该项目的 PR、任务、wiki、附件等文件）。</p> 
+<hr>
+<h3>企业项目类型不同，相应的项目成员数量有什么区别吗？</h3>
+<p><strong>企业私有项目和企业内部开源项目</strong>：项目成员（包括成员角色，如开发者）受限于企业成员数量。根据付费套餐的不同，会有不同的限制，如标准版最高为20人，则标准版用户的企业项目成员数最高为20人，且都必须是企业成员。</p>
+			</div>
+
+																						<h4 id="text_252281" class="sin_target">企业项目成员权限说明</h4>
+<div class="sin_text">
+    					<blockquote>
+ <p>企业成员分为：普通成员，人事管理员，管理员，超级管理员</p> 
+</blockquote>
+<h4>企业的普通成员或企业人事管理</h4> 
+<ul> 
+ <li>可以查看企业开源项目</li> 
+ <li>可以查看企业内部公开项目(如果是外包则不能查看)</li> 
+ <li>不能查看企业私有项目</li> 
+</ul>
+<h4>企业的管理员或企业超级管理员</h4> 
+<ul> 
+ <li>可以管理企业的所有项目</li> 
+</ul>
+			</div>
+
+																						<h4 id="text_262215" class="sin_target">企业外包说明</h4>
+<div class="sin_text">
+    					<h3>外包团队是什么？</h3>
+<p>在项目开发过程中，由于内部开发成员不足，考虑到项目成本，往往会将一些非核心的模块交由第三方团队进行开发，而中小型团队既缺乏相关的管理经验，市面上也很少有支持外包的项目管理工具。码云针对企业存在的这一窘境，从人员与项目的维度将内部与外包清晰的划分，有利于后期团队在项目和人员进行管理。</p> 
+<hr>
+<h3>添加外包团队成员是否会占用企业成员名额？</h3>
+<p>占用的。因为外包团队是属于企业，所以外包成员首先必需先成为企业的成员，才能被加入到外包团队中，故外包成员是占用企业成员数量的额度。</p>
+			</div>
+
+																						<h4 id="text_267719" class="sin_target">企业账号付费说明</h4>
+<div class="sin_text">
+    					<p>如果您现在还没有企业账号，请先根据您的需求选择不同的升级为企业账号的方案。</p> 
+<ul> 
+ <li>全新的企业账号，与个人账号分隔：http://git.mydoc.io/?t=215159</li> 
+ <li>已有组织账号升级为企业账号：http://git.mydoc.io/?t=265543</li> 
+ <li>已有个人账号升级为企业账号：http://git.mydoc.io/?t=262490</li> 
+</ul>
+<p>如果您已有企业账号，想要升级为付费版本（企业标准版及其以上版本），请先登录账号，点击“我的码云”，选择需要升级的企业。</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/12161806_YDYc.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>在出现的企业个人工作台界面的左侧栏点击“功能”，进入企业管理后台。</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/12161702_54Ga.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>在企业管理界面中，点击“升级/续费”</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/12162424_DAfq.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>在升级/续费页面，选择您所需要的企业套餐类型，以及购买的年数，然后点击“购买”，跳转到支付页面。</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/12162836_qpwD.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><strong>注意：这里的优惠码仅限于码云新注册用户或码云线上优惠活动期间才可使用，数量有限。</strong></p>
+<p>在支付页面中，根据您的实际支付情况来选择支付方式。</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/12163204_1lNU.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4>这里需要强调说明下“线下支付”的问题。</h4>
+<p>线下对公转账时，需按照下图所示的账户信息进行转账（以该网页上所显示的账户信息为准）。转账完毕后，敬请上传银行的电子回执单以便于工作人员及时给您核对。最后，关于对公转账开具发票的注意事项页面中也有说明，敬请知悉。</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/12163402_mGuJ.png" alt="输入图片说明" title="在这里输入图片标题"></p> 
+<hr>
+<h3>企业账号发票开具流程：http://git.mydoc.io/?t=227873</h3>
+<h3>查看发票快递信息：http://git.mydoc.io/?t=266896</h3>
+			</div>
+
+																						<h4 id="text_227873" class="sin_target">企业账号开具发票</h4>
+<div class="sin_text">
+    					<p>登录企业超级管理员账号，进入企业后台管理，点击【订单&amp;发票管理】</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/10105235_YrtI.png" alt="订单与发票管理" title="在这里输入图片标题"></p>
+<p>然后在出现的右侧界面中，选择【订单记录】-&gt; 点击【开票】。</p>
+<p><img src="https://static.oschina.net/uploads/img/201710/09173028_xG5U.png" alt="开具发票" title="开具发票"></p>
+<p>最后在弹出的窗口中填写邮寄信息和开票信息。</p>
+<p><img src="https://static.oschina.net/uploads/img/201710/09173158_2KcH.png" alt="邮寄信息" title="邮寄信息"></p>
+<p><img src="https://static.oschina.net/uploads/img/201807/10110640_jndE.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><strong>注：根据个人实际情况选择开票类型。推荐选择「电子发票」，相较于纸质发票，开票速度更快。</strong></p> 
+<hr>
+<h3>发票申请后什么时候能够邮寄出来？</h3>
+<p>申请完发票后，工作人员会在7个工作日内将发票邮寄出来。</p> 
+<hr>
+<h3>开单位发票的话，用我个人的账户转款过去可以吗？</h3> 
+<ul> 
+ <li>个人账户转账至我司对公账户只能开具个人普通发票。</li> 
+ <li>公司账户转账至我司对公账户可开具企业增值税普通发票或企业增值税专用发票。</li> 
+</ul> 
+<hr>
+<h3>企业账号开具发票的类别是什么呢？</h3>
+<p>发票的类别信息具体如下图所示：</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/12171158_GIwh.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_266896" class="sin_target">查看发票快递信息</h4>
+<div class="sin_text">
+    					<p>进入企业管理后台，选择“订单&amp;发票管理”-&gt;点击“发票记录”-&gt;“详情”</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/09111715_1M5R.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>点击“详情”后，就会看到发票的快递信息。</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/09111826_beH2.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>注：发票默认会以顺丰快递，客户无需承担快递费用。</p>
+			</div>
+
+																						<h4 id="text_225924" class="sin_target">企业版仓库快照功能简介</h4>
+<div class="sin_text">
+    					<p>码云推出了企业仓库快照功能，**只要企业是标准版及以上**，都会为企业名下以及企业名下的组织项目进行快照的创建，快照的创建时间为最近三周的周末以及最近半年的每月第一个周末。</p>
+<p>进入企业工作台界面 -&gt; 点击「项目」，即可查看所有项目的快照状态</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/10112631_iqu7.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>可以看到快照列的状态，快照有三种状态</p> 
+<ul> 
+ <li>绿色：已经有快照</li> 
+ <li>灰色：本周末开始创建第一次快照</li> 
+ <li>红色：企业标准版及以上版本才可以使用快照功能</li> 
+</ul>
+<p>鼠标移到绿色图标上即可看到快照个数和时间</p>
+<p>如果用户需要对项目进行快照的恢复，可以使用 <strong>企业版的专属服务特权</strong> 联系我们进行操作。</p>
+<p><strong>需要说明的是快照的创建是全自动的，无需用户做任何操作</strong></p>
+			</div>
+
+																<h4 id="category_53257">服务问题</h4>
+																						<h5 id="text_217399" class="sin_target">如果合同到期终止，代码资产怎么处理？</h5>
+<div class="sin_text">
+    					<p>由购买的高级版本降为企业免费版，如果超出免费版的额度（如成员人数、项目容量等），则限制相应的功能（如push、pull等）的使用，直至用户删减至满足企业免费版的额度。</p>
+			</div>
+
+																						<h5 id="text_217400" class="sin_target">企业免费版会有赔付机制么？</h5>
+<div class="sin_text">
+    					<p>赔付机制只适用于企业标准版及其以上版本，免费版是不会有的。</p>
+			</div>
+
+																												<h4 id="text_307581" class="sin_target">码云企业版代码推拉方式设置功能介绍</h4>
+<div class="sin_text">
+    					<p>在企业的一些开发环境以及安全管控策略场景下，企业会对项目的下载方式有一定的限制，基于这种需求场景，码云企业版推出了对企业内部公开项目以及私有项目操作方式的安全设置，使企业可以设置内部公开项目以及私有项目可以通过哪些方式进行 Push/Pull 操作，企业管理员可以前往企业后台设置 -&gt; 安全设置 -&gt; 推拉代码方式设置 进行设置，打勾项说明允许通过此种方式进行代码的 Push/Pull 操作</p>
+<p><img src="https://images.gitee.com/uploads/images/2018/0730/180508_bc974c92_62561.png" alt="输入图片说明" title="屏幕截图.png"></p>
+<p>上图中的设置仅允许企业内部公开项目以及私有项目通过SSH方式进行 Push/Pull 操作，如果用户尝试通过HTTPS或者SVN进行操作，则会看到如下提示：</p>
+<p><img src="https://static.oschina.net/uploads/img/201807/30190748_CnJJ.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p><code>Pull/Push via HTTPS is forbidden due to enterprise's security setting, more details at http://git.mydoc.io/?t=307581</code></p>
+<p>如果您在操作过程中遇到类似的提示，请联系企业管理员查看安全设置，确认允许的操作方式，通过企业指定的操作方式进行操作。</p>
+			</div>
+
+																																				<h2 id="category_19223">FAQ</h2>
+																		<h3 id="category_36987"> Git 操作管理</h3>
+																						<h4 id="text_154701" class="sin_target">新手小白如何快速的在码云平台注册账号并完成第一次提交</h4>
+<div class="sin_text">
+    					<h2>在码云平台注册以及创建第一个项目</h2>
+<h3>注册账号</h3>
+<p>首先是在码云平台注册，注册链接请点解<a href="https://git.oschina.net/signup" rel="nofollow">这里</a>如下图：</p>
+<p><img src="https://static.oschina.net/uploads/img/201704/01151716_Q7lu.jpg" alt="码云注册" title="码云注册"></p>
+<p>依次填入各项，需注意的是：邮箱最好填写国内的邮箱，以免因为众所周知的原因无法接收激活邮件，**个性地址一经选定，无法修改，请慎重填写。**</p>
+<p>我们会向您的邮箱发送一份激活邮件，请点击其中的链接激活账号，账号激活后，注册流程就算完成了，接下来就是创建第一个项目了</p>
+<h3>创建项目</h3>
+<p>点击右上角的<img src="https://static.oschina.net/uploads/img/201704/01152036_vITZ.jpg" alt="输入图片说明" title="在这里输入图片标题">或者<img src="https://static.oschina.net/uploads/img/201704/01152303_3MMo.jpg" alt="输入图片说明" title="在这里输入图片标题">，跳转至项目创建页面：</p>
+<p><img src="https://static.oschina.net/uploads/img/201704/01152603_Zb3l.jpg" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>依次填写各项信息然后点击创建就可以了，这样我们一个项目就创建好了如果没有意外，你将看到这个页面:</p>
+<p><img src="https://static.oschina.net/uploads/img/201704/01152726_Wux6.jpg" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>这样，我们在码云平台就创建好了一个项目</p>
+<h3>本地初始化一个项目</h3>
+<p>首先，你需要执行下面两条命令，作为 git 的基础配置，作用是告诉 git 你是谁，你输入的信息将出现在你创建的提交中。</p> 
+<pre><code>git config --global user.name "你的名字或昵称"
+git config --global user.email "你的邮箱"
+</code></pre>
+<p>然后在你的需要初始化版本库的文件夹中执行：</p> 
+<pre><code>git init 
+git remote add origin &lt;你的项目地址&gt; //注:项目地址形式为:http://git.oschina.net/xxx/xxx.git或者 git@git.oschina.net:xxx/xxx.git
+</code></pre>
+<p>这样就完成了一次版本你的初始化。</p>
+<p>如果你想克隆一个项目，只需要执行：</p> 
+<pre><code>git clone &lt;项目地址&gt;
+</code></pre>
+<h3>完成第一次提交</h3>
+<p>进入你已经初始化好的或者克隆项目的目录，然后执行：</p> 
+<pre><code>git pull origin master
+&lt;这里需要修改/添加文件，否则与原文件相比就没有变动&gt;
+git add .
+git commit -m "第一次提交"
+git push origin master
+</code></pre>
+<p>然后如果需要账号密码的话就输入账号密码，这样就完成了一次提交。</p>
+<p>此时，你可以在你的个人面板、项目主页查看到你的提交记录，例如：http://git.oschina.net/oschina/git-osc/commit/f3dd1c5bae48fa4244e2595a39e750e5606dd9be](<a href="http://git.oschina.net/oschina/git-osc/commit/f3dd1c5bae48fa4244e2595a39e750e5606dd9be" rel="nofollow">http://git.oschina.net/oschina/git-osc/commit/f3dd1c5bae48fa4244e2595a39e750e5606dd9be</a></p>
+<p>按照本文档新建的项目时，在码云平台仓库上已经存在 readme 文件，故在提交时可能会存在冲突，这时您需要选择的是保留线上的文件或者舍弃线上的文件，如果您舍弃线上的文件，则在推送时选择强制推送，强制推送需要执行下面的命令：</p> 
+<pre><code>git push origin master -f
+</code></pre>
+<p>如果您选择保留线上的 readme 文件，则需要先执行：</p> 
+<pre><code>git pull origin master
+</code></pre>
+<p>然后才可以推送，如果发生冲突，则需要先解决冲突，关于如何处理冲突，请参阅<a href="http://git.mydoc.io?v=16912&amp;t=66902" rel="nofollow">如何处理代码冲突</a>这一小节。</p>
+			</div>
+
+																						<h4 id="text_154710" class="sin_target">http(s)方式如何自动记住密码</h4>
+<div class="sin_text">
+    					<p>https 方式每次都要输入密码，按照如下设置即可输入一次就不用再手输入密码的困扰而且又享受 https 带来的极速</p>
+<p>按照以下设置记住密码十五分钟：</p> 
+<pre><code>git config --global credential.helper cache
+</code></pre>
+<p>如果你想自定义记住的时间，可以这样：</p> 
+<pre><code>git config credential.helper 'cache --timeout=3600' //这里记住的是一个小时，如需其他时间，请修改3600为你想修改的时间，单位是秒
+</code></pre>
+<p>你也可以设置长期记住密码：</p> 
+<pre><code>git config --global credential.helper store
+</code></pre>
+<p>或修改仓库的地址带上你的账号密码</p> 
+<pre><code>http://yourname:password@git.oschina.net/name/project.git //注意，码云平台同时支持个性地址与邮箱，当使用邮箱时，请对@符号使用%40替换
+</code></pre>
+<p>如果你原本使用的 ssh 地址想更换成 http(s) 地址，可以执行以下命令: </p> 
+<pre><code>//删除原本的ssh仓库地址
+git remote rm origin //origin 代表你原本ssh地址的仓库的别名
+//新增http地址的仓库
+git remote add origin http://git.oschina.net/username/project.git 
+</code></pre>
+			</div>
+
+																						<h4 id="text_154702" class="sin_target">如何处理代码冲突</h4>
+<div class="sin_text">
+    					<p>冲突合并一般是因为自己的本地做的提交和服务器上的提交有差异，并且这些差异中的文件改动，Git 不能自动合并，那么就需要用户手动进行合并</p>
+<p>如我这边执行<code>git pull origin master</code></p>
+<h4>如果 Git 能够自动合并，那么过程看起来是这样的</h4>
+<p><img src="http://git.oschina.net/uploads/images/2016/0226/113507_cca8cd22_62561.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>拉取的时候，Git 自动合并，并产生了一次提交。</p>
+<h4>如果 Git 不能够自动合并，那么会提示</h4>
+<p><img src="http://git.oschina.net/uploads/images/2016/0226/113621_dbc985b5_62561.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>这个时候我们就可以知道<code>README.MD</code>有冲突，需要我们手动解决，修改<code>README.MD</code>解决冲突</p>
+<p><img src="http://git.oschina.net/uploads/images/2016/0226/113823_fffe18cf_62561.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>可以看出来，在1+1=几的这行代码上产生了冲突，解决冲突的目标是保留期望存在的代码，这里保留1+1=2，然后保存退出。</p>
+<p><img src="http://git.oschina.net/uploads/images/2016/0226/114159_426b8d65_62561.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>退出之后，确保所有的冲突都得以解决，然后就可以使用</p> 
+<pre><code>git add .
+git commit -m "fixed conflicts"
+git push origin master`
+</code></pre>
+<p>即可完成一次冲突的合并。</p>
+<p>整个过程看起来是这样的</p>
+<p><img src="http://git.oschina.net/uploads/images/2016/0226/114058_429e8b54_62561.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h4 id="text_154703" class="sin_target">如何进行版本回退</h4>
+<div class="sin_text">
+    					<h2>版本回退有多种方式,下面一一演示:</h2>
+<h3>回退到当前版本(放弃所有修改)</h3>
+<p><img src="https://static.oschina.net/uploads/img/201603/10161457_lf5m.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>放弃某一个文件的修改</h3>
+<p><img src="https://static.oschina.net/uploads/img/201603/10161707_dstz.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>回退到某一版本但保存自该版本起的修改</h3>
+<p><img src="https://static.oschina.net/uploads/img/201603/10162127_dLHO.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>回退到某一版本并且放弃所有的修改</h3>
+<p><img src="https://static.oschina.net/uploads/img/201603/10162634_CKmm.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>回退远程仓库的版本</h3>
+<p>先在本地切换到远程仓库要回退的分支对应的本地分支，然后本地回退至你需要的版本，然后执行：</p> 
+<pre><code>git push &lt;仓库名&gt; &lt;分支名&gt; -f 
+</code></pre>
+<h3>如何以当前版本为基础，回退指定个commit</h3>
+<p>首先，确认你当前的版本需要回退多少个版本，然后计算出你要回退的版本数量，执行如下命令</p> 
+<pre><code>git reset HEAD~X //X代表你要回退的版本数量，是数字！！！！
+</code></pre>
+<p>需要注意的是，如果你是合并过分支，那么背合并分支带过来的 commit 并不会被计入回退数量中，而是只计算一个，所以如果需要一次回退多个 commit，不建议使用这种方法</p>
+<h3>如何回退到和远程版本一样</h3>
+<p>有时候，当发生错误修改需要放弃全部修改时，可以以远程分支作为回退点退回到与远程分支一样的地方，执行的命令如下</p> 
+<pre><code>git reset --hard origin/master // origin代表你远程仓库的名字，master代表分支名
+</code></pre>
+			</div>
+
+																						<h4 id="text_154700" class="sin_target">git submodule</h4>
+<div class="sin_text">
+    					<p>我们可能偶尔在一下项目中看到类似下图的东西</p>
+<p><img src="https://static.oschina.net/uploads/img/201702/16161611_xjmS.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>这其实是 git 的子模块功能,作用是为了在项目中引入另一个项目的部分或全部内容，但是这两个项目是分开开发或管理的,这样直接使用 git submodule 就可以不必要将另一个项目复制一份直接引用即可。</p>
+<p>常用 git submodule命令</p> 
+<pre><code># 添加 git 子模块
+
+git submodule add repourl  
+
+# 初次clone带有子模块的仓库如果想查看子模块的内容：
+
+git submodule init
+git submodule update
+或者  git submodule update --init --recursive
+
+# 更新子模块地址
+
+vi .gitmodules   #修改url地址
+git submodule sync
+
+然后提交更改即可。
+
+# 删除子模块
+
+删除 .gitsubmodule中对应submodule的条目
+删除 .Git/config 中对应submodule的条目
+git rm --cached {submodule_path}  # submodule_path即子模块在仓库下的路径
+git commit -m 'xxx'
+git push 
+</code></pre>
+<p>具体的关于 git submodule 的说明以及使用，请点击<a href="https://git-scm.com/book/zh/v1/Git-工具-子模块" rel="nofollow">这里</a></p>
+			</div>
+
+																						<h4 id="text_153712" class="sin_target">为什么在push的时候，出现了413错误，push失败</h4>
+<div class="sin_text">
+    					<h3>为了提供更稳定更快的服务，我们的 http 服务器 nginx 设置了单次上传大小限制为 200M，如果您的单次 push 超过 200M，将被服务器拒绝，返回 413 错误。遇到这种问题，可以在 <a href="https://gitee.com/keys" rel="nofollow">https://gitee.com/keys</a> 页面上传 SSH 公钥，通过 SSH 通道 push 即可。</h3>
+			</div>
+
+																						<h4 id="text_153711" class="sin_target">为什么pull request合并不了</h4>
+<div class="sin_text">
+    					<p>pull request 无法合并是因为您的 pull request 目标分支的提交中存在于您的修改冲突的部分，这时，您需要先在本地将目标分支拉取下来合并到提交 pull request 的项目的分支，解决冲突后重新推送到提交了 pull request 的项目的分支，我们后台会自动更新，一旦检测到两个仓库不存在冲突时，便会提示可以自动合并，我们建议，在 pull request 合并前，应该处于可以自动合并的状态。</p>
+			</div>
+
+																						<h4 id="text_153749" class="sin_target">如何对一个项目提交Pull Request</h4>
+<div class="sin_text">
+    					<p>Pull Request 是两个仓库提交变更的一种方式，通常用于 fork 项目与被 fork 项目的差异提交，同时也是一种非常好的团队协作方式，下面，就来讲解如何在码云平台提交 Pull Request：</p>
+<p>PS：码云平台限制 Pull Request 源项目与目标项目需存在 fork 与被 fork 关系，故如果你要提交 Pull Request，必须先 fork 一个项目，然后才能对该项目提交 Pull Request，同时，以该项目为父项目的所有项目，您也均可以提交 Pull Request。</p>
+<h3>如何 fork 项目</h3>
+<p>fork 项目时非常简单的，进到项目页面，然后找到右上角的 fork 按钮，点击后再次点击确定，等待系统在后台完成仓库克隆操作，你就完成了 fork 操作，如图：</p>
+<p><img src="https://static.oschina.net/uploads/img/201607/11170038_5Rzf.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>如何提交 Pull Request：</h3>
+<p>首先，您的项目与目标项目必须存在差异，这样才能提交,比如这样：</p>
+<p><img src="https://static.oschina.net/uploads/img/201607/11164020_j8To.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>如果不存在差异，或者目标分支比你提 Pull Request 的分支还要新，则会得到这样的提示：</p>
+<p><img src="https://static.oschina.net/uploads/img/201607/11164209_LfgW.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>然后，填入 Pull Request 的说明，点击提交 Pull Request ，就可以提交一个 Pull Request 了，就想下图所示的那样：</p>
+<p><img src="https://static.oschina.net/uploads/img/201607/11171413_x7Jh.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>如何对已经存在的 Pull Request 的进行管理</h3>
+<p>首先，对于一个已经存在的 Pull Request，如果只是观察者，报告者等权限，那么访问将会受到限制，具体权限限制请参考码云平台关于角色权限的内容，下文涉及的部分，仅针对管理员权限，如果您发现不太一样的地方，请检查您的权限是不是管理员或该 Pull Request 的创建者。</p>
+<h4>如何修改一个已经存在的 Pull Request</h4>
+<p>点击 Pull Request 的详情界面右上角的编辑按钮，就会弹出编辑框，在编辑框中修改你需要修改的信息，然后点击保存即可修改该 Pull Request，如下图所示：</p>
+<p><img src="https://static.oschina.net/uploads/img/201607/11182105_veIB.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>请注意，在该界面，可以对 Pull Request 进行指派负责人，指派测试者等等操作，每一个操作均会通知对应的人员</p>
+<h4>对 Pull Request 的 bug 修改如何提交到该 Pull Request 中</h4>
+<p>对于 Pull Request 中的 bug 修复或者任何更新动作，均不必要提交新的 Pull Request，仅仅只需要推送到您提交 Pull Request 的分支上，稍后我们后台会自动更新这些提交，将其加入到这个 Pull Request 中去</p>
+<h4>Pull Request 不能自动合并该如何处理</h4>
+<p>在提交完 Pull Request 的后，在这个 Pull Request 处理期间，由原本的能自动合并变成不能自动合并，这是一件非常正常的事情，那么，这时，我们有两种选择，一种，继续合并到目标，然后手动处理冲突部分，另一种则是先处理冲突，使得该 Pull Request 处于可以自动合并状态，然后采用自动合并，一般来讲，我们官方推荐第二种，即先处理冲突，然后再合并。具体操作为：</p>
+<p>先在本地切换到提交 Pull Request 的分支，然后拉取目标分支到本地，这时，会发生冲突，参考<a href="http://git.mydoc.io?v=16912&amp;t=83148" rel="nofollow">如何处理代码冲突</a> 这一小节将冲突处理完毕，然后提交到 Pull Request 所在的分支，等待系统后台完成 Pull Request 的更新后，Pull Request 就变成了可自动合并状态。</p>
+<h4>Pull Request 不小心合并了，可否回退</h4>
+<p>对于错误合并的 Pull Request，我们提供了回退功能，该功能会产生一个回退 XXX 的 Pull Request，接受该 Pull Request 即可完成回退动作，注意，回退本质上是提交一个完全相反的 Pull Request，所以，你仍然需要进行测试来保证完整性，另，为了不破坏其他 Pull Request，建议只有需回退的 Pull Request 处于最后一次合并操作且往上再无提交时执行回退动作，否则请手动处理。</p>
+			</div>
+
+																						<h4 id="text_153746" class="sin_target">git clone git@osc项目出错 server aborted the ssl handshake</h4>
+<div class="sin_text">
+    					<p>这是您的网络连接有点问题，建议您更换 http 地址或者 ssh 地址或者过一会再试。</p>
+			</div>
+
+																						<h4 id="text_293493" class="sin_target">如何导入Github仓库到码云</h4>
+<div class="sin_text">
+    					<p>有了Github为什么还要用码云呢，因为码云给你最好的开发协作环境，稳定安全，再也不用担心无法访问，随时开发协作，敲你所想。更适合国人使用习惯，对个人开发者免费（包括私有库），国际化支持（多语言及 README 自动渲染相应语言版本），集成多重开发服务。</p>
+<h4>那，我该如何导入Github仓库到码云呢？</h4>
+<h3>首先登陆我们的码云账号，点击右上角的 + 号</h3>
+<p><img src="https://static.oschina.net/uploads/img/201806/04123259_z5VK.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>点击从Github导入项目，授权Gitee访问</h3>
+<p><img src="https://static.oschina.net/uploads/img/201806/04123409_BBED.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>之后就可以选择性的导入您的Github项目到码云</h3>
+<p><img src="https://static.oschina.net/uploads/img/201806/04123454_9miD.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>此外还可以从过链接导入Github的项目，只需要在创建项目的时候，选择导入已有项目</h3>
+<p><img src="https://static.oschina.net/uploads/img/201806/04123605_1ueu.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>如果是私有项目将会需要输入Github的账号信息，只做导入使用哦</h3>
+<p><img src="https://static.oschina.net/uploads/img/201806/04123738_E3gr.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h4>赶快来试试吧 -&gt; <a href="https://gitee.com/" rel="nofollow">https://gitee.com/</a></h4>
+			</div>
+
+																						<h3 id="category_37193">用户账户</h3>
+																						<h4 id="text_154707" class="sin_target">个性地址</h4>
+<div class="sin_text">
+    					<h3>1. 什么是个性地址？？</h3> 
+<blockquote>
+ <p>个性地址即您在码云平台的用户 path，是您在码云平台的唯一身份标识，同时也是您在码云平台创建项目时项目所在的空间的地址，该地址类似于二级域名，每一个用户有且只能有一个个性地址。</p> 
+</blockquote> 
+<ul> 
+ <li><p>例如某项目地址为： <a href="https://gitee.com/xxx/test.git，" rel="nofollow">https://gitee.com/xxx/test.git，</a> xxx即你的个性地址</p></li> 
+ <li><p>注册的时候请选择自己想要的个性地址 username，因为目前还不允许用户自己修改个性地址。</p></li> 
+</ul>
+<h3>2.为什么无法修改个性地址？</h3> 
+<blockquote>
+ <p>个性后缀会作为您项目地址的一部分，这个地址是要配置在您的本地仓库中的，如果修改个性后缀，您的本地项目地址也会更改，而且所有使用这个项目的人的本地项目地址都要更改，非常不便。因为这样的原因，我们不提供自助修改个性后缀的功能，请您在注册的时候谨慎填写。</p> 
+</blockquote>
+			</div>
+
+																						<h4 id="text_154705" class="sin_target">为什么我收不到激活/通知/重置密码等邮件</h4>
+<div class="sin_text">
+    					<blockquote>
+ <p>本站采用 SendCloud 服务发送邮件，我们尽力保证邮件快速送达，但是发送邮件仍然可能会有延迟，正常情况下都可以在 10分钟 内收到邮件，如果你没有收到邮件，可采用以下步骤解决：</p> 
+</blockquote>
+<p>1、查看是否被识别为垃圾邮件，如果垃圾邮件中仍然没有，请继续步骤2；</p>
+<p>2、部分企业邮箱存在反垃圾邮件服务，如您的企业配置了反垃圾邮件服务或者使用了如阿里云之类的企业邮，**请确保将 git.oschina.net 的域名设置成白名单**，否则无法接收激活邮件。</p>
+<p>进入邮箱页面 -&gt; 点击“设置” -&gt; 反垃圾邮件 -&gt; 域白名单 -&gt; 添加“@git.oschina.net”。</p>
+<p>3、若以上步骤均无法解决，请加入 <strong>QQ群:655903986</strong> 联系群管理员处理。<br>【注】：</p>
+<p><strong>因为特殊原因，如果您使用的是新浪邮箱，暂时是无法收到激活/通知/重置密码等邮件。不过，我们工作人员正在尽快处理该问题，敬请谅解！</strong></p>
+			</div>
+
+																						<h4 id="text_154709" class="sin_target">怎么更改邮箱</h4>
+<div class="sin_text">
+    					<h4>怎么修改账户邮箱？？</h4> 
+<ol> 
+ <li><p>如果你的账号已经激活，请到个人中心修改邮箱，地址为：<a href="http://git.oschina.net/profile/account" rel="nofollow">修改账户</a></p></li> 
+ <li><p>如果未激活，请发邮件到 git#git.oschina.cn申请或者联系码云管理员，在您提供必要的证明信息后，管理员可以协助您修改注册邮箱。</p></li> 
+</ol>
+			</div>
+
+																						<h4 id="text_154704" class="sin_target">为什么我的网络连接不上码云？</h4>
+<div class="sin_text">
+    					<p>码云为了扛住各种攻击，保证服务正常可用，在真实 IP 前面加了一层高防防护（电信联通单线高防），正是因为加了这层高防防护，因为高仿的链路质量不是特别好，所以会出现有些用户连不上码云的情况，主要有下面几种情况</p> 
+<ul> 
+ <li>打不开 https 链接</li> 
+ <li>Git 客户端操作码云链接各种超时 Timeout</li> 
+ <li>Ping 不通</li> 
+ <li>用 https 操作出现<code>can not connect to git.oschina.net:443 No Error</code></li> 
+</ul>
+<p>可以通过映射 host 到<code>120.55.226.24</code>来解决这个问题，这是 BGP 高防的 IP</p>
+<p>有些用户可能会问为什么我们不把域名直接解析到<code>120.55.226.24</code>，这是因为 BGP 线路的防护流量比较小，如果超过防护上限，那么就会进入黑洞，所有用户都会受影响，而单线高防可防御流量上百 G，所以为了大家的正常使用才这么考虑，目前我们也正在找寻更可靠的防护方案，不论是从防护上还是链路质量上，谢谢大家的支持和理解！</p>
+			</div>
+
+																						<h4 id="text_154706" class="sin_target">为什么我突然无发访问/登录码云？</h4>
+<div class="sin_text">
+    					<p>从2015年6月以来，码云平台一直在遭受攻击，所以码云平台为了提供正常的服务，使用了第三方的防护方案，如高防 ip 等防护手段，所以，如果您发现您无法登录或访问码云，请检查：<br>- 能否打开网页<br>- 能否登录<br>- 能否推送或拉取</p>
+<p>以上故障出现的可能情况为：<br>- 1.码云平台更换了 ip 地址<br>- 2.码云平台遭受了攻击导致无法访问<br>- 3.码云平台封锁了您的账号密码<br>- 4.您的 dns 存在 dns 解析劫持<br>- 5.码云平台正在维护（一般是周末凌晨）<br>- 6.您的 ip 地址被第三方防护识别为恶意用户而封禁<br>- 7.您的 ip 地址过于频繁访问码云平台导致 ip 地址被封禁<br>- 8.您的项目因为违反码云平台使用条款而屏蔽<br>- 9.您的账号因为散播不合法信息而遭到封禁<br>- 10.您的账号或项目因为上级主管政府部门要求而封禁</p>
+<p>以上故障的的解决办法为：<br>- 遇上问题1,4的解决办法为清理自己的 dns 缓存然后重新解析码云平台的 ip 地址<br>- 遇上问题2,5的解决办法为等待一阵时间，码云平台处理完攻击或完成维护后重新开放即可<br>- 遇上问题3,8,9的解决办法为主动删除所有不合法信息后重新联系码云的管理员，当账号无法登录时可通过开源中国社区联系码云管理员代为处理<br>- 遇上问题10的解决办法为没有解决办法，请更换邮箱后重新注册<br>- 遇上问题6,7的解决办法为联系码云管理员为您解封 ip 地址。一般情况下2小时内可以解决，但如封禁为第三方安全防护封禁，则时间需要得久一点</p>
+			</div>
+
+																						<h4 id="text_158683" class="sin_target">QQ登录的如何修改密码？</h4>
+<div class="sin_text">
+    					<p><strong>QQ登录的会绑定一个邮箱，通过邮箱修改密码！</strong></p>
+			</div>
+
+																						<h3 id="category_36996">代码仓库</h3>
+																						<h4 id="text_289999" class="sin_target">项目被屏蔽后如何处理？</h4>
+<div class="sin_text">
+    					<p>当项目地址作为外链，被频繁拉取，影响到其他正常用户的使用；项目超出容量限制；项目本身存储了非正规文件，被举报等情况都会造成项目被屏蔽，暂时无法正常访问的情况，您可以通过以下步骤来解决：</p> 
+<ol> 
+ <li>写邮件（注明：什么事件，项目地址），邮件标题为“项目被屏蔽+日期（20180515）”</li> 
+ <li>发送至码云官方邮箱 <a href="mailto:git@oschina.cn&nbsp;" rel="nofollow">git@oschina.cn&nbsp;</a></li> 
+ <li>加入码云官方技术交流QQ群：655903986&nbsp;</li> 
+ <li>私聊【群主】沟通处理</li> 
+</ol>
+			</div>
+
+																						<h4 id="text_153752" class="sin_target">为什么大文件推不上去</h4>
+<div class="sin_text">
+    					<p>对于普通用户码云单个仓库限制为1G，单个文件限制 100M。如果超过限制，您的代码将无法推送，我们提供的只是代码托管平台，<br>不是网盘，二进制文件请勿存放在码云，我们会不定期执行仓库大小扫描，如果发现你您的仓库超过大小超过1G，我们会联系您处理，<br>如果您15个工作日内没有处理，我们将暂停您的仓库的访问，请注意，我们只是暂停您仓库的访问，并不是删除您的仓库，<br>如果您超过半年没有处理，我们将永久屏蔽该仓库的访问.</p>
+<p>如果用户仓库提交超过 1GB，请在本地减小仓库体积后清空远程仓库，重新推送到远程服务器即可.这一策略适用于大文件.</p>
+<p>企业用户能够支持更大体积的仓库。</p>
+			</div>
+
+																						<h4 id="text_268479" class="sin_target">push 代码的时候提示 fatal: Authentication failed 问题</h4>
+<div class="sin_text">
+    					<p>如果您在推送代码的时候提示 fatal: Authentication failed for XXXXXX 信息，具体解决方案如下所示：</p>
+<h3>一、通过 https 方式</h3>
+<p>请再次检验下您的账号和密码是否输入无误，或者您当前账号对于该项目来说是没有 push 权限的。</p> 
+<hr>
+<h3>二、通过 ssh 方式</h3>
+<p>敬请检查是否配置 ssh 公钥，并将其部署在码云上。</p>
+			</div>
+
+																						<h3 id="category_36985">配置SSH公钥</h3>
+																						<h4 id="text_153707" class="sin_target">Windows下由于SSH配置文件的不匹配，导致的Permission denied (publickey)及其解决方法 </h4>
+<div class="sin_text">
+    					<p>很多情况下，Windows 平台由于不原生支持 ssh，只能使用如 git bash openssh，putty 等等工具或连接了不同的平台比如同时连接了码云和 github 等等会因为密钥文件储存位置不一致或者各个工具生成了自己的密钥而导致在连接码云的时候出现 Permission denied (publickey)，当遇上这种问题是一般有两种解决办法，一种是只使用一种工具，这样就能保证密钥位置不会变动，然后在密钥的文件夹下创建 config 文件，然后填写如下内容：<br> </p>
+<pre><code><br>Host git.oschina.net
+    HostName git.oschina.net
+    User git
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+</code></pre>
+<br>注意：以上参数中 id_rsa 这一栏请填写绝对地址，并且这一栏指定的私钥文件名字不一定要是 id_rsa，也可以是别的文件名，这样就能保证使用 ssh 连接码云时使用的是指定的密钥而不会被干扰，但请注意，使用这种方法是请保证该密钥不会被覆盖
+<p></p>
+<p>另一种方法是只使用一个密钥，所有平台均使用同一个密钥，这样就不会出现密钥不匹配的情况。</p>
+			</div>
+
+																						<h4 id="text_153708" class="sin_target">为什么我添加了公钥后仍然无法推送代码</h4>
+<div class="sin_text">
+    					<p>添加了公钥后仍然无法推送代码原因有一下几点：<br>- 您本身无权限推送代码<br>- 您电脑上使用的私钥与您添加的公钥不匹配<br>- 您添加的是部署公钥不是用户公钥</p>
+<p>需要说明的是：公私钥不匹配是很常见的问题，特别是 windows 下，遇上公钥不匹配的问题，请重新添加匹配的公钥。</p>
+<p>部署公钥仅仅提供拉取代码的权限，不提供推送代码的权限，故如果是您添加成部署公钥而导致无法推送，请删除该部署公钥后重新添加到个人中心的公钥中。</p>
+			</div>
+
+																						<h3 id="category_36986">代码质量管理</h3>
+																						<h4 id="text_153706" class="sin_target">我该如何开启代码质量分析</h4>
+<div class="sin_text">
+    					<p>目前码云平台自行搭建了 sonar 代码质量分析平台以及腾讯优测安卓源码分析平台，其中，sonar 支持代码级别的分析，可以对每一行代码进行分析，腾讯优测平台则可以对安卓项目在各个平台运行的效果进行具体测试，以便于适配各种型号的设备。</p>
+<h3>sonar 代码质量分析</h3>
+<p>在质量分析页面选择 sonar，如图：</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/03152727_Q1Jn.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>然后点击分析此项目的代码，在弹出来的对话框中填写相应的参数，如图：</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/03152844_sbDG.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>请注意：参数不要填写错误，不然无法正确分析。</p>
+<p>当你看到如下图所示时，则证明分析任务已经加入后台队列，你可以去喝杯咖啡或者下午茶，然后回来查看结果</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/03153051_POOa.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>需要说明的是，分析结果以内嵌网页的形式嵌入码云平台，故如果觉得码云平台页面布局不太符合您的要求，您可以自行通过查看网页源码提取出页面地址然后自行打开查看</p>
+<h3>腾讯优测</h3>
+<p>腾讯优测的开启方法和 sonar 是一样的，故开启方法请参开 sonar</p>
+<p>在提交腾讯优测大约3分钟到半小时后，您的项目分析结果便会已报告的形式呈现给您，报告中会详细的列出您的应用可能遇上的问题，是什么机型，如图：</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/03153506_k4GC.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>您可以点击具体的项目查看具体的问题，以便于您定位您的问题。需要说明的是，优测仅仅支持安卓平台的项目，并不支持 iOS 或者其他平台，请勿测试其他平台的应用。</p>
+			</div>
+
+																						<h3 id="category_36983">WebHook</h3>
+																						<h4 id="text_153693" class="sin_target">我该如何利用WebHook搭建自动化部署/测试平台</h4>
+<div class="sin_text">
+    					<blockquote>
+ <p>码云平台提供了 WebHook 触发钩子，定义了5种触发方法，我们可以根据 WebHook 的回调来搭建自动化部署/测试平台，下面给出示例(注:以下给出的是伪代码，并不能实际运行，仅作参考):<br>首先，我们明确自己的需求:搭建一个自动化部署平台，其需求如下:<br>- 能做到自动拉取代码<br>- 自动编译<br>- 自动更新数据库表结构<br>- 只更新master分支</p> 
+</blockquote>
+<p>这是一个最简单的自动化部署平台需求，下面就来看看怎么实现，需要说明的是，因为是最简单的方案，故没有考虑分布式的架构。</p>
+<p>我们来做功能拆分，拆分如下：</p>
+<h4>代码同步模块</h4> 
+<ul> 
+ <li>正常代码拉取</li> 
+ <li>强制推送代码拉取</li> 
+ <li>忽略其他分支的代码推送</li> 
+</ul>
+<h4>编译模块</h4> 
+<ul> 
+ <li>正常编译</li> 
+ <li>异常编译回滚</li> 
+</ul>
+<h4>部署模块</h4> 
+<ul> 
+ <li>编译文件自动部署</li> 
+ <li>重启服务端</li> 
+ <li>重启代理工具</li> 
+</ul>
+<h4>日志模块</h4> 
+<ul> 
+ <li>正常情况下日志输出</li> 
+ <li>代码拉取失败日志输出</li> 
+ <li>编译错误日志输出</li> 
+ <li>服务端重启日志输出</li> 
+</ul>
+<p>现在功能需求定好了，开始进行代码编写，因为这是一个最简单的部署，所以数据量非常小，用文本文件足以，故这里不采用数据来增加系统复杂程度</p>
+<p>首先，我们要写一个接口，以便于接收由 WebHook 发出的数据，由于 WebHook 的数据发送方式是 post，故需要一个接收 post 数据的地址。例如：<br><a href="http://xxx.xxx.com/xxx/xxx/git/post.php" rel="nofollow">http://xxx.xxx.com/xxx/xxx/git/post.php</a> 这样一个地址，当然，这个 php 文件具体怎么写就不知道了哈，他的作用只有一条：调用执行预定脚本： auto.sh 并将收到的参数传递给脚本。</p>
+<p>然后我们剩下的工作就是写 auto.sh 这个脚本了，我们所有的工作都需要在 auto.sh 这个脚本上完成。</p>
+<p>首先，我们来搞定自动拉取代码</p> 
+<pre><code>git pull origin master
+</code></pre>
+<p>这是正常拉取代码的，但是这条命令需要拉取的分支不存在强制推送状态，故这条命令适用性不够广泛，所以我们要改造一下，改成下面的样子：</p> 
+<pre><code>git reset --hard &lt;commit id&gt;
+git pull origin master
+puts "时间 拉取代码成功，分支为master" &gt;&gt; pull.txt
+</code></pre>
+<p>然后我们就搞定了代码拉取的问题，设定好 commit id 任你分支怎么变化怎么强推我都能正常拉取代码。为了正常判断状态，我们将这段代码新建个脚本，命名为 pull_code.sh 然后交给 auto.sh 调用，这样我们就可以在 auto 中写上判断条件来判断脚本执行成功还是失败，这样便于日志输出</p>
+<p>实际上，这里只做到拉取 master 分支的代码，我们可以将这段代码改改，将分支名作为参数，然后加上 checkout 语句，就可以拉取任意分支了，比如这样：</p> 
+<pre><code>git checkout 分支名（参数，外部传递）
+git reset --hard &lt;commit id&gt;
+git pull origin  分支名
+</code></pre>
+<p>至于 commit id 从配置文件中读出来就行了，然后就变成了可以部署其他分支的代码了。到这里，拉取代码的部分就算完成了。</p>
+<p>接下来是自动编译部分，同样，基于扩展性需求，我们可以将它做成一个脚本，已编译 rails 应用为例，我们一般需要编译资源执行如下命令：</p> 
+<pre><code>bundle exec rake assets:precompile RAILS_ENV=production
+</code></pre>
+<p>所以我们将这条命令写成脚本，命名为：compile.sh 同样，编译部分就完成了，其他语言按照其他语言格式将执行的命令写入到脚本中去，然后等待 auto.sh 的调用即可</p>
+<p>部署模块同样的操作手法，将需要执行的命令一条一条写入脚本中，等待被调用</p>
+<p>然后我们开始写最重要主文件，也就是 auto.sh 脚本（注：以下是伪代码，不具有执行能力，仅提供思路参考）</p>
+<p>以下是伪代码：</p> 
+<pre><code>开始接受参数：params
+
+解析参数，需要：分支信息 commit信息
+
+根据分支信息和 commit 信息判断是否需要更新，如果无需更新，结束
+
+需要更新，开始切换用户，获取更新权限，写入参数到文本文件中，避免因切换参数导致参数丢失
+
+从文本文件中读取参数，调用 pull_code.sh 脚本，同时传递分支参数
+
+接收 pull_code.sh 脚本执行结果，开始根据执行结果打印日志，同时保存执行结果到变量 code
+
+根据变量 code 的值判断代码拉取是否成功，判断是否需要编译资源，同时打印日志
+
+调用部署脚本，开始执行部署操作
+
+日志部分开始工作，对每次执行结果进行记录
+
+汇总日志部分，开始分析是否可以重新启动服务（热启动或其他）
+
+开始清理除日志之外的中间文件，清理工作目录
+
+执行完成
+</code></pre>
+<p>以上就是一个最简单的利用 WebHook 进行自动化部署的案例，其原理是先用钩子触发回调，拿到更新信息，然后调用预先定义好的自动化部署脚本进行部署，最后完成操作</p>
+			</div>
+
+																						<h3 id="category_36984">SVN 支持</h3>
+																						<h4 id="text_153695" class="sin_target">我该如何使用SVN管理我的项目</h4>
+<div class="sin_text">
+    					<p>现在 <strong>码云</strong> 目前支持使用 Subversion 对仓库进行操作，以下是使用指南和注意事项。 </p>
+<h2>使用前注意</h2> 
+<ol> 
+ <li>仓库体积超过 300 MB 不建议使用 Subversion 操作仓库，存储库容量达到 400 MB，或者 300 MB 并且存储大量非文本数据时，我们将关闭仓库的 Subversion 支持。</li> 
+ <li>由于 GIT 不支持空目录的提交，在存储机器上，无论是普通仓库还是开启 Subversion 接入的仓库存储时都是 GIT 仓库，Subversion 的 commit 是提交到 git 仓库上的，所以码云的 Subversion 不支持空目录的提交。</li> 
+ <li>第一次开启 Subversion， 操作一个仓库，如果仓库体积较大或者提交次数较多，由于缓存的缘故，响应时间会比较长。</li> 
+ <li>不支持 Subversion 的 Hook 机制，请使用 WebHook 替代。</li> 
+ <li>Subversion 属性不完全支持。</li> 
+ <li>客户端需要开启 SASL 支持，不支持的客户端无法访问。</li> 
+ <li>部分 svn 命令不支持。可以查看 <strong>Subversion 客户端的兼容性</strong></li> 
+ <li>版本号的映射，目前 Subversion 的版本号计算依据为本分支所有的 commit 数目减一 不包括 merge ，如果使用了在 git 中强制回退等操作，请重新检出。</li> 
+</ol>
+<p><em>WARNING:</em> </p> 
+<blockquote>
+ <p>由于 git 在设计上就没有考虑空文件 <a href="https://git.wiki.kernel.org/index.php/GitFaq#Can_I_add_empty_directories.3F" rel="nofollow">Kernel.org: Git FAQ</a></p>
+ <p>我们设计的原则就是不破坏，不主动修改用户的仓库，我们的后端存储的完全是一个 git 仓库，如果我们添加了，一次提交内容也不会一致了，建议你在添加目录的时候添加 .keep 之类的占位文件，空文件即可。</p>
+ <p>Git 与 SVN 混用时尽量不要使用 Git 强制推送。<a href="https://git.mydoc.io/?t=122635" rel="nofollow">Git 与 SVN 混用注意事项</a></p> 
+</blockquote>
+<h2>关于改版</h2>
+<p>Subversion 功能的最终解释权归 OSChina.NET 所有。Subversion 接入的规则可能在下一次改版中发生改变。</p>
+<h2>开启方式</h2>
+<p>在项目的设置界面开启 </p>
+<p><img src="http://git.oschina.net/uploads/images/2015/0324/182035_d23abb99_62561.png" alt="undefined"></p>
+<p>如果是空仓库：<br><img src="https://static.oschina.net/uploads/img/201506/16185355_IYvK.png" alt="emptyrepo" title="开启空仓库的支持"></p>
+<h2>使用指南</h2>
+<p>码云 支持的是 svn 协议。 对于 svn 而言，获取一个仓库的代码通常是 checkout，在项目主页我们通常可以获得 URL：<br><img src="http://static.oschina.net/uploads/space/2015/0318/152207_DRMJ_139664.png" alt="svn-url"><br>这个仓库地址为： </p> 
+<pre><code>svn://git.net/svnserver/newos
+</code></pre>
+<h3>1.获取仓库代码：</h3> 
+<pre><code>svn checkout svn://git.net/svnserver/newos newos
+</code></pre>
+<p><strong>注意信息</strong> 码云的 SVN 接入后端是通过 git 存储库实现，URL 规则为 <a rel="nofollow">svn://域名/用户名/项目名</a> .</p>
+<p>使用上述命令，我们将得到项目默认分支的代码。并将本地的工作目录命名为 <em>newos</em><br>如果最后不带 newos，svn 默认把本地工作目录命名为 SVN-URL 的最后一个目录名，这里是 <em>newos</em> </p> 
+<pre><code>svn checkout svn://git.net/svnserver/newos
+</code></pre>
+<p>如果要获得任意分支代码，请输入近似如下的命令：</p> 
+<pre><code>svn checkout svn://git.net/svnserver/newos/branches/update newosupdate
+</code></pre>
+<p>特别的说明，获取主干分支，也就是 master 分支可以使用下面的分支格式 </p> 
+<pre><code>svn checkout svn://git.net/svnserver/newos/trunk newos
+</code></pre>
+<p>svn trunk 分支对应 master 分支 用户应当尽量不使用下面格式<br> </p>
+<pre><code><br>svn checkout svn://git.net/svnserver/newos 
+</code></pre>
+<p></p>
+<h2>操作说明</h2>
+<p>如果部分检出仓库，并且仓库根目录下包含 branches/tags/trunk 这样的目录，请使用完整的路径 layout，如下：</p> 
+<pre><code>svn://git.net/example/example/trunk/tags/hello
+svn://git.net/example/example/branches/dev/trunk
+svn://git.net/example/example/branches/dev/branches 
+</code></pre>
+<p>如果没有 master 分支，也就没有 trunk 分支，检出的 URL 不能省略分支名。比如只有一个 dev 分支,必须使用下列格式，否则会提示仓库不存在。 </p> 
+<pre><code>svn co svn://git.net/svnserver/newos/branches/dev  svnserver_dev  
+</code></pre>
+<p>打开终端,输入上述命令，出现以下下面提示。其中第一个认证领域是用户的密码，这个可以留空。而用户名是用户在码云（Gitee.com）登陆时使用<code>邮箱地址</code>。密码则是用户登陆 码云 所使用的密码。</p>
+<p>一般而言，svn 会加密缓存用户的用户名密码，所以，对仓库的操作只需要第一次输入用户邮箱和密码。</p>
+<p>清除密码缓存，用户目录下的 .subversion/auth/svn.simple 文件夹下的文件。</p>
+<p><img src="http://static.oschina.net/uploads/space/2015/0318/153828_ptt4_139664.png" alt="image"></p>
+<p>下图则是成功的拉取了项目代码。</p>
+<p><img src="http://static.oschina.net/uploads/space/2015/0318/154033_aySS_139664.png" alt="image"></p>
+<p>查看本地工作目录信息： </p> 
+<pre><code>svn info
+</code></pre>
+<p><img src="http://static.oschina.net/uploads/img/201503/18161038_vF3E.png" alt="svninfo"><br> </p>
+<pre><code><br>cd helloworld
+echo "#SVN Options ReadMe.md"&gt;SVNReadMe.md
+#svn add SVNReadMe.md
+#svn add * --force类似于git add -A
+svn add * --force
+svn update .
+svn commit -m "first svn commit"
+</code></pre>
+<br>Subversion 在提交前建议先使用 svn update 更新工作拷贝。也就相当于 git pull 后再 git push。
+<br>Subversion 的提交是在线的，如果机器已经离线，那么提交会失败，这个过程用git的方式理解就是 git commit+git push。
+<br>用户使用 svn 提交代码同样会有动态显示。
+<p></p>
+<p>列出版本库中的目录内容: </p> 
+<pre><code>svn list svn://git.net/svnserver/newos/trunk
+</code></pre>
+<p>导出仓库指定分支的所有文件，不含版本控制信息： </p> 
+<pre><code>svn export svn://git.net/svnserver/newos/trunk newos
+</code></pre>
+<h2>备注</h2>
+<h3>安装 Subversion 客户端</h3>
+<p>在 Apache 基金会的 Subversion 官网： </p>
+<p><a href="http://subversion.apache.org" rel="nofollow">http://subversion.apache.org</a></p>
+<p>二进制下载提示页面： </p>
+<p><a href="http://subversion.apache.org/packages.html" rel="nofollow">http://subversion.apache.org/packages.html</a> </p>
+<h4>Windows 系统：</h4>
+<p>与资源管理起集成的 SVN 客户端：<a href="http://tortoisesvn.net/downloads.html" rel="nofollow">TortoiseSVN</a>,通常被叫做“海龟”，为 msi 安装包。可以使用 <a href="http://pan.baidu.com/s/1szHIn" rel="nofollow">ExtractMSI</a> 解压缩。</p>
+<p>很诡异的是，在 Apache 上并没有推荐 TortoiseSVN。</p>
+<p>另外还有 SlikSVN，下载地址：<a href="https://sliksvn.com/download/" rel="nofollow">https://sliksvn.com/download/</a></p>
+<p>其他的也就不一一介绍了。 </p>
+<h4>Linux 系统</h4>
+<p>一般而言 Linux 系统自带的包控制软件能够安装 Subversion，如果版本低于1.8，就建议用户下载预编译的二进制或者自己动手编译 Subversion。这里不做过多说明。</p>
+<h4>OS X</h4>
+<p>XCode 自带的 Subversion 版本为1.7.x，太老，而码云（Gitee.com）只支持1.8以上的 SVN 客户端。</p>
+<p>如果安装了 Homebrew</p> 
+<pre><code>brew install subversion
+</code></pre>
+<p>或者使用WANdisco的预编译版本</p>
+<p><a href="http://www.wandisco.com/subversion/download#osx" rel="nofollow">http://www.wandisco.com/subversion/download#osx</a></p>
+<h3>Subversion 客户端的兼容性</h3>
+<p>我们支持 Apache Subversion 1.8 或者更高的版本，当你安装一个 Subversion 客户端时，如果错误提示是“无法协商验证验证方式” 请确保你的客户端支持 SASL 验证，比如在 Ubuntu 上，你可以安装 libsasl2-dev 然后编译 Subversion, 这样的话客户端是支持 SASL 验证的。</p> 
+<blockquote>
+ <p>sudo apt-get install libsasl2-dev</p> 
+</blockquote>
+<p>当你使用 svnkit 或者 SubversionJavaHl 这类 IDE 集成客户端，请确保支持 SASL 验证。</p>
+<h3>关于 GIT 与 SVN 的转换</h3>
+<p>如果用户存在一个基于 Subversion 托管的项目，要迁移到码云（Gitee.com），可以使用 git-svn 将项目转变为基于 git 的仓库，然后推送到码云（Gitee.com），这样你依然能够使用SVN对项目进行操作。请记得先在码云（Gitee.com）上新建一个项目</p> 
+<pre><code> git svn clone http://myhost/repo -T trunk -b branches -t tags 
+ git remote add oscgit https://git.oschina.net/user/repo
+ git push -u oscgit --all
+</code></pre>
+<p>通常来说，如果本地存在 SVN 仓库，则可以：</p> 
+<pre><code>git svn clone file:///tmp/svn-repo -T trunk -b branches -t tags 
+git remote add oscgit https://git.oschina.net/user/repo
+git push -u oscgit  --all
+</code></pre>
+<p>将项目转移到 码云（Gitee.com）上以后，使用 svn 命令 checkout 即可对项目进行操作。</p>
+<p>高级指南：<br><a href="http://git-scm.com/book/zh/ch8-2.html" rel="nofollow">http://git-scm.com/book/zh/ch8-2.html</a></p>
+<h3>安装 git，git-svn</h3>
+<h4>Windows</h4>
+<p>msysgit 官网 <a href="http://msysgit.github.io/" rel="nofollow">http://msysgit.github.io/</a>,版本比较低。 </p>
+<p>Github for Windows 提供的 git 工具和 msysgit 一致。 </p>
+<p>MSYS2 git 下载地址: <a href="http://sourceforge.net/projects/msys2" rel="nofollow">http://sourceforge.net/projects/msys2</a>，然后启动终端,安装 git，目前版本为2.4.3。</p> 
+<pre><code>pacman -S git
+</code></pre>
+<p>Cygwin git 下载地址: <a href="http://www.cygwin.com/" rel="nofollow">http://www.cygwin.com/</a>,然后使用包管理软件或者直接下载 git 源码编译 git。</p> 
+<pre><code>make configure
+./configure --prefix=/usr/local
+make 
+make install 
+</code></pre>
+<h4>Linux</h4>
+<p>有包管理器的直接用包管理器安装。</p>
+<p>如 Ubuntu</p> 
+<pre><code>sudo apt-get install git git-svn
+</code></pre>
+<p>也可以手动编译。</p>
+<h4>Mac OSX</h4>
+<p>下载地址：<a href="http://git-scm.com/download/mac" rel="nofollow">http://git-scm.com/download/mac</a></p>
+			</div>
+
+																						<h4 id="text_153698" class="sin_target">我使用SVN管理我的项目但总是提示输入用户名密码</h4>
+<div class="sin_text">
+    					<p>首先请确认： 1.SVN客户端版本在1.8以上 2.码云的用户名不带有@符号<br>其次： 使用的账号密码是码云平台的账号密码，并不是社区的账号密码，请确认密码没有使用错误<br>然后：确认密码不包含特殊字符，如@！#￥%%之类的特殊符号<br>如果以上三点均达到，请联系管理员或开发人员并请您准备好日志以便于我们开发人员查看分析问题</p>
+			</div>
+
+																						<h4 id="text_153699" class="sin_target">SVN 常见错误</h4>
+<div class="sin_text">
+    					<h2>Repository size is too large</h2>
+<p>仓库体积超过 300 MB 不建议使用 Subversion 操作仓库，存储库容量达到 400 MB，或者 300 MB 并且存储大量非文本数据时，我们将关闭仓库的 Subversion 支持。</p>
+<p>解决方案 使用 Git，或清空项目，重新推送。</p>
+<h2>Empty directories is not supported</h2>
+<p>我们SVN管理项目是通过兼容来实现的，所以我们后端仓库仍然是一个git仓库，但是git不允许存在空仓库，故使用SVN管理项目时，使用空文件夹会报错，如果您一定要使用空文件夹，<br>请您在需要保留的空文件夹内新建一个.keep文件，这样git就会保存这个文件夹。</p>
+<p>另外，如果您新建.keep文件后仍然无法推送，请先清空SVN的缓存，然后再次推送。</p>
+<h2>Can’t find node</h2>
+<p>如果出现了 <strong>Can’t find node</strong> 这样的错误，请检查是否是通过默认存储库地址检出的项目，<br>即：</p> 
+<blockquote>
+ <p>svn co <a rel="nofollow">svn://example.com/example/example</a> </p> 
+</blockquote>
+<p>这样检出的存储库，不能建名字为 trunk， branches,tags 的目录，当然如果是强制指定了分支或者 trunk，</p>
+<p>如：</p> 
+<blockquote>
+ <p>svn co <a rel="nofollow">svn://example.com/example/example/trunk</a> exmaple<br>svn co svn co <a rel="nofollow">svn://example.com/example/example/branches/dev</a> dev</p> 
+</blockquote>
+<p>这样检出的存储库可以在根目录下创建 trunk,tags branches 这样名称的目录。</p>
+<p>在子目录创建则无影响。</p>
+<p>**<a rel="nofollow">svn://example.com/example/example**</a> 这样的路径实际上是检出的 <strong><a rel="nofollow">svn://example.com/example/example/branches/$(default</a> branch)</strong></p>
+<p>此问题只需要检出时强制指定分支名即可。</p>
+<h2>其他</h2>
+<p>TBD</p>
+			</div>
+
+																						<h4 id="text_153694" class="sin_target">Git 与 SVN 混用注意事项</h4>
+<div class="sin_text">
+    					<p>[Deprecated]<br>已经修复</p>
+<p>Git 和 SVN 混合使用时，尽量不要使用 Git 的强制推送。Git 强制推送时，前一次 commit 将会被覆盖，同时，与该 commit 对应的 SVN 版本缺失，造成 SVN 更新代码失败。</p>
+<p>具体情况如下：</p>
+<p>当 Git 进行强制推送后，SVN 尝试更新代码:</p> 
+<pre><code>$ svn update .
+Updating '.':
+svn: E200022: svn: E200022: Git Force push miss some object,Please checkout again !
+</code></pre>
+<p>如果再次尝试更新，SVN 会进行版本回退：</p> 
+<pre><code>$ svn update .
+Updating '.':
+svn: E160006: svn: E160006: No such revision 4
+$ svn update .
+Updating '.':
+At revision 3.
+</code></pre>
+<p><strong>注意</strong>，此时回退是使用本地的数据，该版本是被强制推送覆盖掉的版本！与服务器数据已经不一致！！</p>
+<p>此时需要将本地仓库目录删除，然后重新 checkout。</p>
+			</div>
+
+																						<h3 id="category_36988">项目演示</h3>
+																						<h4 id="text_153716" class="sin_target">我该选择哪种paas平台</h4>
+<div class="sin_text">
+    					<p>目前我们码云平台提供三种 paas 服务以供您选择，其特点如下</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/13113415_ByVB.png" alt="输入图片说明" title="在这里输入图片标题"></p> 
+<ul> 
+ <li>百度BAE:</li> 
+</ul>
+<p>支持java PHP nodejs python .提供数据库mysql mongodb redis 需要注意的是,百度提供急速收录服务,即使用百度的paas内容会非常快速的被百度收录.关于收费:百度BAE是按天收费,具体收费详情为:每64M内存大约为0.1元每天</p> 
+<ul> 
+ <li>Mopaas:</li> 
+</ul>
+<p>支持Go Python PHP Tomcat JBoss NodeJS Ruby Websphere8 .Net,服务提供Mysql Redis,Memcached,MongoDB,PostgreSQL等等几十种第三方服务.关于收费: 以代金券的方式提供,可以以256M内存运行应用约半年(注:内存指该用户名下总共使用的内存)</p>
+<p>以上就是我们码云平台暂时支持的演示服务,各位开发者可以根据自己的需求灵活的选择一个或多个部署自己的演示。</p>
+			</div>
+
+																						<h4 id="text_153714" class="sin_target">为什么我的paas演示平台打开比较慢</h4>
+<div class="sin_text">
+    					<p>因为我们的 paas 是第三方服务，我们是通过调用接口来获取数据的，因地区差异以及运营商的差异，您的网络速度以及质量可能不太理想，故获取数据的时间可能会稍微长一点，这样就造成了页面打开慢。</p>
+			</div>
+
+																						<h4 id="text_153717" class="sin_target">为什么我的mopaas演示无法启动</h4>
+<div class="sin_text">
+    					<p>因为 mopaas 的限制，新建的演示必须在部署代码后才能启动，并且，所有的项目必须存在标志性的文件才可以启动成功，比如 php 项目必须存在 index.php，rails 项目必须存在 Gemfile 等等。</p>
+<p>如果在项目演示的时候出现如下提示：</p>
+<p><img src="https://static.oschina.net/uploads/img/201803/13113604_ICBG.jpg" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>敬请登录到<a href="https://www.mopaas.com" rel="nofollow">魔泊云官网</a>，登陆账号使用开启该服务的码云注册邮箱，登陆密码请在码云注册邮箱查看魔泊云的邮件。</p>
+<p>登陆魔泊云，进行实名认证后即可在码云上使用该功能。</p>
+			</div>
+
+																						<h4 id="text_153718" class="sin_target">为什么我的MoPaaS的项目演示部署失败</h4>
+<div class="sin_text">
+    					<p>根据 mopaas 的规则，部署响应项目必须有项目的该项目类型的标识，比如 php 项目就必须根目录下存在 index.php 文件才可以部署成功，注:Mopaas 已经不再支持静态页面，如果需要部署静态页面，请等待我们即将推出的 pages 服务。</p>
+			</div>
+
+																						<h3 id="category_36995">项目管理</h3>
+																						<h4 id="text_153744" class="sin_target">如何修改我的git默认的编辑器</h4>
+<div class="sin_text">
+    					<p>nano 是一个字符终端的文本编辑器，有点像 DOS 下的 editor 程序。它比 vi/vim 要简单得多，比较适合 Linux 初学者使用，git 默认的编辑器就是 nano 不过，有些人习惯了使用 vi 或者其他编辑器，如果想要改换默认编辑器的话只需要在仓库目录下执行下面命令就可以了<br> </p>
+<pre><code><br>git config --global core.editor vim
+</code></pre>
+<br>注意:vim 可以替换成你喜欢的编辑器，比如 emacs。
+<p></p>
+			</div>
+
+																						<h4 id="text_153743" class="sin_target">我该如何才能使我的组织中的成员访问、管理组织中的项目</h4>
+<div class="sin_text">
+    					<p>首先，在码云平台，组织功能设计上只是一堆人员与项目的集合，成员与项目中间并没有直接的权限关系，故组织成员不可以直接管理项目，不对项目具有直接的管理权限，所以，要想让组织成员能访问、管理您组织的中项目，您需要将该成员添加到项目成员中。具体的您可以这样做：</p>
+<p>首先点击您的组织中的那个项目，如图：</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/18111502_0YFX.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>然后点击管理，如图：</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/18111538_aZH5.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>点击下图所示的任意一个条目：</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/18111704_RbIm.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>然后点击从组织中添加成员</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/18111746_7KXj.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>你就能看到下图类似的界面：</p>
+<p><img src="https://static.oschina.net/uploads/img/201605/18112206_YcFu.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>然后选择好成员，选择好权限，点击添加用户，该用户就可以访问或管理这个组织中的项目了。</p>
+			</div>
+
+																						<h4 id="text_153750" class="sin_target">为什么有的项目不能提交Issue、Pull Request</h4>
+<div class="sin_text">
+    					<blockquote>
+ <p>项目的管理员可以设置项目是否接受 Issue 和 Pull Request，如果该项目设置了不接受 Issue 或者 Pull Request，则您不能提交 Issue 或 Pull Request。</p> 
+</blockquote>
+			</div>
+
+																						<h3 id="category_39010">开源指南</h3>
+																						<h4 id="text_161652" class="sin_target">开源指南</h4>
+<div class="sin_text">
+    					<h3>一、如何贡献于开源项目</h3>
+<p><a href="http://www.oschina.net/translate/contribute-to-opensource" rel="nofollow">1、如何向开源软件贡献自己的力量 </a></p> 
+<blockquote>
+ <p>“我想向开源社区贡献源码，但是该怎么做呢？”我经常看见很多很多学生在很多论坛里问这个问题。有很多种方式可以贡献源码，我列出了很多，希望能够对你们有多帮助。</p> 
+</blockquote>
+<p><a href="https://my.oschina.net/editorial-story/blog/837992" rel="nofollow">2、不用写代码，你也能为开源作出贡献</a></p> 
+<blockquote>
+ <p>开源项目在国外已经成为了一股热潮，已经开始影响到日常生活的方方面面，可是在中国，开源项目的使用者不少，贡献者却寥寥无几，但同时有很多人想要参加开源项目，却总是不得其门而入……无论你是久经沙场的编程老手还是初入门道的技术小白，或者压根就不是一个程序猿，都有不写代码而为开源项目作出贡献的方法。</p> 
+</blockquote>
+<p><a href="https://my.oschina.net/ljzn/blog/732450" rel="nofollow">3、开源项目贡献者行为准则</a></p> 
+<blockquote>
+ <p>作为该项目的贡献者和维护者，我们希望培养一个开放，友善的社区，我们承诺:尊敬任何通过报告提案，发布特性需求，更新文档，提交pull请求或补丁，以及其它任何活动来进行贡献的人.</p> 
+</blockquote>
+<h3>二、如何开启开源项目</h3>
+<p><a href="https://www.oschina.net/translate/starting-open-source-project?lang=chs&amp;page=1#" rel="nofollow">1、如何开始一个新的开源项目</a></p> 
+<blockquote>
+ <p>这一段时间， 好像很多人写了一代代码加上一段开源软件协议， 再把它发布到GitHub， 然后就说: “我把它开源了”. 创建一个开源项目并不仅仅是让你的代码可以自由的被访问获取。<br>如何开始呢？</p> 
+</blockquote>
+<p><a href="https://www.oschina.net/question/554557_120351" rel="nofollow">2、向开源社区贡献模块的经验分享</a></p> 
+<blockquote>
+ <p>2007年的时候，我曾经在CPAN上发布了几个Perl模块，至今我的名字一直是Perl模块作者中几十个中文名字的其中一个，在Google中搜索我的名字，CPAN上的页面也一直有较高的关联度。</p>
+ <p>向开源社区贡献模块是一个熟悉国外软件开发流程，完善代码规范的过程，对于把自己训练成更专业的软件开发者很有帮助。 </p> 
+</blockquote>
+<p><a href="https://my.oschina.net/u/134395/blog/523214" rel="nofollow">3、我如何在OSC上做开源项目</a></p> 
+<blockquote> 
+ <ul> 
+  <li>在 OSC 上如何做开源项目和利用开源项目赚钱？</li> 
+  <li>如何做开源软件？</li> 
+  <li>大家都明白，所以重点是在如何利用开源软件赚钱。</li> 
+ </ul> 
+</blockquote>
+<p><a href="https://www.oschina.net/news/26465/find-the-todos-in-opensource-project" rel="nofollow">4、寻找 TODOs：向开源项目贡献的一些建议</a></p> 
+<blockquote>
+ <p>TODO 和 Bug 不一样。Bug一般是由用户提交的，外部可见的一些问题。而TODO一般是开发者自己标记的，代码中可以改进的地方，由于时间关系没有来得及做。</p> 
+</blockquote>
+<h3>三、为开源项目寻找参与者</h3>
+<p><a href="http://os.51cto.com/art/201509/491366.htm" rel="nofollow">1、吸引学生为你的开源项目贡献代码的九招秘诀</a></p>
+<h3>四、建立开源欢迎社区</h3>
+<p><a href="http://www.kaiyuanshe.cn/article/57.html" rel="nofollow">1、如何建立开源社区</a></p> 
+<blockquote>
+ <p>社区就是有共同兴趣的一群人。开源项目和闭源项目都有用户社区，大部分用户不会积极地与社区其他成员互动。而另一方面，无论是开源社区还是闭源社区，都会有成员愿意更积极地参与，例如，报告 bug、帮助其他用户、撰写文档或进行推广。</p> 
+</blockquote>
+<h3>五、如何做好开源项目的维护者</h3>
+<p><a href="http://www.csdn.net/article/2013-07-03/2816085-How-to-maintain-a-successful-open-source-project" rel="nofollow">1、怎样维护成功的开源项目</a></p> 
+<blockquote>
+ <p>开源项目和普通产品一样，想要取得成功并非易事。流行的开源 Python 库 urllib3 的作者 Andrey Petrov 是总结了自己五年来的经验，写好介绍下文字、对待用户和贡献者的态度、合作和营销意识都至关重要。</p> 
+</blockquote>
+<p><a href="https://www.sdk.cn/news/4066" rel="nofollow">2、成为流行开源项目的维护者 你是如何一步步进“坑”的 ？</a></p> 
+<blockquote>
+ <p>我们都清楚，开源的价值越来越高。我谈到了作为一名开源维护人员，你将会经历的各种情绪，但是对于你的职业生涯来说，维护开源项目将会给你带来巨大的回报。 </p> 
+</blockquote>
+<h3>六、如何领导和治理开源社区</h3>
+<p><a href="https://linux.cn/article-7436-1.html" rel="nofollow">1、自由开源社群治理之道</a></p>
+<p>注：以上内容为文章作者</p>
+			</div>
+
+																						<h3 id="category_74242">LFS 支持</h3>
+																						<h4 id="text_309345" class="sin_target">在码云中使用 Git LFS</h4>
+<div class="sin_text">
+    					<h1>Git LFS 是什么</h1>
+<p>Git LFS 即 Git Large File Storage （大文件存储），即将存储库中体积较大修改不太频繁的文件转移到 LFS 服务器上存储。在 2015 年由 Github 推出。</p>
+<p>关于 Git LFS 的技术原理，大家可以在网络搜索，或者去 <a href="https://github.com/git-lfs/git-lfs" rel="nofollow">https://github.com/git-lfs/git-lfs</a> 查看。</p>
+<h1>如何在 Gitee 上 使用 LFS</h1>
+<p>由于 Git LFS 需要大量的带宽和存储需求，因此目前 LFS 仅开放给付费企业用户。因此，当您需要在码云上使用 Git LFS 时，需要确保您的项目是属于付费企业。</p>
+<h2>安装 Git LFS</h2>
+<p>如果您当前的操作系统是 Windows，要使用 Git LFS 非常简单，把您的 Git for Windows 客户端升级到最新版本即可。如果是 macOS 或者 Linux 用户，那麻烦您自己去 <a href="https://github.com/git-lfs/git-lfs/releases" rel="nofollow">https://github.com/git-lfs/git-lfs/releases</a> 下载 git-lfs 程序. 当然，在这之前您得安装好 git。</p>
+<p>Linux 用户：</p> 
+<pre><code>wget https://github.com/git-lfs/git-lfs/releases/download/v2.5.1/git-lfs-linux-amd64-v2.5.1.tar.gz
+tar -xvf git-lfs-linux-amd64-v2.5.1.tar.gz
+cd git-lfs-linux-amd64-v2.5.1
+sudo ./install.sh
+git lfs version
+</code></pre>
+<p>macOS 用户或许可以使用 <code>brew</code> 安装。</p>
+<h2>在 Gitee 上创建项目</h2>
+<p>创建一个项目，选择项目的所有者为付费企业用户，或者是付费企业用户下的组织。</p>
+<h2>Git LFS 操作</h2>
+<p>Git LFS 存储库和普通的 git 存储库是一致的，只有当您的项目中有文件被 Git LFS track 时，才会出现一些差异。</p>
+<p>将文件纳入 Git LFS 管理。</p>
+<p>已知一个图片设计文件路劲为为 <code>resources/logo.psd</code> 将其纳入 git lfs 管理</p> 
+<pre><code>git lfs track resources/logo.psd
+</code></pre>
+<p>然后按照正常的 git 操作流程即可，在 运行 <code>git push</code> 的时候会被推送到远程 LFS 服务器，Pull 时会按需从 LFS 服务器下载。而 diff merge 等操作由 git lfs 管理。</p>
+<h2>Git LFS lock</h2>
+<p>Git LFS 目前可以设置 lock 防止其他用户对特定路径的文件进行修改。</p> 
+<pre><code># 对路径上锁
+git lfs lock resources/logo.psd
+
+# 查看存储库的锁
+git lfs locks
+
+# 解除锁定
+git lfs unlock resources/logo.psd
+# 或者
+git lfs unlock --id=lockid
+</code></pre>
+<h2>Git LFS 授权</h2>
+<p>在使用 Git LFS 的时候，如果没有设置凭据管理器保存密码，您可能需要多次输入密码，这是正常情况，因此不必担忧。</p>
+			</div>
+
+																																				<h2 id="category_19221">Git 入门篇</h2>
+																								<h3 id="text_180687" class="sin_target">Git 是什么</h3>
+<div class="sin_text">
+    					<p>Git 是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。因为在开发过程中需要跟踪代码，文档，项目等信息中的变化，版本控制则成为项目管理中的重中之重，且它对跨平台时遇到的一些问题有很不错的支持，所以在全球范围都广受欢迎。</p>
+			</div>
+
+																						<h3 id="text_180689" class="sin_target">Git 版本控制入门</h3>
+<div class="sin_text">
+    					<h3>Git 版本控制入门</h3>
+<p>不了解Git请查看权威Git书籍 <a href="http://git.oschina.net/progit/" rel="nofollow">ProGit（中文版）</a>。</p>
+<p>一份很好的 Git 入门教程，<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001373962845513aefd77a99f4145f0a2c7a7ca057e7570000" rel="nofollow">点击这里查看</a>。</p>
+<p>Git客户端下载地址： <a href="http://git-scm.com/downloads" rel="nofollow">官方Git</a> － <a href="http://tortoisegit.org/download/" rel="nofollow">TortoiseGit</a> － <a href="https://www.sourcetreeapp.com/" rel="nofollow">SourceTree</a> </p>
+			</div>
+
+																						<h3 id="text_180691" class="sin_target">Git 常用命令与名词解释</h3>
+<div class="sin_text">
+    					<h3>仓库</h3>
+<p>在 Git 的概念中，仓库，就是你存在<code>.git</code>目录的那个文件夹内的所有文件，包括隐藏的文件，Git程序会在当前目录以及上级目录查找是否存在<code>.git</code>文件，如果存在，则会将<code>.git</code>目录存在的文件夹开始下的所有文件当成你需要管理的文件，所以，我们如果想将某个文件夹当做一个Git仓库，你可以在那个文件夹下通过终端(Window为Cmd或者PoewrShell或者Bash)来执行<br> </p>
+<pre><code><br>git init
+</code></pre>
+<br>这样，你所期望的那个文件夹就成为了一个Git管理的仓库了
+<p></p>
+<h3>版本</h3>
+<p>严格来讲，Git并不存在版本的概念，但人们也硬是发展出了这么个玩意，在Git中，计数基础是提交，即我们常说的Commit，我们每做一点更改便可以产生一次提交，当提交累计起来，可以作为产品定型时，就在当前的Commit上打上一个标记，将这个标记我们称之为版本多少多少，那么就算完成了一个版本，标记本身被称之为Tag，请注意，在Git中，版本仅仅只是某一个提交的标签，并没有其他意义，Git本身也仅有打标签的功能，并没有版本功能，版本功能是根据Tag来扩展的，Git本身并没有</p>
+<h3>分支</h3>
+<p>这是Git中最重要的也是最常用的概念和功能之一，分支功能解决了正在开发的版本与上线版本稳定性冲突的问题在Git使用过程中，我们的默认分支一般是Master，当然，这是可以修改的，我们在Master完成一次开发，生成了一个稳定版本，那么当我们需要添加新功能或者做修改时，只需要新建一个分支，然后在该分支上开发，完成后合并到主分支即可</p>
+<h3>提交</h3>
+<p>提交在Git中同样是非常重要的概念，Git对于版本的管理其实是对于提交的管理，在整个Git仓库中，代码存在的形式并不是一分一分的代码，而是一个一个的提交，Git使用四十个字节长度的16进制字符串来标识每一个提交，这基本保证了每一个提交的标识是唯一的，然后通过组织一个按照时间排序的提交列表，就组成了我们所说的分支，请注意，分支在本质上只是一个索引，所以，我们可以任意回退，修正，即使因为某些原因丢失了，也可以重建另外，关于Git的储存方式:Git是仅仅只储存有修改的部分，并不会储存整个文件，所以，请不要删除文件夹整个文件夹的内容，除非你确定你不再需要他，否则请勿删除</p>
+<h3>同步</h3>
+<p>同步，也可以称之为拉取，在Git中是非常频繁的操作，和SVN不同，Git的所有仓库之间是平等的，所以，为了保证代码一致性，尽可能的在每次操作前进行一次同步操作，具体的为在工作目录下执行如下命令:<br> </p>
+<pre><code><br>git pull origin master
+</code></pre>
+<br>其中
+<code>origin</code>代表的是你远程的仓库，可以通过命令 
+<code>git remote -v</code> 查看，
+<code>master</code>是分支名，如果你本地是其他分支，请换成其他分支的名字，另，因为远程仓库与你本地仓库可能存在冲突，故当存在冲突时，请参考进阶篇的如何处理冲突
+<p></p>
+<h3>推送</h3>
+<p>和拉取一样，也是一个非常频繁的操作，当你代码有更新时，你需要更新到远程仓库，这个动作被称之为推送，执行的命令与拉取一样，只是将其中的<code>pull</code>这个单词改成<code>push</code>，同样，如果远程仓库存在你本地仓库没有的更新，则在推送前你需要先进行一次同步，如果你确定你不需要远程的更新，则在推送时加上 <code>-f</code> 选项，则可以强制推送，注:在协同开发中，我并不建议这么做，因为这样很可能覆盖别人的代码 推送代码示例:<br> </p>
+<pre><code><br>git push origin master
+</code></pre>
+<p></p>
+<p>强制推送代码示例:<br> </p>
+<pre><code><br>git push origin master -f
+</code></pre>
+<p></p>
+<h3>冲突</h3>
+<p>在使用Git开发时，如果只是一个人使用，那么基本不会产生冲突，但是在多人合作开发的情况下，产生冲突是很正常的一件事情，关于如何处理冲突，请参考进阶篇的<a href="http://git.mydoc.io?v=16912&amp;t=83148" rel="nofollow">如何处理代码冲突</a> 这一小节</p>
+<h3>合并</h3>
+<p>合并这个命令通常情况下是用于两个分支的合并，一般用于本地分支，远程分支多用Pull命令，该命令的功能是将待合并分支与目标分支合并在一起，注意，这个命令只会合并当前版本之前的差异，两个分支的提交历史会根据提交时间重新组织索引，故只可能会产生一次冲突但是会生成一个提交，如果你不想生成这次提交，加上 <code>--base</code>参数即可</p>
+<h3>暂存</h3>
+<p>这个既是一个概念也是一个命令，其含义就是字面上的，作用就是可以将你当前正在进行的工作暂时存起来，然后在此基础上干别的事情，等你别的事情干完后，再转回来继续，注意，暂存只是针对你最后一次改动而言，即针对当前所在的版本的所有改动都算具体执行命令为:</p>
+<h5>将当前改动暂存起来:</h5> 
+<pre><code>git stash
+</code></pre>
+<h5>恢复最后一次暂存的改动</h5> 
+<pre><code>git stash pop
+</code></pre>
+<h5>查看有多少暂存</h5> 
+<pre><code>git stash list
+</code></pre>
+<h3>撤销</h3>
+<p>撤销命令使用是非常频繁的，因为某些原因，我们不再需要我们的改动或者新的改动有点问题，我们需要回退到某个版本，这时就需要用到撤销命令，或者说这个应该翻译成重置更加恰当。具体命令如下:</p>
+<h5>撤销当前的修改:</h5> 
+<pre><code>git reset --hard
+</code></pre>
+<p>请注意:以上命令会完全重置你的修改，如果你想保留某些文件，请使用checkout +文件路径 命令来逐一撤销修改</p>
+<h5>如果你想重置到某一版本，可以将 <code>--hard</code> 改为具体的Commit的id如:</h5> 
+<pre><code>git reset 1d7f5d89346
+</code></pre>
+<p>请注意，这时你的修改仍然存在，只是你的最近一次提交的版本号变成了你要重置的版本，如果说你想完全丢弃修改，只需要加上 –hard参数就可以</p>
+<h5>这里解释的只是一些工作中经常用到的git的基本概念，名词，并不包含Git的所有名词，概念解释，故本文未提到之处请自行使用搜索引擎搜索;另:文档编撰者尽可能的寻找标准的解释，因结果来自于互联网，如果解释有错漏之处，烦请指出并给出正确的解释，谢谢</h5>
+<h5>另，本文仅提到部分常使用的概念以及命令，但Git远远不止这些东西，所以，在本文找不到的内容请自行百度，这里推荐 Git的官方文档(中文和英文均有，由官方以及志愿者维护):<a href="http://git-scm.com/book/zh/v2" rel="nofollow">http://git-scm.com/book/zh/v2</a> ，廖雪峰博客:<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" rel="nofollow">http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></h5>
+			</div>
+
+																						<h3 id="text_180692" class="sin_target">Git 安装</h3>
+<div class="sin_text">
+    					<h2>1.Git 的安装</h2>
+<h3>Window 下的安装</h3>
+<p>从 <a href="http://git-scm.com/download" rel="nofollow">http://git-scm.com/download</a> 上下载window版的客户端，然后一直下一步下一步安装git即可，请注意，如果你不熟悉每个选项的意思，请保持默认的选项</p>
+<h3>Ubuntu 下安装</h3> 
+<pre><code>在终端下执行 apt-get install git 
+</code></pre>
+<h3>Centos/Redhat 安装</h3> 
+<pre><code>在终端下执行 yum install git
+</code></pre>
+<h3>Fedora23 安装</h3> 
+<pre><code>在终端下执行 dnf install git 或者 yum install git
+</code></pre>
+<h3>Fedora22/21 安装</h3> 
+<pre><code>在终端下执行 yum install git
+</code></pre>
+<h3>SUSE/OPENSUSE安装</h3> 
+<pre><code>在终端下执行 sudo zypper install git
+</code></pre>
+<h3>Mac OS X 安装</h3> 
+<pre><code>在终端下执行brew install git (注:请自行解决环境变量以及Brew工具的问题)
+</code></pre>
+<h3>编译安装(注:仅适合非window系统) 从 https://github.com/git/git/releases 上选取一个版本下载，解压缩后进入到 Git 的目录然后依次执行以下代码:</h3> 
+<pre><code>make configure
+./configure
+make all
+sudo make install
+</code></pre>
+<p>注意:如果遇上无法编译的问题，请自行通过搜索引擎来查找 Git 所需的依赖</p>
+<p>如果以上一切正常，打开终端(Window下请打开安装git时一并安装的bash) 输入 git –version 应该会显示如下类似的信息<br> </p>
+<pre><code><br>git version 2.5.0
+</code></pre>
+<p></p>
+			</div>
+
+																						<h3 id="text_180693" class="sin_target">Git 使用前的配置</h3>
+<div class="sin_text">
+    					<h2>配置自己的用户名和邮箱</h2>
+<p>在使用git前，我们需要告诉git自己是谁以及自己的邮箱是什么，所以我们需要对git进行一些基本设置。打开终端（Windows打开安装git时安装的git bash）执行如下命令<br> </p>
+<pre><code><br>git config --global user.name "你的名字或昵称"
+git config --global user.email "你的邮箱"
+</code></pre>
+<br>这样就配置好了这台电脑的git 如果您没有安装git bash或者使用其他工具，建议您查找该工具的设置教程，本文档建议使用命令行终端操作git，这样遇上的兼容性问题最小。
+<p></p>
+<p>关于如何配置sshkey问题，请参阅<a href="http://git.mydoc.io/?t=83157" rel="nofollow">ssh key相关问题</a></p>
+			</div>
+
+																						<h3 id="text_180695" class="sin_target">如何克隆一个项目？</h3>
+<div class="sin_text">
+    					<h4>以克隆项目<code>git@git.oschina.net:zxzllyj/sample-project.git</code>为例</h4> 
+<ol> 
+ <li><p>ssh方式：需要在本机配置ssh<br> <img src="https://static.oschina.net/uploads/img/201603/10160653_BHzv.gif" alt="输入图片说明" title="在这里输入图片标题"></p></li> 
+ <li><p>https方式：https支持用户名密码方式和 <code>username + accessToken</code> 或者 <code>oauth2 + accessToken</code> 获取项目的方式</p></li> 
+</ol>
+<p> </p>
+<pre><code><br>    用户名，密码方式：
+    git clone https://gitee.com/zxzllyj/sample-project.git
+    根据提示输入用户名密码
+   
+    username + accessToken 方式：
+    git clone https://zxzllyj:fb63d3ae801d73d7364cd7b2cacxxxd2a@gitee.com/zxzllyj/sample-project.git
+   
+    oauth2 + accessToken 方式：
+    git clone https://oauth2:fb63d3ae801d73d7364cd7b2cacxxxd2a@gitee.com/zxzllyj/sample-project.git
+   </code></pre>
+<br>注：上图的方法虽然将仓库完整的拉取了下来，但是仅仅只会是显示默认分支，如果需要直接到指定的分支，可以在仓库地址后面加上分支名
+<p></p>
+			</div>
+
+																						<h3 id="text_180696" class="sin_target">Git 仓库的基本操作</h3>
+<div class="sin_text">
+    					<h3>1.修改仓库名</h3>
+<p>一般来讲，默认情况下，在执行clone或者其他操作时，仓库名都是 origin 如果说我们想给他改改名字，比如我不喜欢origin这个名字，想改为 oschina 那么就要在仓库目录下执行命令:<br> </p>
+<pre><code><br>git remote rename origin oschina
+</code></pre>
+<br>这样 你的远程仓库名字就改成了oschina，同样，以后推送时执行的命令就不再是 git push origin master 而是 git push oschina master 拉取也是一样的
+<p></p>
+<h3>2.添加一个仓库</h3>
+<p>在不执行克隆操作时，如果想将一个远程仓库添加到本地的仓库中，可以执行<br> </p>
+<pre><code><br>git remote add origin  仓库地址
+
+</code></pre>
+<br>注意: 1.origin是你的仓库的别名 可以随便改，但请务必不要与已有的仓库别名冲突 2. 仓库地址一般来讲支持 http/https/ssh/git协议，其他协议地址请勿添加
+<p></p>
+<h3>3.查看当前仓库对应的远程仓库地址</h3> 
+<pre><code>git remote -v
+</code></pre>
+<p>这条命令能显示你当前仓库中已经添加了的仓库名和对应的仓库地址，通常来讲，会有两条一模一样的记录，分别是fetch和push，其中fetch是用来从远程同步 push是用来推送到远程</p>
+<h3>4.修改仓库对应的远程仓库地址</h3> 
+<pre><code>git remote set-url origin 仓库地址
+
+</code></pre>
+			</div>
+
+																														<h2 id="category_19222">Git 进阶篇</h2>
+																								<h3 id="text_83148" class="sin_target">如何处理代码冲突</h3>
+<div class="sin_text">
+    					<p>冲突合并一般是因为自己的本地做的提交和服务器上的提交有差异，并且这些差异中的文件改动，Git不能自动合并，那么就需要用户手动进行合并</p>
+<p>如我这边执行<code>git pull origin master</code></p>
+<h4>如果Git能够自动合并，那么过程看起来是这样的</h4>
+<p><img src="http://git.oschina.net/uploads/images/2016/0226/113507_cca8cd22_62561.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>拉取的时候，Git自动合并，并产生了一次提交。</p>
+<h4>如果Git不能够自动合并，那么会提示</h4>
+<p><img src="http://git.oschina.net/uploads/images/2016/0226/113621_dbc985b5_62561.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>这个时候我们就可以知道<code>README.MD</code>有冲突，需要我们手动解决，修改<code>README.MD</code>解决冲突</p>
+<p><img src="http://git.oschina.net/uploads/images/2016/0226/113823_fffe18cf_62561.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>可以看出来，在1+1=几的这行代码上产生了冲突，解决冲突的目标是保留期望存在的代码，这里保留1+1=2，然后保存退出。</p>
+<p><img src="http://git.oschina.net/uploads/images/2016/0226/114159_426b8d65_62561.png" alt="输入图片说明" title="在这里输入图片标题"></p>
+<p>退出之后，确保所有的冲突都得以解决，然后就可以使用<br> </p>
+<pre><code><br>git add .
+git commit -m "fixed conflicts"
+git push origin master`
+</code></pre>
+<br>即可完成一次冲突的合并。
+<p></p>
+<p>整个过程看起来是这样的</p>
+<p><img src="http://git.oschina.net/uploads/images/2016/0226/114058_429e8b54_62561.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h3 id="text_83149" class="sin_target">如何进行版本回退</h3>
+<div class="sin_text">
+    					<h2>版本回退有多种方式,下面一一演示:</h2>
+<h3>回退到当前版本(放弃所有修改)</h3>
+<p><img src="https://static.oschina.net/uploads/img/201603/10161457_lf5m.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>放弃某一个文件的修改</h3>
+<p><img src="https://static.oschina.net/uploads/img/201603/10161707_dstz.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>回退到某一版本但保存自该版本起的修改</h3>
+<p><img src="https://static.oschina.net/uploads/img/201603/10162127_dLHO.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>回退到某一版本并且放弃所有的修改</h3>
+<p><img src="https://static.oschina.net/uploads/img/201603/10162634_CKmm.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>回退远程仓库的版本</h3>
+<p>先在本地切换到远程仓库要回退的分支对应的本地分支，然后本地回退至你需要的版本，然后执行：<br> </p>
+<pre><code><br>git push &lt;仓库名&gt; &lt;分支名&gt; -f 
+</code></pre>
+<p></p>
+<h3>如何以当前版本为基础，回退指定个commit</h3>
+<p>首先，确认你当前的版本需要回退多少个版本，然后计算出你要回退的版本数量，执行如下命令<br> </p>
+<pre><code><br>git reset HEAD~X //X代表你要回退的版本数量，是数字！！！！
+</code></pre>
+<br>需要注意的是，如果你是合并过分支，那么背合并分支带过来的commit并不会被计入回退数量中，而是只计算一个，所以如果需要一次回退多个commit，不建议使用这种方法
+<p></p>
+<h3>如何回退到和远程版本一样</h3>
+<p>有时候，当发生错误修改需要放弃全部修改时，可以以远程分支作为回退点退回到与远程分支一样的地方，执行的命令如下<br> </p>
+<pre><code><br>git reset --hard origin/master // origin代表你远程仓库的名字，master代表分支名
+</code></pre>
+<p></p>
+			</div>
+
+																						<h3 id="text_83150" class="sin_target">如何进行分支合并</h3>
+<div class="sin_text">
+    					<h2>分支合并分为两种情况,一种是本地分支合并,一种是远程分支合并到本地分支,下面,分别用GIF动画演示</h2>
+<h3>本地合并分支:</h3>
+<p><img src="https://static.oschina.net/uploads/img/201603/11110502_Puw4.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+<h3>远程分支合并</h3>
+<p><img src="https://static.oschina.net/uploads/img/201603/11105933_WdrB.gif" alt="输入图片说明" title="在这里输入图片标题"></p>
+			</div>
+
+																						<h3 id="text_83151" class="sin_target">如何从众多提交中保留只需要的提交</h3>
+<div class="sin_text">
+    					<p>如果说在众多提交中,已某个提交为基准,只保留上游众多提交中的某个或者某几个,可以使用 cherry-pick命令,具体是:<br> </p>
+<pre><code><br>git cherry-pick &lt;commit id&gt;
+</code></pre>
+<br>如果没有冲突,则回显示如下:
+<br> 
+<pre><code><br>Finished one cherry-pick.
+# On branch dev
+# Your branch is ahead of 'origin/dev' by 3 commits.
+</code></pre>
+<br>如果存在冲突,则需要解决冲突然后继续,关于如何冲突,请查看如何处理代码冲突小节
+<p></p>
+			</div>
+
+																						<h3 id="text_83152" class="sin_target">如何进行减少提交历史数量以及修改自己的commit中的邮箱</h3>
+<div class="sin_text">
+    					<h5>注:本节中内容来自 https://git-scm.com/book/zh/v2/Git-工具-重写历史 最终解释权归该页面编撰者所有,本页面仅引用以及对内容进行一定的排版,本文档编撰者对本页面内容无版权</h5>
+<p>许多时候，在使用 Git 时，可能会因为某些原因想要修正提交历史。 Git 很棒的一点是它允许你在最后时刻做决定。 你可以在将暂存区内容提交前决定哪些文件进入提交，可以通过 stash 命令来决定不与某些内容工作，也可以重写已经发生的提交就像它们以另一种方式发生的一样。 这可能涉及改变提交的顺序，改变提交中的信息或修改文件，将提交压缩或是拆分，或完全地移除提交 - 在将你的工作成果与他人共享之前。</p>
+<p>在本节中，你可以学到如何完成这些非常有用的工作，这样在与他人分享你的工作成果时你的提交历史将如你所愿地展示出来。</p>
+<h3>修改最后一次提交</h3>
+<p>修改你最近一次提交可能是所有修改历史提交的操作中最常见的一个。 对于你的最近一次提交，你往往想做两件事情：修改提交信息，或者修改你添加、修改和移除的文件的快照。</p>
+<p>如果，你只是想修改最近一次提交的提交信息，那么很简单：<br> </p>
+<pre><code><br> git commit --amend
+</code></pre>
+<br>这会把你带入文本编辑器，里面包含了你最近一条提交信息，供你修改。 当保存并关闭编辑器后，编辑器将会用你输入的内容替换最近一条提交信息。
+<p></p>
+<p>如果你已经完成提交，又因为之前提交时忘记添加一个新创建的文件，想通过添加或修改文件来更改提交的快照，也可以通过类似的操作来完成。 通过修改文件然后运行 git add 或 git rm 一个已追踪的文件，随后运行 git commit –amend 拿走当前的暂存区域并使其做为新提交的快照。</p>
+<p>使用这个技巧的时候需要小心，因为修正会改变提交的 SHA-1 校验和。 它类似于一个小的变基 - 如果已经推送了最后一次提交就不要修正它。</p>
+<h3>修改多个提交信息</h3>
+<p>为了修改在提交历史中较远的提交，必须使用更复杂的工具。 Git 没有一个改变历史工具，但是可以使用变基工具来变基一系列提交，基于它们原来的 HEAD 而不是将其移动到另一个新的上面。 通过交互式变基工具，可以在任何想要修改的提交后停止，然后修改信息、添加文件或做任何想做的事情。 可以通过给 git rebase 增加 -i 选项来交互式地运行变基。 必须指定想要重写多久远的历史，这可以通过告诉命令将要变基到的提交来做到。</p>
+<p>例如，如果想要修改最近三次提交信息，或者那组提交中的任意一个提交信息，将想要修改的最近一次提交的父提交作为参数传递给 git rebase -i命令，即 HEAD~2^ 或 HEAD~3。 记住 ~3 可能比较容易，因为你正尝试修改最后三次提交；但是注意实际上指定了以前的四次提交，即想要修改提交的父提交：<br> </p>
+<pre><code><br> git rebase -i HEAD~3
+</code></pre>
+<br>再次记住这是一个变基命令 - 在 HEAD~3..HEAD 范围内的每一个提交都会被重写，无论你是否修改信息。 不要涉及任何已经推送到中央服务器的提交 - 这样做会产生一次变更的两个版本，因而使他人困惑。
+<p></p>
+<p>运行这个命令会在文本编辑器上给你一个提交的列表，看起来像下面这样：<br> </p>
+<pre><code><br>pick f7f3f6d changed my name a bit
+pick 310154e updated README formatting and added blame
+pick a5f4a0d added cat-file
+
+# Rebase 710f0f8..a5f4a0d onto 710f0f8
+#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#  x, exec = run command (the rest of the line) using shell
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+</code></pre>
+<br>需要重点注意的是相对于正常使用的 log 命令，这些提交显示的顺序是相反的。 运行一次 log 命令，会看到类似这样的东西：
+<br> 
+<pre><code><br>git log --pretty=format:"%h %s" HEAD~3..HEAD
+a5f4a0d added cat-file
+310154e updated README formatting and added blame
+f7f3f6d changed my name a bit
+</code></pre>
+<br>注意其中的反序显示。 交互式变基给你一个它将会运行的脚本。 它将会从你在命令行中指定的提交（HEAD~3）开始，从上到下的依次重演每一个提交引入的修改。 它将最旧的而不是最新的列在上面，因为那会是第一个将要重演的。
+<p></p>
+<p>你需要修改脚本来让它停留在你想修改的变更上。 要达到这个目的，你只要将你想修改的每一次提交前面的 ‘pick’ 改为 ‘edit’。 例如，只想修改第三次提交信息，可以像下面这样修改文件：<br> </p>
+<pre><code><br>edit f7f3f6d changed my name a bit
+pick 310154e updated README formatting and added blame
+pick a5f4a0d added cat-file
+</code></pre>
+<br>当保存并退出编辑器时，Git 将你带回到列表中的最后一次提交，把你送回命令行并提示以下信息：
+<br> 
+<pre><code><br> git rebase -i HEAD~3
+Stopped at f7f3f6d... changed my name a bit
+You can amend the commit now, with
+
+       git commit --amend
+
+Once you’re satisfied with your changes, run
+
+       git rebase --continue
+</code></pre>
+<br>这些指令准确地告诉你该做什么。 输入
+<br> 
+<pre><code><br> git commit --amend
+</code></pre>
+<br>修改提交信息，然后退出编辑器。 然后，运行
+<p></p> 
+<pre><code> git rebase --continue
+</code></pre>
+<p>这个命令将会自动地应用另外两个提交，然后就完成了。 如果需要将不止一处的 pick 改为 edit，需要在每一个修改为 edit 的提交上重复这些步骤。 每一次，Git 将会停止，让你修正提交，然后继续直到完成。</p>
+<h3>重新排序提交</h3>
+<p>也可以使用交互式变基来重新排序或完全移除提交。 如果想要移除 “added cat-file” 提交然后修改另外两个提交引入的顺序，可以将变基脚本从这样：<br> </p>
+<pre><code><br>pick f7f3f6d changed my name a bit
+pick 310154e updated README formatting and added blame
+pick a5f4a0d added cat-file
+</code></pre>
+<br>改为这样：
+<br> 
+<pre><code><br>pick 310154e updated README formatting and added blame
+pick f7f3f6d changed my name a bit
+</code></pre>
+<br>当保存并退出编辑器时，Git 将你的分支带回这些提交的父提交，应用 310154e 然后应用 f7f3f6d，最后停止。 事实修改了那些提交的顺序并完全地移除了 “added cat-file” 提交。
+<p></p>
+<h3>压缩提交</h3>
+<p>通过交互式变基工具，也可以将一连串提交压缩成一个单独的提交。 在变基信息中脚本给出了有用的指令：<br> </p>
+<pre><code><br>#
+# Commands:
+#  p, pick = use commit
+#  r, reword = use commit, but edit the commit message
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#  f, fixup = like "squash", but discard this commit's log message
+#  x, exec = run command (the rest of the line) using shell
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+</code></pre>
+<br>如果，指定 “squash” 而不是 “pick” 或 “edit”，Git 将应用两者的修改并合并提交信息在一起。 所以，如果想要这三次提交变为一个提交，可以这样修改脚本：
+<br> 
+<pre><code><br>pick f7f3f6d changed my name a bit
+squash 310154e updated README formatting and added blame
+squash a5f4a0d added cat-file
+</code></pre>
+<br>当保存并退出编辑器时，Git 应用所有的三次修改然后将你放到编辑器中来合并三次提交信息：
+<br> 
+<pre><code><br># This is a combination of 3 commits.
+# The first commit's message is:
+changed my name a bit
+
+# This is the 2nd commit message:
+
+updated README formatting and added blame
+
+# This is the 3rd commit message:
+
+added cat-file
+</code></pre>
+<br>当你保存之后，你就拥有了一个包含前三次提交的全部变更的提交。
+<p></p>
+<h3>拆分提交</h3>
+<p>拆分一个提交会撤消这个提交，然后多次地部分地暂存与提交直到完成你所需次数的提交。 例如，假设想要拆分三次提交的中间那次提交。 想要将它拆分为两次提交：第一个 “updated README formatting”，第二个 “added blame” 来代替原来的 “updated README formatting and added blame”。 可以通过修改 rebase -i 的脚本来做到这点，将要拆分的提交的指令修改为 “edit”：<br> </p>
+<pre><code><br>pick f7f3f6d changed my name a bit
+edit 310154e updated README formatting and added blame
+pick a5f4a0d added cat-file
+</code></pre>
+<br>然后，当脚本将你进入到命令行时，重置那个提交，拿到被重置的修改，从中创建几次提交。 当保存并退出编辑器时，Git 带你到列表中第一个提交的父提交，应用第一个提交（f7f3f6d），应用第二个提交（310154e），然后让你进入命令行。 那里，可以通过 git reset HEAD^ 做一次针对那个提交的混合重置，实际上将会撤消那次提交并将修改的文件未暂存。 现在可以暂存并提交文件直到有几个提交，然后当完成时运行 git rebase –continue：
+<br> 
+<pre><code><br> git reset HEAD^
+ git add README
+ git commit -m 'updated README formatting'
+ git add lib/simplegit.rb
+ git commit -m 'added blame'
+ git rebase --continue
+</code></pre>
+<br>Git 在脚本中应用最后一次提交（a5f4a0d），历史记录看起来像这样：
+<br> 
+<pre><code><br> git log -4 --pretty=format:"%h %s"
+
+1c002dd added cat-file
+9b29157 added blame
+35cfb2b updated README formatting
+f3cc40e changed my name a bit
+</code></pre>
+<br>再一次，这些改动了所有在列表中的提交的 SHA-1 校验和，所以要确保列表中的提交还没有推送到共享仓库中。
+<p></p>
+<h2>核武器级选项：filter-branch</h2>
+<p>有另一个历史改写的选项，如果想要通过脚本的方式改写大量提交的话可以使用它 - 例如，全局修改你的邮箱地址或从每一个提交中移除一个文件。 这个命令是 filter-branch，它可以改写历史中大量的提交，除非你的项目还没有公开并且其他人没有基于要改写的工作的提交做的工作，你不应当使用它。 然而，它可以很有用。 你将会学习到几个常用的用途，这样就得到了它适合使用地方的想法。</p>
+<h3>从每一个提交移除一个文件</h3>
+<p>这经常发生。 有人粗心地通过 git add . 提交了一个巨大的二进制文件，你想要从所有地方删除它。 可能偶然地提交了一个包括一个密码的文件，然而你想要开源项目。 filter-branch 是一个可能会用来擦洗整个提交历史的工具。 为了从整个提交历史中移除一个叫做 passwords.txt 的文件，可以使用 –tree-filter 选项给 filter-branch：<br> </p>
+<pre><code><br> git filter-branch --tree-filter 'rm -f passwords.txt' HEAD
+Rewrite 6b9b3cf04e7c5686a9cb838c3f36a8cb6a0fc2bd (21/21)
+Ref 'refs/heads/master' was rewritten
+</code></pre>
+<br>–tree-filter 选项在检出项目的每一个提交后运行指定的命令然后重新提交结果。 在本例中，你从每一个快照中移除了一个叫作 passwords.txt 的文件，无论它是否存在。 如果想要移除所有偶然提交的编辑器备份文件，可以运行类似 git filter-branch –tree-filter ’rm -f *~’ HEAD 的命令。
+<p></p>
+<p>最后将可以看到 Git 重写树与提交然后移动分支指针。 通常一个好的想法是在一个测试分支中做这件事，然后当你决定最终结果是真正想要的，可以硬重置 master 分支。 为了让 filter-branch 在所有分支上运行，可以给命令传递 –all 选项。</p>
+<h3>使一个子目录做为新的根目录</h3>
+<p>假设已经从另一个源代码控制系统中导入，并且有几个没意义的子目录（trunk、tags 等等）。 如果想要让 trunk 子目录作为每一个提交的新的项目根目录，filter-branch 也可以帮助你那么做：<br> </p>
+<pre><code><br> git filter-branch --subdirectory-filter trunk HEAD
+Rewrite 856f0bf61e41a27326cdae8f09fe708d679f596f (12/12)
+Ref 'refs/heads/master' was rewritten
+</code></pre>
+<br>现在新项目根目录是 trunk 子目录了。 Git 会自动移除所有不影响子目录的提交。
+<p></p>
+<h3>全局修改邮箱地址</h3>
+<p>另一个常见的情形是在你开始工作时忘记运行 git config 来设置你的名字与邮箱地址，或者你想要开源一个项目并且修改所有你的工作邮箱地址为你的个人邮箱地址。 任何情形下，你也可以通过 filter-branch 来一次性修改多个提交中的邮箱地址。 需要小心的是只修改你自己的邮箱地址，所以你使用 –commit-filter：<br> </p>
+<pre><code><br> git filter-branch --commit-filter '
+        if [ "$GIT_AUTHOR_EMAIL" = "schacon@localhost" ];
+        then
+                GIT_AUTHOR_NAME="Scott Chacon";
+                GIT_AUTHOR_EMAIL="schacon@example.com";
+                git commit-tree "$@";
+        else
+                git commit-tree "$@";
+        fi' HEAD
+</code></pre>
+<br>这会遍历并重写每一个提交来包含你的新邮箱地址。 因为提交包含了它们父提交的 SHA-1 校验和，这个命令会修改你的历史中的每一个提交的 SHA-1 校验和，而不仅仅只是那些匹配邮箱地址的提交。
+<p></p>
+			</div>
+
+																						<h3 id="text_83153" class="sin_target">如何减小仓库体积</h3>
+<div class="sin_text">
+    					<p>因为我们码云平台目前仅提供 1G 的仓库大小，且单文件限制在 100M，如果您的项目中不小心打包进来了比较大的二进制文件，那么仓库很快就会超过我们规定的大小，这时，您需要精简您的仓库以免因为仓库大小超过规定而导致该仓库停止访问，这里给出精简仓库大小的命令:</p>
+<p>查看存储库中的大文件：</p> 
+<pre><code>git rev-list --objects --all | grep -E `git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -10 | awk '{print$1}' | sed ':a;N;$!ba;s/\n/|/g'`
+</code></pre>
+<p>改写历史，去除大文件<br> </p>
+<pre><code><br>git filter-branch --tree-filter 'rm -f path/to/large/files' --tag-name-filter cat -- --all
+git push origin --tags --force
+git push origin --all --force
+</code></pre>
+<p></p>
+<p>并告知所有组员，push 代码前需要 pull rebase，而不是 merge，否则会从该组员的本地仓库再次引入到远程库中，导致项目在此被码云系统屏蔽。</p>
+<p>更加具体的操作可以点击<a href="http://my.oschina.net/jfinal/blog/215624?fromerr=ZTZ6c38X" rel="nofollow">这里</a>查看</p>
+			</div>
+
+																														<h2 id="category_19224">版权以及使用条款</h2>
+																								<h3 id="text_83179" class="sin_target">本站使用说明以及用户条款</h3>
+<div class="sin_text">
+    					<h4>感谢您访问 git.oschina.net（以下简称“本网站”）。</h4>
+<p>本网站由深圳市奥思网络科技有限公司（以下简称“奥思网络”）运行维护。本网站向公众开放，提供基于 git 的代码托管和项目管理服务。 在使用本网站前，敬请您仔细阅读以下各项使用条款（以下简称“本使用条款”）。您对本网站的使用(包括但不限于对本网站的访问、登录，对本网站内容的浏览和使用)，将被视为您自愿承诺接受本声明的约束。如果您对本使用条款的内容不能接受，您应当立即停止使用本网站并迅速离开。</p>
+<h4>本网站的使用</h4>
+<p>奥思网络有限许可您在您的计算机设备上浏览（使用）本网站展示的内容（由本使用条款第2条规定）。</p>
+<h4>知识产权声明</h4>
+<p>本网站，包括(但不仅限于) 文字，内容，软件，录像，音乐，声音，图形，照片，图表，美术设计，图片，名称，标识，商标和/或服务标志（包括已注册和未注册的），以及其他资料（以下简称网站内容）都受到版权法，商标法和一切知识产权公约的保护。本网站内容包括奥思网络所有或控制下的内容和第三方所有或控制下，并授权奥思网络使用的内容。所有代码，文章，讨论等一切构成本网站的元素都可能是受版权保护的作品。您同意遵守所有适用本网站的版权保护法律法规，以及所有本网站包含的补充性的版权说明或限制。本网站的内容均由相应的机构/个人上传、维护。对于本站内容的任何使用请遵守内容所附带的授权协议。如不清楚相应的授权协议请询问上传该内容的机构/个人。</p>
+<p>任何在 git.oschina.net 上注册的账号上传的内容的版权均归上传者所有，上传者承担所有被上传内容的版权责任。奥思网络有权在其拥有的网站上，展示上传者上传到本网站公共区域的内容。</p>
+<h4>个人信息的保护</h4>
+<p>奥思网络尊重访问本网站的任何个人的隐私信息。当您访问本网站的时候可能被要求提供您个人的基本资料(如姓名、电子邮件、电话号码等)，您可以自行选择是否提供。对于您提供的个人信息，奥思网络将根据中华人民共和国相关法律进行保密并严格保管，不会将这些信息以任何方式提供或展示给任何第三方，但下述情况除外：</p>
+<p>(一) 当司法机关或行政机关依照法定程序和法定职权要求本网站披露个人资料时，我们将依法提供相关资料。对于此情况下的任何披露，本网站均得免责；</p>
+<p>(二) 对于任何由黑客攻击、计算机病毒侵入或发作、或政府管制而造成的暂时性关闭等影响网站正常运营的不可抗力事件所造成的个人资料的泄露、丢失、被盗用或被篡改等，本网站均得免责；</p>
+<p>(三) 对于用户将个人密码告知他人或与他人共享注册帐号所导致的任何个人资料泄露，丢失、被盗用或被篡改等,本网站不负任何责任；</p>
+<p>(四) 对于与本网站链接的任何其它网站的个人资料泄露，丢失、被盗用或被篡改等事件，本网站不负任何责任。</p>
+<h4>网站的更新与变更</h4>
+<p>奥思网络提供的本网站上的内容仅为方便您获取信息，奥思网络有权单方面在任何时间，对本网站的内容进行变更或更新，此种变更或更新无需以通知您或任何第三方为前提。您承认并接受上述变更或更新。我们建议您定期访问本网站以尽快获知有关的更新或变更的信息。</p>
+<h4>无担保声明</h4>
+<p>在法律允许的最大限度内，本网站及本网站的内容不包括任何明确或暗示的有关（但不限于）所有权，适销性，质量满意程度，特定用途的适用性，准确性、时效性和完整性，不侵犯知识产权和其它方权利的承诺。</p>
+<p>奥思网络尽其合理的商业努力维护本网站的安全和功能，但不保证本网站上的所有功能正常运作，也不保证本网站连续性地或无故障运行或缺陷被及时更正。</p>
+<p>奥思网络不保证本网站系统适合您的电脑操作系统性能，也不保证本网站或其服务器永不产生故障或没有病毒、木马程序和其他有害程序。奥思网络亦不承担您因上述问题而产生的任何电脑的损坏的责任。</p>
+<p>奥思网络不为您所使用的访问本网站的网络线路和设备的可靠性以及连续性承担责任。</p>
+<h4>禁止盗链</h4>
+<p>奥思网络禁止擅自利用本网站内容的网页构架系统的行为。奥思网络保留断开任何未经授权指向本网站的超文本链接或网页构架系统的权利。</p>
+<h4>项目大小</h4>
+<p>奥思网络允许用户上传项目，规定每个项目的大小上限为1G，禁止大量的外链请求到本网站，并且不允许存放与代码无关的文件，如果代码实在有需要更大，请发邮件(git#oschina.cn)联系我们，说明使用场景和原因进行申请，我们邮件同意后方可上传更大的项目，如果未经允许私自上传大项目、与代码无关的文件或者大量的外链请求，奥思网络保留停止项目的使用以及通知作者备份并删除的权利。</p>
+<h4>终止使用</h4>
+<p>如果您的账户违反当地相关法律法规或网站使用条款，在未经事先通知的情况下，奥思网络有权自行判断并立即终止您对本网站的使用，或者采取措施禁止您对本网站的再次访问。</p>
+<h4>准据法和管辖权</h4>
+<p>本网站内容及本使用条款的解释和适用均适用中华人民共和国法律，由于使用本网站而产生的一切纠纷，除另有约定，均由中华人民共和国(奥思网络所在地)人民法院管辖。</p>
+<h4>继续有效原则</h4>
+<p>如果本使用条款中的部分条款被有关机关认定为无效，则此无效部分并不影响本使用条款其他部分的效力，其他部分仍然有效。</p>
+			</div>
+
+																						<h3 id="text_83180" class="sin_target">版权声明</h3>
+<div class="sin_text">
+    					<p>本文档引用互联网内容部分版权归属为作者本人，其他部分版权归属码云平台。码云平台对本文档内容不做限制，任何个人或单位或组织均可以引用本文档内容而无需经过码云平台同意，但需要保留出处。任何人对本文档进行拷贝，修改而生成自己的文档均无需码云平台的同意，但需要保留出处。</p>
+			</div>
+
+																																						<h2 id="text_83141" class="sin_target">鸣谢以及关于文档的维护</h2>
+<div class="sin_text">
+    					<p>本文档git相关部分编撰参考廖雪峰先生的git的教程，具体请参考廖雪峰先生的<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" rel="nofollow">官方博客</a> 本文档已经覆盖了日常工作中绝大部分的使用场景，如有未覆盖的地方，请自行通过搜索引擎搜索并联系文档管理员将您遇上的问题以及解决办法添加到FAQ中，谢谢</p>
+			</div>
+
+																																		<h2 id="text_83142" class="sin_target">继续阅读</h2>
+<div class="sin_text">
+    					<p>你可以点击这里阅读权威的 git 书籍<a href="http://git.oschina.net/progit" rel="nofollow">ProGit</a></p>
+<p>以下为收集的开源中国社区热心网友制作的码云（Gitee.com）跟各种 IDE，软件的集成办法，可以点击查看：</p> 
+<ul> 
+ <li><p><a href="https://git-scm.com/book/zh/v2" rel="nofollow">git官方中文文档</a> 推荐阅读!</p></li> 
+ <li><p><a href="http://my.oschina.net/songxinqiang/blog/194203" rel="nofollow">eclipse中egit插件使用-图文并茂-详细</a></p></li> 
+ <li><p><a href="http://my.oschina.net/gal/blog/141442" rel="nofollow">Visual Studio 2012连接到osc@git</a></p></li> 
+ <li><p><a href="http://my.oschina.net/icelily/blog/141342" rel="nofollow">TortoiseGit配合msysGit在Git@OSC代码托管的傻瓜教程</a></p></li> 
+ <li><p><a href="http://my.oschina.net/kzhou/blog/132146" rel="nofollow">利用eclipse的git插件EGit与git@osc交互</a></p></li> 
+ <li><p><a href="http://my.oschina.net/dxqr/blog/134811" rel="nofollow">Git初体验</a></p></li> 
+ <li><p><a href="http://my.oschina.net/longxuu/blog/141699" rel="nofollow">在win7系统下使用TortoiseGit(乌龟git)简单操作Git@OSC</a></p></li> 
+ <li><p><a href="http://my.oschina.net/zxs/blog/142544" rel="nofollow">Xcode连接git @ osc</a></p></li> 
+ <li><p><a href="http://my.oschina.net/kzhou/blog/150290" rel="nofollow">git@osc(git)中team开发、fork和pull request的用法</a></p></li> 
+ <li><p><a href="http://my.oschina.net/u/861562/blog/151975" rel="nofollow">eclipse的git插件整合Git@OSC</a></p></li> 
+ <li><p><a href="http://my.oschina.net/China2012/blog/174874" rel="nofollow">Eclipse使用EGit管理git@OSC项目</a></p></li> 
+ <li><p><a href="http://www.oschina.net/question/82993_133520" rel="nofollow">如何导入外部Git仓库到中国源代码托管平台（Git@OSC）</a></p></li> 
+ <li><p><a href="http://git.oschina.net/oschina/git-osc/issues/2586" rel="nofollow">https 方式使用Git@OSC设置密码的方式</a></p></li> 
+ <li><p><a href="http://blog.csdn.net/riven_wn/article/details/45332713" rel="nofollow">sourcetree使用git@osc教程</a></p></li> 
+ <li><p><a href="https://netbeans.org/kb/docs/ide/git_zh_CN.html?print=yes" rel="nofollow">Netbeans使用git教程</a></p></li> 
+</ul>
+			</div>
+
+																					
+				  		<div class="sin_info" style="margin-top: 10px;">
+	  			码云拥有唯一最终解释权
+	  		</div>
+	  				</div>
+		<div class="clear"></div>
+	</div>
+	<div id="bottom_begin"></div>
+	<div class="sin_footer">
+		<div>
+			Powered by <a href="http://www.oschina.net" target="_blank">开源中国</a>
+		</div>
+	</div>
+	<script>
+		//计算图片的真实大小，如果超过编辑区域，则进行限制
+		var resizePicWidth = function(pic_width){
+			var imgs = document.getElementsByTagName("img");
+            var j=0;
+			for(var i=0;i<imgs.length;i++){
+                var realWidth;	//真实的宽度
+                var realHeight;		//真实的高度
+                //这里做下说明，$("<img/>")这里是创建一个临时的img标签，类似js创建一个new Image()对象！
+				var newImg = new Image();
+				newImg.onload=function() {
+                    realWidth = imgs[j].width;
+                    realHeight = imgs[j].height;
+                    //如果真实的宽度大于规定的宽度就按照100%显示
+                    if(realWidth>=pic_width){
+						imgs[j].style.width=(pic_width) + "px";
+                    } else{//如果小于浏览器的宽度按照原尺寸显示
+						imgs[j].style.width=realWidth+'px';
+                    }
+                    j++;
+                }
+				newImg.src=imgs[j].src;
+			}
+
+		}
+		var currentNode = null;
+		window.onscroll=function(){
+            var h = document.getElementById("top_end").getBoundingClientRect().top;
+            if(h<=0){
+				document.getElementById("sin_navi_id").className='sin_navi sin_navi_nomove';
+				document.getElementById("sin_content_id").className='sin_content sin_content_mar';
+            }else{
+                document.getElementById("sin_navi_id").className='sin_navi';
+                document.getElementById("sin_content_id").className='sin_content';
+            }
+            comLayout();
+            var arr= new Array();
+            var index = 0;
+			var sinTargets = getClass("h2","sin_target");
+			for(var i=0;i<sinTargets.length;i++){
+                var th = sinTargets[i].getBoundingClientRect().top - 80;	                if(th<=0){
+                    arr[index] = new Array();
+                    arr[index][0] = sinTargets[i].getAttribute("id");
+                    arr[index][1] = th;
+                    index++;
+                }
+			}
+
+            var curr = bubbleSort(arr);
+            if(curr!=null && curr!=currentNode){
+				var oldCurrIds = getClass("li","sin_navi_current");
+                if(oldCurrIds && oldCurrIds[0]){
+                    var oid=oldCurrIds[0].getAttribute("id");
+                    document.getElementById(oid).className=" ";
+                }
+				document.getElementById("navi_"+curr).className="sin_navi_current";
+                currentNode = curr;
+            }
+        }
+		
+		
+	    window.onresize = function(){
+            comLayout();
+		}
+
+        var ch = document.getElementById("sin_navi_id").offsetHeight;
+
+	    function comLayout() {
+	        var h = document.documentElement.clientHeight;
+	    	if(ch<h){
+	    		return;
+	    	}
+		    var i = document.getElementById("bottom_begin").getBoundingClientRect().top;
+	        if(i<h){
+                document.getElementById("sin_navi_id").style.height=(i+"px");
+		   	}else{
+                document.getElementById("sin_navi_id").style.height=(h+"px");
+		   	}
+	    }
+	    
+	    function bubbleSort(arr){
+	    	var i= arr.length;
+	    	if(i<=0){
+	    		return null;
+	    	}
+	    	var j;
+			var tempExchangVal;
+			while(i>0){
+				for(j=0;j<i-1;j++){
+					if(arr[j][1] < arr[j+1][1]){
+						tempExchangVal=arr[j];
+						arr[j]=arr[j+1];
+						arr[j+1]=tempExchangVal;
+					}
+				}
+				i--;
+			}
+			return arr[0][0];
+		}
+	    comLayout();
+	    resizePicWidth(680);
+
+        function getClass(tagname, className) { //tagname指元素，className指class的值
+            //判断浏览器是否支持getElementsByClassName，如果支持就直接的用
+            if (document.getElementsByClassName) {
+                return document.getElementsByClassName(className);
+            }
+            else {    //当浏览器不支持getElementsByClassName的时候用下面的方法
+                var tagname = document.getElementsByTagName(tagname);  //获取指定元素
+                var tagnameAll = [];     //这个数组用于存储所有符合条件的元素
+                for (var i = 0; i < tagname.length; i++) {     //遍历获得的元素
+                    if (tagname[i].className == className) {     //如果获得的元素中的class的值等于指定的类名，就赋值给tagnameAll
+                        tagnameAll[tagnameAll.length] = tagname[i];
+                    }
+                }
+                return tagnameAll;
+            }
+        }
+	</script>
+</body>
+</html>	
+<!-- Generated by OsChina.NET (init:0[ms],page:632[ms],ip:183.2.198.167) -->

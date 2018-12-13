@@ -1,0 +1,43 @@
+{
+    "attachment_folder": "_v_attachments",
+    "created_time": "2018-07-18T05:47:10Z",
+    "files": [
+    ],
+    "image_folder": "",
+    "recycle_bin_folder": "_v_recycle_bin",
+    "sub_directories": [
+        {
+            "name": "HTML"
+        },
+        {
+            "name": "CSS"
+        },
+        {
+            "name": "JSP "
+        },
+        {
+            "name": "Servlet"
+        },
+        {
+            "name": "XML"
+        },
+        {
+            "name": "JavaScript"
+        },
+        {
+            "name": "Ajax"
+        },
+        {
+            "name": "Json"
+        },
+        {
+            "name": "JS"
+        },
+        {
+            "name": "Vue.js、"
+        }
+    ],
+    "tags": [
+    ],
+    "version": "1"
+}

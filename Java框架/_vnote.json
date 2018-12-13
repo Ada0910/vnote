@@ -1,0 +1,34 @@
+{
+    "attachment_folder": "_v_attachments",
+    "created_time": "2018-07-18T03:47:32Z",
+    "files": [
+    ],
+    "image_folder": "",
+    "recycle_bin_folder": "_v_recycle_bin",
+    "sub_directories": [
+        {
+            "name": "Spring4"
+        },
+        {
+            "name": "Maven"
+        },
+        {
+            "name": "MVC"
+        },
+        {
+            "name": "Struts2"
+        },
+        {
+            "name": "SpringMVC "
+        },
+        {
+            "name": "MyBatis"
+        },
+        {
+            "name": "ssm框架整合思路"
+        }
+    ],
+    "tags": [
+    ],
+    "version": "1"
+}

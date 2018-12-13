@@ -1,0 +1,46 @@
+{
+    "created_time": "2018-07-19T14:38:02Z",
+    "files": [
+        {
+            "attachment_folder": "1532351671_32017",
+            "attachments": [
+            ],
+            "created_time": "2018-07-19T14:38:44Z",
+            "modified_time": "2018-07-19T14:38:44Z",
+            "name": "SpringMVC入门.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "1532498686_26077",
+            "attachments": [
+                {
+                    "name": "SpringMVC_day01.pdf"
+                },
+                {
+                    "name": "SpringMVC_day02.pdf"
+                },
+                {
+                    "name": "SpringMVC参考.docx"
+                },
+                {
+                    "name": "SpringMVC第二天课堂笔记.docx"
+                },
+                {
+                    "name": "springmvc第一天课堂笔记.docx"
+                },
+                {
+                    "name": "springmvc架构.pptx"
+                }
+            ],
+            "created_time": "2018-07-25T03:36:57Z",
+            "modified_time": "2018-07-25T03:36:57Z",
+            "name": "SpringMVC思路.md",
+            "tags": [
+            ]
+        }
+    ],
+    "sub_directories": [
+    ],
+    "version": "1"
+}
