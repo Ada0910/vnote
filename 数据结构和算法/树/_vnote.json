@@ -1,0 +1,48 @@
+{
+    "created_time": "2018-12-17T02:17:21Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2018-12-17T02:17:29Z",
+            "modified_time": "2018-12-17T02:18:31Z",
+            "name": "从前序与中序遍历序列构造二叉树.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2018-12-17T02:28:22Z",
+            "modified_time": "2018-12-17T02:29:05Z",
+            "name": "二叉树的层次遍历.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2018-12-17T02:30:00Z",
+            "modified_time": "2018-12-17T02:30:29Z",
+            "name": " 二叉树的锯齿形层次遍历.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2018-12-17T02:31:00Z",
+            "modified_time": "2018-12-17T02:31:00Z",
+            "name": "二叉树的最大深度.md",
+            "tags": [
+            ]
+        }
+    ],
+    "sub_directories": [
+    ],
+    "version": "1"
+}
