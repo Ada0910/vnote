@@ -17,6 +17,9 @@
         },
         {
             "name": "Oracle"
+        },
+        {
+            "name": "SQL"
         }
     ],
     "tags": [
