@@ -7,10 +7,10 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "JVM"
+            "name": "基本概念"
         },
         {
-            "name": "基本概念"
+            "name": "JVM"
         }
     ],
     "tags": [

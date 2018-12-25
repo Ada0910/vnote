@@ -7,16 +7,10 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "Spring4"
-        },
-        {
-            "name": "Maven"
-        },
-        {
-            "name": "MVC"
-        },
-        {
             "name": "Struts2"
+        },
+        {
+            "name": "Spring4"
         },
         {
             "name": "SpringMVC "
@@ -25,7 +19,10 @@
             "name": "MyBatis"
         },
         {
-            "name": "ssm框架整合思路"
+            "name": "MVC"
+        },
+        {
+            "name": "Maven"
         }
     ],
     "tags": [

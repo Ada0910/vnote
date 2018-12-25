@@ -13,6 +13,9 @@
             "name": "CSS"
         },
         {
+            "name": "JavaScript"
+        },
+        {
             "name": "JSP "
         },
         {
@@ -22,19 +25,13 @@
             "name": "XML"
         },
         {
-            "name": "JavaScript"
-        },
-        {
             "name": "Ajax"
         },
         {
             "name": "Json"
         },
         {
-            "name": "JS"
-        },
-        {
-            "name": "Vue.js、"
+            "name": "Vue.js"
         }
     ],
     "tags": [

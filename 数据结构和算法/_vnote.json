@@ -7,19 +7,25 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "动态规划"
+            "name": "树"
         },
         {
-            "name": "排序算法"
+            "name": "栈"
         },
         {
             "name": "数组"
         },
         {
-            "name": "树"
+            "name": "链表"
         },
         {
             "name": "字符串"
+        },
+        {
+            "name": "动态规划"
+        },
+        {
+            "name": "排序算法"
         },
         {
             "name": "回溯算法"
@@ -29,9 +35,6 @@
         },
         {
             "name": "贪心算法"
-        },
-        {
-            "name": "栈"
         }
     ],
     "tags": [

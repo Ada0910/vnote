@@ -7,19 +7,19 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "Mysql"
+            "name": "数据库的基础操作"
         },
         {
-            "name": "数据库的基础操作"
+            "name": "SQL"
+        },
+        {
+            "name": "Mysql"
         },
         {
             "name": "Redis"
         },
         {
             "name": "Oracle"
-        },
-        {
-            "name": "SQL"
         }
     ],
     "tags": [

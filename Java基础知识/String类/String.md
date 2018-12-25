@@ -62,3 +62,9 @@ System.out.println(s4 == s5);  // true
 Java 虚拟机将堆划分成新生代、老年代和永久代（PermGen Space）。在 Java 6 之前，字符串常量池被放在永久代中，而在 Java 7 时，它被放在堆的其它位置。这是因为永久代的空间有限，如果大量使用字符串的场景下会导致 OutOfMemoryError 错误。
 
 > [What is String interning?](https://stackoverflow.com/questions/10578984/what-is-string-interning) </br> [深入解析 String#intern](https://tech.meituan.com/in_depth_understanding_string_intern.html)
+# 2. StringBuffer
+
+length()方法和capacity()方法都是获取StringBuffer的长度。
+
+- length()返回字符串的实际长度； 
+- capacity()返回字符串所占容器的总大小。 
