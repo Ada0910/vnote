@@ -7,6 +7,9 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
+            "name": "线程"
+        },
+        {
             "name": "Java基础知识"
         },
         {
@@ -26,9 +29,6 @@
         },
         {
             "name": "类总结"
-        },
-        {
-            "name": "线程"
         }
     ],
     "tags": [
