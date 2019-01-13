@@ -20,6 +20,9 @@
         },
         {
             "name": "Maven"
+        },
+        {
+            "name": "SpringBoot"
         }
     ],
     "tags": [
