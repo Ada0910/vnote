@@ -7,19 +7,19 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "Spring4.0"
-        },
-        {
-            "name": "SpringMVC "
-        },
-        {
-            "name": "MyBatis"
-        },
-        {
             "name": "MVC"
         },
         {
             "name": "Maven"
+        },
+        {
+            "name": "SpringMVC"
+        },
+        {
+            "name": "Spring4.0"
+        },
+        {
+            "name": "MyBatis"
         },
         {
             "name": "SpringBoot"

@@ -7,10 +7,10 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "基本概念"
+            "name": "JVM"
         },
         {
-            "name": "JVM"
+            "name": "基本概念"
         },
         {
             "name": "设计模式"

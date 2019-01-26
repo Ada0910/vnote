@@ -7,10 +7,13 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "线程"
+            "name": "基础"
         },
         {
-            "name": "Java基础知识"
+            "name": "其他"
+        },
+        {
+            "name": "线程"
         },
         {
             "name": "Java特性"
@@ -22,16 +25,16 @@
             "name": "数据类型"
         },
         {
-            "name": "String类"
-        },
-        {
             "name": "集合类"
         },
         {
-            "name": "类总结"
+            "name": "常见类"
         },
         {
-            "name": "常见类"
+            "name": "String类"
+        },
+        {
+            "name": "类总结"
         }
     ],
     "tags": [
