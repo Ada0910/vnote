@@ -18,14 +18,14 @@ Spring进行事务管理的时候，首先平台事务管理器根据**事务定
 Spring的七种传播行为：
 
 保证多个操作在同一个事务之中
-**PROPAGATION_REQUIRED(propagetion_required)** 默认值：如果a中有事务，使用a中的事务，如果a没有，创建一个新的事务，将操作包含进来
-PROPAGATION_SUPPORTS ：支持事务，如果a中有事务，使用a中的事务，如果a没有事务，不适用事务
-PROPAGATION_MANDATORY：如果a中有事务，使用a中事务，如果a中没有事务，抛出异 常
+`**PROPAGATION_REQUIRED(propagetion_required)**` 默认值：如果a中有事务，使用a中的事务，如果a没有，创建一个新的事务，将操作包含进来
+`PROPAGATION_SUPPORTS ：`支持事务，如果a中有事务，使用a中的事务，如果a没有事务，不适用事务
+`PROPAGATION_MANDATORY：`如果a中有事务，使用a中事务，如果a中没有事务，抛出异 常
 
 保证多个操作不在同一个事务之中
-**PROPAGATION_REQUIRES_NEW**：如果a中有事务，将a中的事务挂起，创建新事务，只包含自身操作，如果a中没有事务，创建一个新事务，包含自身操作
-PROPAGATION_NOT_SUPPORTED：如果a中有事务，将a中的事务挂起，不会使用事务
-PROPAGATION_NEVER：如果a中有事务，直接报异常
+`**PROPAGATION_REQUIRES_NEW**`：如果a中有事务，将a中的事务挂起，创建新事务，只包含自身操作，如果a中没有事务，创建一个新事务，包含自身操作
+`PROPAGATION_NOT_SUPPORTED`：如果a中有事务，将a中的事务挂起，不会使用事务
+`PROPAGATION_NEVER`  ： 如果a中有事务，直接报异常
 
 嵌套式事务
 **PROPAGATION_NESTED**：嵌套事务，如果a中有事务，按照a的事务执行，执行完成后，设置一个保存点，执行b操作，如果没有异常，执行通过，如果有异常，可以选择回滚到最初始位置或者回滚到保存点
