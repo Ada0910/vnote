@@ -294,7 +294,16 @@ SELECT AVG(DISTINCT col1) AS avg_col
 FROM mytable
 ```
 
-# 13. 分组
+# 13. 索引
+```
+CREATE UNIQUE INDEX 索引名称
+ON 表名称 (列名称) 
+
+如果降序的话：
+CREATE INDEX PersonIndex
+ON Person (LastName DESC) 
+```
+# 14. 分组
 
 分组就是把具有相同的数据值的行放在同一组中。
 
@@ -334,7 +343,7 @@ HAVING COUNT(*) >= 2;
 3. NULL 的行会单独分为一组；
 4. 大多数 SQL 实现不支持 GROUP BY 列具有可变长度的数据类型。
 
-# 14. 子查询
+# 15. 子查询
 
 子查询中只能返回一个字段的数据。
 
@@ -358,7 +367,7 @@ FROM Customers
 ORDER BY cust_name;
 ```
 
-# 15. 连接
+# 16. 连接
 
 连接用于连接多个表，使用 JOIN 关键字，并且条件语句使用 ON 而不是 WHERE。
 
@@ -366,7 +375,7 @@ ORDER BY cust_name;
 
 可以用 AS 给列名、计算字段和表名取别名，给表名取别名是为了简化 SQL 语句以及连接相同表。
 
-## 15.1. 内连接
+## 16.1. 内连接
 
 内连接又称等值连接，使用 INNER JOIN 关键字。
 
@@ -386,7 +395,7 @@ where A.key = B.key
 
 在没有条件语句的情况下返回笛卡尔积。
 
-## 15.2. 自连接
+## 16.2. 自连接
 
 自连接可以看成内连接的一种，只是连接的表是自身而已。
 
@@ -414,7 +423,7 @@ where e1.department = e2.department
 
 连接一般比子查询的效率高。
 
-## 15.3. 自然连接
+## 16.3. 自然连接
 
 自然连接是把同名列通过等值测试连接起来的，同名列可以有多个。
 
@@ -425,7 +434,7 @@ select *
 from employee natural join department;
 ```
 
-## 15.4. 外连接
+## 16.4. 外连接
 
 外连接保留了没有关联的那些行。分为左外连接，右外连接以及全外连接，左外连接就是保留左表没有关联的行。
 
@@ -447,7 +456,7 @@ on Customers.cust_id = Orders.curt_id
 group by Customers.cust_id;
 ```
 
-# 16. 组合查询
+# 17. 组合查询
 
 使用  **UNION**  来组合两个查询，如果第一个查询返回 M 行，第二个查询返回 N 行，那么组合查询的结果为 M+N 行。
 
@@ -467,7 +476,7 @@ FROM mytable
 WHERE col =2;
 ```
 
-# 17. 视图
+# 18. 视图
 
 视图是虚拟的表，本身不包含数据，也就不能对其进行索引操作。对视图的操作和对普通表的操作一样。
 
@@ -485,17 +494,17 @@ FROM mytable
 WHERE col5 = val;
 ```
 
-# 18. 存储过程
+# 19. 存储过程
 
 存储过程可以看成是对一系列 SQL 操作的批处理；
 
-## 18.1. 使用存储过程的好处
+## 19.1. 使用存储过程的好处
 
 1. 代码封装，保证了一定的安全性；
 2. 代码复用；
 3. 由于是预先编译，因此具有很高的性能。
 
-## 18.2. 创建存储过程
+## 19.2. 创建存储过程
 
 命令行中创建存储过程需要自定义分隔符，因为命令行是以 ; 为结束符，而存储过程中也包含了分号，因此会错误把这部分分号当成是结束符，造成语法错误。
 
@@ -524,7 +533,7 @@ call myprocedure(@ret);
 select @ret;
 ```
 
-# 19. 游标
+# 20. 游标
 
 在存储过程中使用游标可以对一个结果集进行移动遍历。
 
@@ -560,7 +569,7 @@ create procedure myprocedure(out ret int)
  delimiter ;
 ```
 
-# 20. 触发器
+# 21. 触发器
 
 触发器会在某个表执行以下语句时而自动执行：DELETE、INSERT、UPDATE
 
@@ -580,7 +589,7 @@ UPDATE 触发器包含一个名为 NEW 和一个名为 OLD 的虚拟表，其中
 可以使用触发器来进行审计跟踪，把修改记录到另外一张表中。
 
 MySQL 不允许在触发器中使用 CALL 语句 ，也就是不能调用存储过程。
-# 21. 事务处理
+# 22. 事务处理
 
 基本术语：
 
@@ -607,7 +616,7 @@ ROLLBACK TO delete1
 COMMIT
 ```
 
-# 22. 字符集
+# 23. 字符集
 
 基本术语：
 
@@ -631,7 +640,7 @@ FROM mytable
 ORDER BY col COLLATE latin1_general_ci;
 ```
 
-# 23. 权限管理
+# 24. 权限管理
 
 MySQL 的账户信息保存在 mysql 这个数据库中。
 
@@ -640,7 +649,7 @@ USE mysql;
 SELECT user FROM user;
 ```
 
-## 23.1. 创建账户
+## 24.1. 创建账户
 
 ```sql
 CREATE USER myuser IDENTIFIED BY 'mypassword';
@@ -648,25 +657,25 @@ CREATE USER myuser IDENTIFIED BY 'mypassword';
 
 新创建的账户没有任何权限。
 
-## 23.2. 修改账户名
+## 24.2. 修改账户名
 
 ```sql
 RENAME myuser TO newuser;
 ```
 
-## 23.3. 删除账户
+## 24.3. 删除账户
 
 ```sql
 DROP USER myuser;
 ```
 
-## 23.4. 查看权限
+## 24.4. 查看权限
 
 ```sql
 SHOW GRANTS FOR myuser;
 ```
 
-## 23.5. 授予权限
+## 24.5. 授予权限
 
 ```sql
 GRANT SELECT, INSERT ON mydatabase.* TO myuser;
@@ -674,7 +683,7 @@ GRANT SELECT, INSERT ON mydatabase.* TO myuser;
 
 账户用 username@host 的形式定义，username@% 使用的是默认主机名。
 
-## 23.6. 删除权限
+## 24.6. 删除权限
 
 ```sql
 REVOKE SELECT, INSERT ON mydatabase.* FROM myuser;
@@ -688,7 +697,7 @@ GRANT 和 REVOKE 可在几个层次上控制访问权限：
 - 特定的列；
 - 特定的存储过程。
 
-## 23.7. 更改密码
+## 24.7. 更改密码
 
 必须使用 Password() 函数
 
