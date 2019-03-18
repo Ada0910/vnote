@@ -1,4 +1,30 @@
-## 1. equals()
+# 1. 预览
+```java
+public final native Class<?> getClass()
+
+public native int hashCode()
+
+public boolean equals(Object obj)
+
+protected native Object clone() throws CloneNotSupportedException
+
+public String toString()
+
+public final native void notify()
+
+public final native void notifyAll()
+
+public final native void wait(long timeout) throws InterruptedException
+
+public final void wait(long timeout, int nanos) throws InterruptedException
+
+public final void wait() throws InterruptedException
+
+protected void finalize() throws Throwable {}
+
+```
+# 2. 部分方法详解
+## 2.1. equals()
 
 **1. equals() 与 == 的区别** 
 
@@ -93,7 +119,7 @@ equals()
 加深理解：（比如）
 - String s="abce"是一种非常特殊的形式,和new 有本质的区别。它是java中唯一不需要new 就可以产生对象的途径。以String s="abce";形式赋值在java中叫直接量,它是在常量池中而不是象new一样放在压缩堆中。这种形式的字符串，在JVM内部发生字符串拘留，即当声明这样的一个字符串后，JVM会在常量池中先查找有有没有一个值为"abcd"的对象,如果有,就会把它赋给当前引用.即原来那个引用和现在这个引用指点向了同一对象,如果没有,则在常量池中新创建一个"abcd",下一次如果有String s1 = "abcd";又会将s1指向"abcd"这个对象,即以这形式声明的字符串,只要值相等,任何多个引用都指向同一对象.而String s = new String("abcd");和其它任何对象一样.每调用一次就产生一个对象，只要它们调用。
 - 也可以这么理解: String str = "hello"; 先在内存中找是不是有"hello"这个对象,如果有，就让str指向那个"hello".如果内存里没有"hello"，就创建一个新的对象保存"hello". String str=new String ("hello") 就是不管内存里是不是已经有"hello"这个对象，都新建一个对象保存"hello"
-## 2. hashCode()
+## 2.2. hashCode()
 
 hasCode() 返回散列值，而 equals() 是用来判断两个实例是否相等。相等的两个实例散列值一定要相同，但是散列值相同的两个实例不一定相等。
 
@@ -126,7 +152,7 @@ public int hashCode() {
 }
 ```
 
-## 3. toString()
+## 2.3. toString()
 
 默认返回 ToStringExample@4554617c 这种形式，其中 @ 后面的数值为散列码的无符号十六进制表示。
 
@@ -149,7 +175,7 @@ System.out.println(example.toString());
 ToStringExample@4554617c
 ```
 
-## 4. clone()
+## 2.4. clone()
 
 **1. cloneable** 
 
