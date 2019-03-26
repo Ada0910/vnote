@@ -7,4 +7,5 @@ https://github.com/MicrosoftArchive/redis/releases
 ```
 redis-server.exe redis.windows.conf 
 ```
+![](_v_images/_1553492088_12374.png)
 ![](_v_images/_1541412491_9357.png)
