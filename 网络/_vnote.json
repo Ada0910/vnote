@@ -7,10 +7,22 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "fiddler抓包"
+            "name": "网络基础"
         },
         {
-            "name": "网络基础"
+            "name": "Socket编程"
+        },
+        {
+            "name": "进程通信"
+        },
+        {
+            "name": "线程通信"
+        },
+        {
+            "name": "线程安全"
+        },
+        {
+            "name": "线程同步"
         }
     ],
     "tags": [
