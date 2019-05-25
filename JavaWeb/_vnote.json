@@ -35,6 +35,12 @@
         },
         {
             "name": "Vue"
+        },
+        {
+            "name": "Thymeleaf"
+        },
+        {
+            "name": "WebJars"
         }
     ],
     "tags": [
