@@ -1,3 +1,4 @@
+vnote_backup_file_826537664 D:/Notes/vnote/网络/网络基础/TCP、UDP.md
 # 1. TCP/IP传输协议
 　　在TCP/IP模型中，传输层的功能是使源端主机和目标端主机上的对等实体可以进行会话。在传输层定义了两种服务质量不同的协议。即：传输控制协议TCP（transmission control protocol）和用户数据报协议UDP（user datagram protocol）。
 　![](_v_images/_1553915914_12189.png)
