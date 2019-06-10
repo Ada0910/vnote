@@ -34,12 +34,6 @@
             "name": "Json"
         },
         {
-            "name": "Vue"
-        },
-        {
-            "name": "Thymeleaf"
-        },
-        {
             "name": "WebJars"
         }
     ],
