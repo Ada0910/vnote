@@ -74,3 +74,16 @@ public class TestClass {
 ![](_v_images/_1552922805_18529.png)
 
 ![](_v_images/_1552922821_9633.png)
+
+# 3. lombok总结
+@NotNull 作用在方法参数上的注解，用于自动生成空值参数检查。
+@Cleanup 作用在局部变量上，在作用域结束时会自动调用close方法释放资源。
+@Getter 作用在字段上，会自动生成字段的Getter；作用在类上，会自动生成该类所有非静态字段的Getter，还能控制Getter的访问级别
+@Setter 基本同上。
+@ToString 类注解，自动生成类的toString方法，可以做一些定制，比如不使用某个字段，不调用Getters等。
+@EqualsAndHashCode 类注解，自动生成类中所有非静态非瞬时字段的equals方法和hashCode方法。
+@NoArgsConstructor 类注解，自动生成一个无参构造函数。
+@AllArgsConstructor 类注解，生成一个初始化所有字段的构造函数。
+@RequiredArgsConstructor 类注解，为final字段和标记了@NotNull的字段生成构造函数。
+@Data 类注解，相当于同时应用了@Getter、@Setter、@ToString、@EqualsAndHashCode、@RequiredArgsConstructor。如果已经定义了一个构造方法，就不会再自动生成构造方法了。
+@Value 类注解，和@Data类似，但是用于不可变类型。生成的类和所有字段都设置为final，所有字段都为private，自动生成Getter但是没有Setter，会生成初始化所有字段的构造函数。相当于同时应用了final @ToString、 @EqualsAndHashCode、 @AllArgsConstructor 、@FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)和 @Getter。
