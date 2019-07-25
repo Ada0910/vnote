@@ -23,6 +23,9 @@
         },
         {
             "name": "SpringBoot"
+        },
+        {
+            "name": "Hibernate"
         }
     ],
     "tags": [
