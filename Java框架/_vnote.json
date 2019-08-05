@@ -23,6 +23,9 @@
         },
         {
             "name": "SpringBoot"
+        },
+        {
+            "name": "SpringCloud"
         }
     ],
     "tags": [
