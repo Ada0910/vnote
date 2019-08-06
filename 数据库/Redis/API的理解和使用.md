@@ -116,4 +116,77 @@ getrange key start end
 ```
 ![](_v_images/_1565019333_16382.png)
 ## 2.2. 内部编码
+- int ：8个字节的长整型
+- embstr：小于等于39个字节的字符串
+- raw：大于39个字节的字符串
 ## 2.3. 使用场景
+- 缓存功能
+- 计数
+- 共享session
+- 限速
+
+# 3. 哈希
+## 3.1. 命令
+- 设置值
+```
+hset key xxx  xxx
+```
+- 获取值
+```
+hget key  xxx
+```
+![](_v_images/_1565101726_968.png)
+
+
+- 删除field
+```
+hdel key field [field ...]
+```
+![](_v_images/_1565102146_7189.png)
+- 计算field
+```
+hlen key 
+```
+![](_v_images/_1565102373_27838.png)
+- 批量设置或者获取field-value
+```
+hmget key field [...] 
+hmset key value [...]
+```
+- 判断field是否存在
+```
+hexitsts key field 
+```
+![](_v_images/_1565102491_14146.png)
+- 获取所有的field
+```
+hkeys key
+```
+- 获取所有的value
+```
+hvals key 
+```
+![](_v_images/_1565102709_18092.png)
+- 获取所有的field-value
+```
+hgetall key
+```
+![](_v_images/_1565102734_7742.png)
+- hincrby &&hincrbyfloat
+```
+hincrby key field
+hincrbyfloat key field 
+```
+- 计算value的字符串长度(3.2以上支持)
+```
+hstrlen key field
+```
+## 3.2. 内部编码
+- ziplist (压缩列表)
+- hashtable(哈希表)
+## 3.3. 使用情景
+
+# 4. 列表
+## 4.1. 命令
+## 4.2. 内部编码
+## 4.3. 使用情景
