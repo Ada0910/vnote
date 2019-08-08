@@ -278,8 +278,9 @@ brpop key [key ...] timeout
 ```
 object encoding key 
 ```
-## 4.3. 使用场景## 4.2. 内部编码
-## 4.4. 使用情景
+## 4.3. 使用场景
+## 4.4. 内部编码
+## 4.5. 使用情景
 - 消息队列
 - 文章列表
 - 开发选择
@@ -291,8 +292,70 @@ object encoding key
 ```
 # 5. 集合
 ## 5.1. 命令
+### 5.1.1. 集合内操作
+- 添加元素
+```
+sadd key element[...]
+```
+![](_v_images/_1565187081_25303.png)
+
+- 删除元素
+```
+srem key element[...]
+```
+![](_v_images/_1565187192_21829.png)
+- 计算元素个数
+```
+scard key
+```
+![](_v_images/_1565187231_12164.png)
+- 判断元素是否在集合内
+```
+sismember key element
+```
+![](_v_images/_1565187299_16336.png)
+- 随机从集合返回指定个数元素
+```
+srandmember key [count]
+```
+![](_v_images/_1565187445_26306.png)
+- 从集合随机弹出元素
+```
+ spop key
+```
+![](_v_images/_1565187581_2968.png)
+- 获取所有元素
+```
+smembers key
+```
+![](_v_images/_1565187623_11395.png)
+### 5.1.2. 集合间操作
+- 交集
+```
+sinter key [...]
+```
+![](_v_images/_1565188223_17968.png)
+- 并集
+```
+sunion key [....]
+```
+![](_v_images/_1565188240_17356.png)
+- 差集
+```
+sdiff key [...]
+```
+![](_v_images/_1565188269_27457.png)
+- 保存
+```
+sinterstore destination key [...]
+sunionstore destination key [...]
+sdiffstore destination  key [...] 
+```
 ## 5.2. 内部编码
+- intset (整数集合)：
+- hashtable(哈希表):
 ## 5.3. 使用情景
+- 标签
 # 6. 有序集合
 ## 6.1. 命令
 ## 6.2. 内部编码
