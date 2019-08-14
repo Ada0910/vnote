@@ -8,3 +8,7 @@ use Vnotes to look it
 # Java基础
 # JavaWeb
 # Java框架
+# Java虚拟机
+# IDE
+# Default
+# 前端框架
