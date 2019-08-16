@@ -103,5 +103,56 @@ It is not required that if two objects are unequal according to the equals(java.
 
       在object类中，hashcode()方法是本地方法，返回的是对象的地址值，而object类中的equals()方法比较的也是两个对象的地址值，如果equals()相等，说明两个对象地址值也相等，当然hashcode()也就相等了；在String类中，equals()返回的是两个对象内容的比较，当两个对象内容相等时，Hashcode()方法根据String类的重写代码的分析，也可知道hashcode()返回结果也会相等。以此类推，可以知道Integer、Double等封装类中经过重写的equals()和hashcode()方法也同样适合于这个原则。当然没有经过重写的类，在继承了object类的equals()和hashcode()方法后，也会遵守这个原则。
 
+# 4. Map
+- Map是java中的接口，Map.Entry是Map的一个内部接口。
+
+- Map提供了一些常用方法，如keySet()、entrySet()等方法。
+
+- keySet()方法返回值是Map中key值的集合；entrySet()的返回值也是返回一个Set集合，此集合的类型为Map.Entry。
+
+
+Map.Entry是Map声明的一个内部接口，此接口为泛型，定义为Entry<K,V>。它表示Map中的一个实体（一个key-value对）。接口中有getKey(),getValue方法。
+
+```
+  Map<String, String> map = new HashMap<String, String>();    
+  map.put("key1", "value1");    
+  map.put("key2", "value2");    
+  map.put("key3", "value3");    
+```
+      
+```
+  //第一种：普遍使用，二次取值    
+  System.out.println("通过Map.keySet遍历key和value：");    
+  for (String key : map.keySet()) {    
+   System.out.println("key= "+ key + " and value= " + map.get(key));    
+  }    
+```
+      
+```
+  //第二种    
+  System.out.println("通过Map.entrySet使用iterator遍历key和value：");    
+  Iterator<Map.Entry<String, String>> it = map.entrySet().iterator();    
+  while (it.hasNext()) {    
+   Map.Entry<String, String> entry = it.next();    
+   System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());    
+  }    
+```
+      
+```
+ //第三种：推荐，尤其是容量大时</span>    
+  System.out.println("通过Map.entrySet遍历key和value");    
+  for (Map.Entry<String, String> entry : map.entrySet()) {    
+   System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());    
+  }    
+    
+```
+```
+  //第四种    
+  System.out.println("通过Map.values()遍历所有的value，但不能遍历key");    
+  for (String v : map.values()) {    
+   System.out.println("value= " + v);    
+  }
+
+```
 
 

@@ -7,12 +7,6 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "总结"
-        },
-        {
-            "name": "树"
-        },
-        {
             "name": "栈"
         },
         {

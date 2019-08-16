@@ -25,6 +25,8 @@
             "name": "SpringBoot"
         },
         {
+            "name": "SpringCloud"
+        },{
             "name": "Hibernate"
         }
     ],
