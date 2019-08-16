@@ -42,6 +42,11 @@
     "image_folder": "",
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
+        {
+            "name": "Git"
+        }
+    ],
+    "tags": [
     ],
     "tags": [
     ],

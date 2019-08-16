@@ -1,0 +1,4 @@
+vnote_backup_file_826537664 F:/Notes/vnote/Java框架/Hibernate/基础.md
+# 1. 常见方法
+## 1.1. find（）
+- getHibernateTemplate().find()方法
