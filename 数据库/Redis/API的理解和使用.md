@@ -358,5 +358,119 @@ sdiffstore destination  key [...]
 - 标签
 # 6. 有序集合
 ## 6.1. 命令
+### 6.1.1. 集合内
+- 添加成员
+```
+zadd key score member[score member ....]
+```
+- 计算成员
+```
+zcard key
+```
+![](_v_images/_1565796099_3405.png)
+
+- 计算某个成员的分数
+```
+zscore key member
+```
+- 排名
+```
+升序：zrank key member
+降序：zrevrank key member
+```
+- 删除
+```
+zrem key member [key member....]
+```
+![](_v_images/_1565796432_3601.png)
+- 增加成员分数
+```
+zincrby key 分数 member
+```
+
+![](_v_images/_1565796951_27799.png)
+- 返回指定排名范围的成员
+```
+zrange key start end [withscores]
+zrevrange key start end [withscores]
+```
+![](_v_images/_1565797110_2656.png)
+- 返回指定分数范围的成员
+```
+zrangebyscore key min max [withscores] [limit offset count]
+zrevrangebyscore ......
+```
+
+![](_v_images/_1565797156_17982.png)
+- 返回指定分数范围的成员个数
+```
+zcount key min max 
+```
+![](_v_images/_1565797276_25124.png)
+- 删除指定排名内的升序元素
+```
+zremrangebyrank key start end (删除排名内)
+zremrangebuscoure key min max (删除多少分内)
+```
+### 
+- 交集
+```
+zinterstore destination numkeys key [key ....][weights [weight...]] [aggregate sum | min | max]
+```
+- 并集
+```
+zunionstore destination numkeys key [key ....][weights [weight...]] [aggregate sum | min | max]
+
+```
 ## 6.2. 内部编码
+- ziplist
+- skiplist 
 ## 6.3. 使用情景
+- 添加用户赞数
+- 取消用户赞数
+- 展示赞数最多的十个用户
+- 展示用户信息以及分数
+# 7. 键管理
+## 7.1. 单个键
+- 键命名
+
+```
+rename key newkey
+```
+- 随机返回一个键
+
+```
+randomkey
+```
+- 键过期
+
+```
+expire key seconds :
+expireat key timestamp;
+persist 可以将键的过期时间清除
+```
+- 迁移键
+```
+(1)move
+(2)dump+restore
+(3)migrate
+```
+## 7.2. 遍历键
+- 全局遍历键
+```
+keys pattern
+```
+- 渐进式遍历
+```
+scan cursor [match pattern][count number]
+```
+## 7.3. 数据库管理
+- 切换数据库
+```
+select xxx
+```
+- flushdb/flushall
+```
+flushdb 删除当前的
+flushall 删除全部
+```
