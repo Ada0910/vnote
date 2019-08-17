@@ -26,6 +26,8 @@
         },
         {
             "name": "SpringCloud"
+        },{
+            "name": "Hibernate"
         }
     ],
     "tags": [
