@@ -20,8 +20,12 @@
         },
         {
             "name": "Java思维导图"
-        },{
+        },
+        {
             "name": "Debug"
+        },
+        {
+            "name": "Json"
         }
     ],
     "tags": [
