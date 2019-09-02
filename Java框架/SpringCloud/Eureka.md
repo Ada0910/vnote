@@ -1,13 +1,10 @@
-# 1. SpringCloud简介
-![](_v_images/_1566017188_15554.png)
-注：Netflix图中打错
-# 2. Eureka
+# 1. Eureka
    Eureka是Netflix开发的服务发现框架，本身是一个基于REST的服务，主要用于定位运行在AWS域中的中间层服务，以达到负载均衡和中间层服务故障转移的目的。 SpringCloud将它集成在其子项目spring-cloud-netflix中，以实现SpringCloud的服务发现功能。
 
 
 ![](_v_images/_1566094775_4545.png)
 
-## 2.1. 和dubbo之间的的对比
+## 1.1. 和dubbo之间的的对比
 ![](_v_images/_1566095032_15816.png)
 
 ![](_v_images/_1566095114_670.png)
@@ -17,16 +14,16 @@
 
 
 
-# 3. Nocos 
+# 2. Nocos 
 Nacos系列：基于Nacos的注册中心
-## 3.1. 注册中心分类
+## 2.1. 注册中心分类
 在现有的技术方案中，注册中心主要分为两类，
 
 - 一类是CP类注册中心，
 - 另一类是AP类注册中心，Nacos属于后者
 - 为什么会有 CP 和 AP 两种不同类型的注册中心呢？这就不得不提到分布式的一个理论：CAP理论。它是由加州大学的计算机科学家 Eric Brewer 提出，在一个分布式系统中，Consistency（一致性）、Availability（可用性）、Partition tolerance（分区容错性）无法同时满足，正所谓“鱼和熊掌与虾不可兼得也”。
 - CP类注册中心更强调一致性，而AP类注册中心更强调可用性，
-## 3.2. Nacos 结合 Spring
+## 2.2. Nacos 结合 Spring
 先来看 Nacos + Spring 的使用：
 
 添加 maven 依赖：
@@ -145,3 +142,4 @@ public class NacosDiscoveryController {
 
 
 ```
+# 
