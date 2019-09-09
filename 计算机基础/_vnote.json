@@ -8,6 +8,9 @@
     "sub_directories": [
         {
             "name": "操作系统"
+        },
+        {
+            "name": "计算机基础"
         }
     ],
     "tags": [

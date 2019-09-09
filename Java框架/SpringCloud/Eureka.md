@@ -82,7 +82,7 @@ public class NacosDiscoveryController {
     }
 }
 ```
-## 3.3. Nacos结合SpringBoot
+## 2.3. Nacos结合SpringBoot
 添加 Starter 依赖：
 ```
 <dependency>
@@ -142,4 +142,10 @@ public class NacosDiscoveryController {
 
 
 ```
-# 
+# 3. 版本之间的框架对应
+## 3.1. 大版本对应
+![](_v_images/20190904193418769_19304.png)
+
+## 3.2. 更详细版本
+![](_v_images/20190904193435529_23626.png)
+
