@@ -26,8 +26,12 @@
         },
         {
             "name": "SpringCloud"
-        },{
+        },
+        {
             "name": "Hibernate"
+        },
+        {
+            "name": "Swagger"
         }
     ],
     "tags": [
