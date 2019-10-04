@@ -31,9 +31,10 @@
             "name": "Hibernate"
         },
         {
-<<<<<<< HEAD
+
             "name": "Swagger"
-=======
+			},
+			{
             "name": "RabbitMQ"
         },
         {
@@ -41,7 +42,6 @@
         },
         {
             "name": "Sleuth"
->>>>>>> c92343d3be6fd112084a9352bf1c4d5ee12f7a7e
         }
     ],
     "tags": [
