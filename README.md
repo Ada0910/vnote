@@ -1,18 +1,3 @@
-# notes
-this is my  study notes
-use Vnotes to look it 
-侵权删
-# 数据库
-## Redis
-## SQL
-## Redis
-## SQL
-# 服务器
-# Java基础
-# JavaWeb
-# Java框架
-# Java虚拟机
-# IDE
-# Default
-# 前端框架
+# 1. vnote笔记的思维导图
+![](_v_images/20191004224505173_19588.png)
 
