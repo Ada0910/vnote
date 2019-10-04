@@ -6,6 +6,21 @@
     "image_folder": "",
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
+        {
+            "name": "线程"
+        },
+        {
+            "name": "进程通信"
+        },
+        {
+            "name": "线程通信"
+        },
+        {
+            "name": "线程安全"
+        },
+        {
+            "name": "线程同步"
+        }
     ],
     "tags": [
     ],

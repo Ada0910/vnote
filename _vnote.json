@@ -8,6 +8,9 @@
     "sub_directories": [
         {
             "name": "GitHub"
+        },
+        {
+            "name": "Git"
         }
     ],
     "tags": [
