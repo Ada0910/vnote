@@ -25,4 +25,14 @@ public class TestResponseController {
 ![](_v_images/20191014171418102_17084.png)
 ## 2.3. 设置http响应体
 可以能使用BodyBuilder status(HttpStatus status)和BodyBuilder status(int status) 方法设置http状态
-
+```
+ @GetMapping("/age/{id}")
+    ResponseEntity<String> age(@PathVariable("id") int yearOfBirth) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Custom-Header", "ada");
+        return ResponseEntity.status(HttpStatus.OK)
+                .body("Your age is " + yearOfBirth);
+    }
+```
+访问:http://localhost:8080/age/11
+![](_v_images/20191014231042524_4980.png)
