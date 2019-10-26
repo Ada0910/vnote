@@ -203,3 +203,21 @@ registry.jsp("/WEB-INF/jsp/", ".jsp");
 　　这个方法想必看名字就知道了，它就是用来注册各种各样的视图解析器的，包括自己定义的。
 
 ## 3.6. configureContentNegotiation(ContentNegotiationConfigurer configurer)
+上面我们讲了configureViewResolvers 方法，假如在该方法中我们启用了内容裁决解析器，那么configureContentNegotiation(ContentNegotiationConfigurer configurer) 这个方法是专门用来配置内容裁决的一些参数的。这个比较简单，我们直接通过一个例子看：
+
+```
+ public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+       /* 是否通过请求Url的扩展名来决定media type */
+        configurer.favorPathExtension(true) 
+                 /* 不检查Accept请求头 */
+                .ignoreAcceptHeader(true)
+                .parameterName("mediaType")
+                 /* 设置默认的media yype */
+                .defaultContentType(MediaType.TEXT_HTML)
+                 /* 请求以.html结尾的会被当成MediaType.TEXT_HTML*/
+                .mediaType("html", MediaType.TEXT_HTML)
+                /* 请求以.json结尾的会被当成MediaType.APPLICATION_JSON*/
+                .mediaType("json", MediaType.APPLICATION_JSON);
+    }
+
+```
