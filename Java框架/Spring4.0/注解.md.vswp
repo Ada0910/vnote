@@ -19,7 +19,7 @@ Annotation是一种应用于类、方法、参数、变量、构造器及包声�
 假如你想为应用设置很多的常量或参数，这种情况下，XML是一个很好的选择，因为它不会同特定的代码相连。如果你想把某个方法声明为服务，那么使用Annotation会更好一些，因为这种情况下需要注解和方法紧密耦合起来，开发人员也必须认识到这点。
 
 另一个很重要的因素是Annotation定义了一种标准的描述元数据的方式。在这之前，开发人员通常使用他们自己的方式定义元数据。例如，使用标记interfaces，注释，transient关键字等等。每个程序员按照自己的方式定义元数据，而不像Annotation这种标准的方式。
-
+# 3. 元注解
 许多框架将XML和Annotation两种方式结合使用，平衡两者之间的利弊
 
 ```
@@ -29,9 +29,11 @@ Annotation是一种应用于类、方法、参数、变量、构造器及包声�
 @Inherited – 是否允许子类继承该注解
 ```
 
-@Documented–一个简单的Annotations标记注解，表示是否将注解信息添加在java文档中。
+## 3.1. @Documented
+一个简单的Annotations标记注解，表示是否将注解信息添加在java文档中。
 
-@Retention– 定义该注解的生命周期。
+## 3.2. @Retention
+定义该注解的生命周期。
 
 RetentionPolicy.SOURCE – 在编译阶段丢弃。这些注解在编译结束之后就不再有任何意义，所以它们不会写入字节码。@Override, @SuppressWarnings都属于这类注解。
 
@@ -39,7 +41,8 @@ RetentionPolicy.CLASS – 在类加载的时候丢弃。在字节码文件的处
 
 RetentionPolicy.RUNTIME– 始终不会丢弃，运行期也保留该注解，因此可以使用反射机制读取该注解的信息。我们自定义的注解通常使用这种方式。
 
-@Target – 表示该注解用于什么地方。如果不明确指出，该注解可以放在任何地方。以下是一些可用的参数。需要说明的是：属性的注解是兼容的，如果你想给7个属性都添加注解，仅仅排除一个属性，那么你需要在定义target包含所有的属性。
+## 3.3. @Target 
+表示该注解用于什么地方。如果不明确指出，该注解可以放在任何地方。以下是一些可用的参数。需要说明的是：属性的注解是兼容的，如果你想给7个属性都添加注解，仅仅排除一个属性，那么你需要在定义target包含所有的属性。
 
 ElementType.TYPE:用于描述类、接口或enum声明
 ElementType.FIELD:用于描述实例变量
@@ -50,14 +53,15 @@ ElementType.LOCAL_VARIABLE
 ElementType.ANNOTATION_TYPE 另一个注释
 ElementType.PACKAGE 用于记录java文件的package信息
 
-@Inherited – 定义该注释和子类的关系
-# 3. 自定义注解
+## 3.4. @Inherited 
+定义该注释和子类的关系
+# 4. 自定义注解
 
-# 4. 常见注解
-## 4.1. @Autowired注解
+# 5. 常见注解
+## 5.1. @Autowired注解
 ![](_v_images/_1538188531_28448.png)
-## 4.2. @Service注解
-### 4.2.1. 例如
+## 5.2. @Service注解
+### 5.2.1. 例如
 首先，在applicationContext.xml文件中加一行：
 ```
 <context:component-scan base-package="xxx"/> 
@@ -79,5 +83,5 @@ public class CourseDAOImpl extends HibernateDaoSupport implements CourseDAO{
     </bean>
 ```
 
-## 4.3. @Entity
+## 5.3. @Entity
 对实体注释。任何Hibernate映射对象都要有这个注释
