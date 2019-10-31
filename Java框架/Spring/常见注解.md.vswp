@@ -1,3 +1,4 @@
+vnote_backup_file_826537664 F:/Notes/vnote/Java框架/Spring/常见注解.md
 # 1. @MapperScan
 之前是在配置中都是要引入@Mapper这个来给每一个mapper类进行配置，显得有点麻烦和冗余
 ## 1.1. 配置一个
@@ -74,16 +75,7 @@ defaultValue 如果本次请求没有携带这个参数，或者参数为空，�
 name 绑定本次参数的名称，要跟URL上面的一样
 required 这个参数是不是必须的
 value 跟name一样的作用，是name属性的一个别名
-# 4. @RequestBody
 
-<<<<<<< HEAD
-@RequestBody注解可以接收json格式的数据，并将其转换成对应的数据类型。
-
-1. @RequestBody接收一个对象
-url请求：http://localhost:8080/WxProgram/findBookByName
-
-复制代码
-=======
 
 - @RequestParam（org.springframework.web.bind.annotation.RequestParam）用于将指定的请求参数赋值给方法中的形参。
 例：
@@ -166,7 +158,6 @@ get方式中query String的值，和post方式中body data的值都会被Servlet
 
 -  @RequestBody接收一个对象
 url请求：http://localhost:8080/WxProgram/findBookByName
->>>>>>> adf3157d34b3e8f552aa78559a5e35272090013e
 ```
 @RequestMapping(value="/findBookByName", method = RequestMethod.POST)
 @ResponseBody
@@ -178,19 +169,11 @@ public DbBook findBookByName(@RequestBody DbBook book){
     return book;
 }
 ```
-<<<<<<< HEAD
-复制代码
-=======
->>>>>>> adf3157d34b3e8f552aa78559a5e35272090013e
 
 - @RequestBody接收不同的字符串
 
 (1)前台界面，这里以小程序为例
 
-<<<<<<< HEAD
-复制代码
-=======
->>>>>>> adf3157d34b3e8f552aa78559a5e35272090013e
 ```
 wx.request({
       url: host.host + `/WxProgram/deleteBookById`,
@@ -208,17 +191,9 @@ wx.request({
       }
     })
 ```
-<<<<<<< HEAD
-复制代码
-
-- controller
-
-复制代码
-=======
 
 (2)controller
 
->>>>>>> adf3157d34b3e8f552aa78559a5e35272090013e
 ```
 @RequestMapping(value="/deleteBookById",method=RequestMethod.POST)
 @ResponseBody
@@ -234,32 +209,18 @@ public void deleteBookById(@RequestBody Map<String, String> map){
     }
 }
 ```
-<<<<<<< HEAD
-复制代码
-=======
->>>>>>> adf3157d34b3e8f552aa78559a5e35272090013e
 @RequestBody
 处理HttpEntity传递过来的数据，一般用来处理非Content-Type: application/x-www-form-urlencoded编码格式的数据。
 
 GET请求中，因为没有HttpEntity，所以@RequestBody并不适用。
 POST请求中，通过HttpEntity传递的参数，必须要在请求头中声明数据的类型Content-Type，SpringMVC通过使用HandlerAdapter 配置的HttpMessageConverters来解析HttpEntity中的数据，然后绑定到相应的bean上。
 
-<<<<<<< HEAD
-@RequestBody用于post请求，不能用于get请求
-=======
 - @RequestBody用于post请求，不能用于get请求
->>>>>>> adf3157d34b3e8f552aa78559a5e35272090013e
 
 这里涉及到使用@RequestBody接收不同的对象
 1. 创建一个新的entity，将两个entity都进去。这是最简单的，但是不够“优雅”。
 2. 用Map<String, Object>接受request body，自己反序列化到各个entity中。
 3. 类似方法2，不过更为generic，实现自己的HandlerMethodArgumentResolver
-<<<<<<< HEAD
-# 5. @PathVariable
-请求路径上有个id的变量值，可以通过@PathVariable来获取  @RequestMapping(value = "/page/{id}", method = RequestMethod.GET)
-
-# 6. @Param
-=======
 # 5. @ModelAttribute
 
 @ModelAttribute注解类型将参数绑定到Model对象
@@ -309,7 +270,6 @@ public class User {
 请求路径上有个id的变量值，可以通过@PathVariable来获取  @RequestMapping(value = "/page/{id}", method = RequestMethod.GET)
 
 # 7. @Param
->>>>>>> adf3157d34b3e8f552aa78559a5e35272090013e
 dao层示例
 
 ```
@@ -387,15 +347,6 @@ xml映射对应示例
 
 ```
 
-<<<<<<< HEAD
-# 7. @Component 
-指示自动扫描组件。
-# 8. @Repository 
-表示在持久层DAO组件。
-# 9. @Service 
-表示在业务层服务组件。
-## 9.1. 例如
-=======
 # 8. @Component 
 指示自动扫描组件。
 # 9. @Repository 
@@ -403,7 +354,6 @@ xml映射对应示例
 # 10. @Service 
 表示在业务层服务组件。
 ## 10.1. 例如
->>>>>>> adf3157d34b3e8f552aa78559a5e35272090013e
 首先，在applicationContext.xml文件中加一行：
 ```
 <context:component-scan base-package="xxx"/> 
@@ -425,15 +375,8 @@ public class CourseDAOImpl extends HibernateDaoSupport implements CourseDAO{
     </bean>
 ```
 
-<<<<<<< HEAD
-# 10. @Controller 
-表示在表示层控制器组件
-
-# 11. @Autowired  
-=======
 # 11. @Controller 
 表示在表示层控制器组件
 
 # 12. @Autowired  
->>>>>>> adf3157d34b3e8f552aa78559a5e35272090013e
 当不能确定 Spring 容器中一定拥有某个类的 Bean 时，可以在需要自动注入该类 Bean 的地方可以使用 @Autowired(required = false)，这等于告诉 Spring：在找不到匹配 Bean 时也不报错
