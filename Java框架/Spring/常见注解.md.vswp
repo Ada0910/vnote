@@ -1,3 +1,4 @@
+vnote_backup_file_826537664 F:/Notes/vnote/Java框架/Spring/常见注解.md
 # 1. @MapperScan
 之前是在配置中都是要引入@Mapper这个来给每一个mapper类进行配置，显得有点麻烦和冗余
 ## 1.1. 配置一个
