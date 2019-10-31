@@ -28,7 +28,7 @@
             "name": "索引"
         },
         {
-            "name": "DRUID"
+            "name": "连接池"
         }
     ],
     "tags": [
