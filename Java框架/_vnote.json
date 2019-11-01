@@ -9,14 +9,14 @@
         {
             "name": "MVC"
         },
+		{
+            "name": "Spring"
+        },
         {
             "name": "Maven"
         },
         {
             "name": "SpringMVC"
-        },
-        {
-            "name": "Spring"
         },
         {
             "name": "MyBatis"
