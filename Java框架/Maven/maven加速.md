@@ -1,4 +1,6 @@
 # 1. 步骤
+右键项目：
+![](_v_images/20191104091800935_3281.png)
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
