@@ -1,3 +1,4 @@
+vnote_backup_file_826537664 F:/Notes/vnote/Java框架/Spring/常见注解.md
 # 1. @MapperScan
 之前是在配置中都是要引入@Mapper这个来给每一个mapper类进行配置，显得有点麻烦和冗余
 ## 1.1. 配置一个
@@ -273,35 +274,7 @@ xml映射对应示例
 
 ```
 # 9. @Component 
-指示自动扫描组件
-@Component是Spring容器中的基本注解，表示容器中的一个组件（bean）可以作用在任何层次，下面的示例介绍该注解的使用方法。
-注解配置示例：
-```
-@Component("userDao")
-public class userDao{......}
-```
-他等效于XML配置
-```
-<bean id="userDao" class="cn.lovepi.***.userDao"/>
-```
-- 还有一些其他的可以被用来注解bean的注解，这些可以让注解类本身的用途更加清晰，此外，特定的注解也具备特定的功能。
-Spring在2.5后提供了一个context的命名空间，它提供了通过扫描类包来加载利用注解定义的Bean的方式。
-在context中可以使用resource-pattern来过滤出特定的类。
-```
-<context:component-scan base-package="cn.lovepi.spring" resource-pattern="anno/*.class"/>
-```
-- 默认情况下加载的是package下的*.class即扫描全部类，在使用了resource-pattern之后，则只扫描package下的anno子包下的所有类。
-不过使用resource-pattern并不能提供给我们完善的功能，所有我们得使用过滤子元素的方法。
-```
-<context:component-scan base-package="cn.lovepi.spring">
-   <context:include-filter type="regex" expression="cn.lovepi.spring.*"/>
-   <context:exclude-filter type="aspectj" expression="cn.lovepi..*Controller+"/>
-</context:component-scan>
-```
-其中：
-include-filter表示要包含的目标类，
-exclude-filter表示要排除在外的目标类
-
+指示自动扫描组件。
 # 10. @Repository 
 表示在持久层DAO组件。
 # 11. @Service 
