@@ -1,3 +1,4 @@
+vnote_backup_file_826537664 F:/Notes/vnote/Java框架/Spring/bean的配置和注入.md
 # 1. bean的定义
 那些组成应用程序的主体及由Spring IoC容器所管理的对象，称为bean
 bean就是由IoC容器初始化、装配及管理的对象，除此之外，bean就与应用程序中的其他对象没有什么区别了。而bean的定义以及bean相互间的依赖关系将通过配置元数据来描述
