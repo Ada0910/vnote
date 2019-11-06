@@ -7,25 +7,25 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
+            "name": "Json"
+        },
+        {
+            "name": "Debug"
+        },
+        {
+            "name": "工具"
+        },
+        {
+            "name": "面试"
+        },
+        {
             "name": "小技能"
         },
         {
             "name": "正则表达式"
         },
         {
-            "name": "面试"
-        },
-        {
-            "name": "工具"
-        },
-        {
             "name": "Java思维导图"
-        },
-        {
-            "name": "Debug"
-        },
-        {
-            "name": "Json"
         }
     ],
     "tags": [

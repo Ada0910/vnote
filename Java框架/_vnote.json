@@ -9,7 +9,7 @@
         {
             "name": "MVC"
         },
-		{
+        {
             "name": "Spring"
         },
         {
@@ -38,9 +38,6 @@
         },
         {
             "name": "Kafka"
-        },
-        {
-            "name": "Sleuth"
         },
         {
             "name": "JWT"
