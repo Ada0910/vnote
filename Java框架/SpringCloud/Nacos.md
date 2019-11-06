@@ -1,32 +1,16 @@
-# 1. Eureka
-   Eureka是Netflix开发的服务发现框架，本身是一个基于REST的服务，主要用于定位运行在AWS域中的中间层服务，以达到负载均衡和中间层服务故障转移的目的。 SpringCloud将它集成在其子项目spring-cloud-netflix中，以实现SpringCloud的服务发现功能。
-
-
-![](_v_images/_1566094775_4545.png)
-
-## 1.1. 和dubbo之间的的对比
-![](_v_images/_1566095032_15816.png)
-
-![](_v_images/_1566095114_670.png)
-
-![](_v_images/_1566095247_11082.png)
-
-
-
-
-# 2. Nocos 
+# 1. Nacos 
 Nacos系列：基于Nacos的注册中心
 
 - 关于 Nacos 名字：前四个字母分别为 Naming 和 Configuration 的前两个字母，最后的 s 为Service
 -  Nacos 就是注册中心 + 配置中心的组合，即（Nacos = Spring Cloud Eureka + Spring Cloud Config）
-## 2.1. 注册中心分类
+## 1.1. 注册中心分类
 在现有的技术方案中，注册中心主要分为两类，
 
 - 一类是CP类注册中心，
 - 另一类是AP类注册中心，Nacos属于后者
 - 为什么会有 CP 和 AP 两种不同类型的注册中心呢？这就不得不提到分布式的一个理论：CAP理论。它是由加州大学的计算机科学家 Eric Brewer 提出，在一个分布式系统中，Consistency（一致性）、Availability（可用性）、Partition tolerance（分区容错性）无法同时满足，正所谓“鱼和熊掌与虾不可兼得也”。
 - CP类注册中心更强调一致性，而AP类注册中心更强调可用性，
-## 2.2. Nacos 结合 Spring
+## 1.2. Nacos 结合 Spring
 先来看 Nacos + Spring 的使用：
 
 添加 maven 依赖：
@@ -85,7 +69,7 @@ public class NacosDiscoveryController {
     }
 }
 ```
-## 2.3. Nacos结合SpringBoot
+## 1.3. Nacos结合SpringBoot
 添加 Starter 依赖：
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -201,10 +185,3 @@ public class DemoApplication {
 访问http://127.0.0.1:8848/nacos/
 测试结果
  ![](_v_images/20191105152614195_7146.png)
-# 3. 版本之间的框架对应
-## 3.1. 大版本对应
-![](_v_images/20190904193418769_19304.png)
-
-## 3.2. 更详细版本
-![](_v_images/20190904193435529_23626.png)
-

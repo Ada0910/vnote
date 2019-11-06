@@ -1,8 +1,16 @@
 # 1. bean的定义
-那些组成应用程序的主体及由Spring IoC容器所管理的对象，称为bean
-bean就是由IoC容器初始化、装配及管理的对象，除此之外，bean就与应用程序中的其他对象没有什么区别了。而bean的定义以及bean相互间的依赖关系将通过配置元数据来描述
-## 1.1. bean是单例
-　　Spring中的bean默认都是单例的，这些单例Bean在多线程程序下如何保证线程安全呢？例如对于Web应用来说，Web容器对于每个用户请求都创建一个单独的Sevlet线程来处理请求，引入Spring框架之后，每个Action都是单例的，那么对于Spring托管的单例Service Bean，如何保证其安全呢？ Spring的单例是基于BeanFactory也就是Spring容器的，单例Bean在此容器内只有一个，Java的单例是基于JVM，每个JVM内只有一个实例
+## 1.1. bean是什么
+```
+bean就是spring管理的类
+```
+- 那些组成应用程序的主体及由Spring IoC容器所管理的对象，称为bean
+## 1.2. bean和普通对象区别
+- bean就是由IoC容器初始化、装配及管理的对象，除此之外，bean就与应用程序中的其他对象没有什么区别了
+- bean的定义以及bean相互间的依赖关系将通过配置元数据来描述
+## 1.3. bean是单例
+- Spring中的bean默认都是单例的
+- 这些单例Bean在多线程程序下如何保证线程安全呢？例如对于Web应用来说，Web容器对于每个用户请求都创建一个单独的Sevlet线程来处理请求，引入Spring框架之后，每个Action都是单例的，那么对于Spring托管的单例Service Bean，如何保证其安全呢？
+- Spring的单例是基于BeanFactory也就是Spring容器的，单例Bean在此容器内只有一个，Java的单例是基于JVM，每个JVM内只有一个实例
 
 # 2. bean与spring容器的关系
 ![](_v_images/_1552891698_9941.png)
@@ -23,7 +31,13 @@ Bean配置信息定义了Bean的实现及依赖关系，Spring容器根据各种
 ```
 ![](_v_images/_1552892048_11231.png)
 ## 3.2. 使用注解定义Bean
-我们知道，Spring容器成功启动的三大要件分别是：Bean定义信息、Bean实现类以及Spring本身。如果采用基于XML的配置，Bean定义信息和Bean实现类本身是分离的，而采用基于注解的配置方式时，Bean定义信息即通过在Bean实现类上标注注解实现。
+Spring容器成功启动的三大要件分别是：
+
+-  Bean定义信息
+- Bean实现类
+- Spring本身
+
+如果采用基于XML的配置，Bean定义信息和Bean实现类本身是分离的，而采用基于注解的配置方式时，Bean定义信息即通过在Bean实现类上标注注解实现。
 
 ```
 package com.baobaotao.anno;
