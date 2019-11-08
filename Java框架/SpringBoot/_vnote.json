@@ -50,18 +50,8 @@
             "name": "WebMvcConfigurer.md",
             "tags": [
             ]
-<<<<<<< HEAD
         },
-        {
-            "attachment_folder": "",
-            "attachments": [
-            ],
-            "created_time": "2019-11-01T02:11:07Z",
-            "modified_time": "2019-11-01T03:50:17Z",
-            "name": "HandlerInterceptor.md",
-            "tags": [
-            ]
-        },
+
         {
             "attachment_folder": "",
             "attachments": [
@@ -71,8 +61,7 @@
             "name": "CommandLineRunner.md",
             "tags": [
             ]
-=======
->>>>>>> 27370da29b20567d20a7ba5873b186589b1bf259
+
         }
     ],
     "sub_directories": [
