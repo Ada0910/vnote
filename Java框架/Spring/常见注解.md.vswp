@@ -146,9 +146,7 @@ POST请求中，通过HttpEntity传递的参数，必须要在请求头中声明
 1. 创建一个新的entity，将两个entity都进去。这是最简单的，但是不够“优雅”。
 2. 用Map<String, Object>接受request body，自己反序列化到各个entity中。
 3. 类似方法2，不过更为generic，实现自己的HandlerMethodArgumentResolver
-# 5. @PathVariable
-请求路径上有个id的变量值，可以通过@PathVariable来获取  @RequestMapping(value = "/page/{id}", method = RequestMethod.GET)
-# 6. @ModelAttribute
+# 5. @ModelAttribute
 
 @ModelAttribute注解类型将参数绑定到Model对象
 
@@ -193,10 +191,10 @@ public class User {
 1. application/x-www-form-urlencoded，这种情况的数据@RequestParam、@ModelAttribute可以处理，@RequestBody也可以处理。
 2. multipart/form-data，@RequestBody不能处理这种格式的数据。（form表单里面有文件上传时，必须要指定enctype属性值为multipart/form-data，意思是以二进制流的形式传输文件。）
 3. application/json、application/xml等格式的数据，必须使用@RequestBody来处理
-# 7. @PathVariable
+# 6. @PathVariable
 请求路径上有个id的变量值，可以通过@PathVariable来获取  @RequestMapping(value = "/page/{id}", method = RequestMethod.GET)
 
-# 8. @Param
+# 7. @Param
 dao层示例
 
 ```
@@ -273,13 +271,41 @@ xml映射对应示例
     Enchashment selectUserById(User user);
 
 ```
-# 9. @Component 
-指示自动扫描组件。
-# 10. @Repository 
+# 8. @Component 
+指示自动扫描组件
+@Component是Spring容器中的基本注解，表示容器中的一个组件（bean）可以作用在任何层次，下面的示例介绍该注解的使用方法。
+注解配置示例：
+```
+@Component("userDao")
+public class userDao{......}
+```
+他等效于XML配置
+```
+<bean id="userDao" class="cn.lovepi.***.userDao"/>
+```
+- 还有一些其他的可以被用来注解bean的注解，这些可以让注解类本身的用途更加清晰，此外，特定的注解也具备特定的功能。
+Spring在2.5后提供了一个context的命名空间，它提供了通过扫描类包来加载利用注解定义的Bean的方式。
+在context中可以使用resource-pattern来过滤出特定的类。
+```
+<context:component-scan base-package="cn.lovepi.spring" resource-pattern="anno/*.class"/>
+```
+- 默认情况下加载的是package下的*.class即扫描全部类，在使用了resource-pattern之后，则只扫描package下的anno子包下的所有类。
+不过使用resource-pattern并不能提供给我们完善的功能，所有我们得使用过滤子元素的方法。
+```
+<context:component-scan base-package="cn.lovepi.spring">
+   <context:include-filter type="regex" expression="cn.lovepi.spring.*"/>
+   <context:exclude-filter type="aspectj" expression="cn.lovepi..*Controller+"/>
+</context:component-scan>
+```
+其中：
+include-filter表示要包含的目标类，
+exclude-filter表示要排除在外的目标类
+
+# 9. @Repository 
 表示在持久层DAO组件。
-# 11. @Service 
+# 10. @Service 
 表示在业务层服务组件。
-## 11.1. 例如
+## 10.1. 例如
 
 首先，在applicationContext.xml文件中加一行：
 ```
@@ -302,14 +328,14 @@ public class CourseDAOImpl extends HibernateDaoSupport implements CourseDAO{
     </bean>
 ```
 
-# 12. @Controller 
+# 11. @Controller 
 表示在表示层控制器组件
 
-# 13. @Autowired  
+# 12. @Autowired  
 当不能确定 Spring 容器中一定拥有某个类的 Bean 时，可以在需要自动注入该类 Bean 的地方可以使用 @Autowired(required = false)，这等于告诉 Spring：在找不到匹配 Bean 时也不报错
 
-# 14. @Scheduled
-## 14.1. 使用
+# 13. @Scheduled
+## 13.1. 使用
 - 开启注解
 ![](_v_images/20191104102936311_30254.png)
 - 代码
@@ -330,11 +356,11 @@ public class ScheduledTasks {
     }
 }
 ```
-## 14.2. 测试结果
+## 13.2. 测试结果
 ![](_v_images/20191104102102904_11909.png)
 ![](_v_images/20191104102448030_23394.png)
 ![](_v_images/20191104102602319_30172.png)
-## 14.3. cron表达式详解：    
+## 13.3. cron表达式详解：    
 
 一个cron表达式有至少6个（也可能7个）有空格分隔的时间元素。
       按顺序依次为
@@ -397,7 +423,7 @@ public class ScheduledTasks {
        星期           1-7 或者 SUN-SAT           , - * ? / L C #
        年（可选）           留空, 1970-2099           , - * /
 
-# 15. @Configuration
+# 14. @Configuration
 @Configuration：代表这个类是一个配置类
 ```
 @Target({ElementType.TYPE})
@@ -418,7 +444,7 @@ public @interface Configuration {
 - - 配置类必须是非本地的（即不能将配置类定义在其他类的方法内部，不能是private）
 - - 配置类必须有一个无参构造函数
 符合上述条件的类，就可以使用@Configuration来进行注解，表示这个类可以使用Spring IoC容器作为bean定义的来源
-## 15.1. 例子
+## 14.1. 例子
 ```
 @Configuration
 public class DataSourceConfig {
@@ -439,6 +465,6 @@ Spring在解析该类时，会识别出标注@Bean的所有方法，执行并将
 <bean id="mysqlDataSource" class="**.MysqlDataSource"/> 
 <bean id="oracleDataSource" class="**.OracleDataSource"/>
 ```
-# 16. @Bean
+# 15. @Bean
 用@Configuration注解该类，等价 与XML中配置beans；用@Bean标注方法等价于XML中配置bean
 @Bean：用来定义一个bean，可以指定初始、销毁方法，及bean范围等
