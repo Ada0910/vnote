@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "created_time": "2019-11-12T01:23:28Z",
     "files": [
         {
@@ -21,6 +22,10 @@
             "tags": [
             ]
         }
+=======
+    "created_time": "2019-11-11T15:11:20Z",
+    "files": [
+>>>>>>> d194413d50fcf136fc165004304681dd54dde98d
     ],
     "sub_directories": [
     ],
