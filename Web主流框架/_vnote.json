@@ -25,28 +25,13 @@
             "name": "SpringBoot"
         },
         {
-            "name": "SpringCloud"
-        },
-        {
             "name": "Hibernate"
         },
         {
             "name": "Swagger"
         },
         {
-            "name": "RabbitMQ"
-        },
-        {
-            "name": "Kafka"
-        },
-        {
-            "name": "JWT"
-        },
-        {
             "name": "Java加密"
-        },
-        {
-            "name": "Lucene"
         }
     ],
     "tags": [
