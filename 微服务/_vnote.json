@@ -1,0 +1,43 @@
+{
+    "attachment_folder": "_v_attachments",
+    "created_time": "2019-11-16T07:17:57Z",
+    "files": [
+    ],
+    "image_folder": "",
+    "recycle_bin_folder": "_v_recycle_bin",
+    "sub_directories": [
+        {
+            "name": "Spring Cloud"
+        },
+        {
+            "name": "Eureka"
+        },
+        {
+            "name": "Nacos"
+        },
+        {
+            "name": "Ribbon"
+        },
+        {
+            "name": "Feign"
+        },
+        {
+            "name": "Hystrix"
+        },
+        {
+            "name": "Gateway"
+        },
+        {
+            "name": "Zuul"
+        },
+        {
+            "name": "Sleuth"
+        },
+        {
+            "name": "Config"
+        }
+    ],
+    "tags": [
+    ],
+    "version": "1"
+}
