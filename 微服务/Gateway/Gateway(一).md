@@ -58,3 +58,5 @@ http://localhost:9000/EUREKA-CLIENT@192.168.1.101@8000/api/users
 
 备注： Spring Cloud Gateway需要Spring Boot和Spring Webflux提供的Netty运行时。
 它不能在传统的Servlet容器中工作或构建为WAR
+
+**以下几篇皆转自：https://www.cnblogs.com/liukaifeng/p/10055872.html**
