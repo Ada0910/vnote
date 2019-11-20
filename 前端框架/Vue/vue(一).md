@@ -98,13 +98,16 @@ export default {
 单页面组件会在后面的实战中完整体现，这里先不做过多描述；
 
 
-看到我们文件内分为三大部分，分别是<template><script><style>，很好理解结构，脚本，样式；script就像node一样暴露一些接口，可以看到我们的template标签中除了一张图片之外就只有一行代码：<router-view></router-view>
+看到我们文件内分为三大部分，分别是`<template><script><style>`，很好理解结构，脚本，样式；script就像node一样暴露一些接口，可以看到我们的template标签中除了一张图片之外就只有一行代码：
+```
+<router-view></router-view>
 <template>
   <div id="app">
     <img src="./assets/logo.png">
     <router-view></router-view>
   </div>
 </template>
+```
 复制代码回看我们的浏览器页面中，图片是有了，可下面的文本和链接的代码写在哪里了呢？这里就要开始涉及路由了
 ![](_v_images/20191119233847839_22498.png =1618x)
 
@@ -204,4 +207,5 @@ export default new Router({
 
 ```
 
-
+# 5. vue的页面架构
+![](_v_images/20191120100701284_24794.png =1386x)
