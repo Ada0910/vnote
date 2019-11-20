@@ -1,9 +1,30 @@
 # 1. 安装node.js
-node.js下载地址：https://nodejs.org/en/download/
-安装后检查是否成功：（如出现以上图示就是成功了）
-![](_v_images/_1541043903_22135.png)
+- node.js下载地址：https://nodejs.org/en/download/
+用中文网比较下载比较快：http://nodejs.cn/download/
+
+
+ - 安装后检查是否成功：（如出现以上图示就是成功了）
+![](_v_images/20191119140357470_20381.png)
 # 2. 在IDEA中配置vue
-新建web工程之后，在命令行中输入
+
+## 2.1. 安装 vue-cli
+
+安装好了 node，我们可以直接全局安装 vue-cli：
+
+```
+npm install -g vue-cli
+```
+但是这种安装方式比较慢，推荐使用国内镜像来安装，所以我们先设置 cnpm：
+
+```
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+```
+如果安装失败，可以使用 `npm cache clean `清理缓存，然后再重新安装。后面的安装过程中，如有安装失败的情况，也需要先清理缓存
+
+同样可以使用` cnpm -v` 查看是否安装成功
+![](_v_images/20191119140955646_23482.png)
+
+## 2.2. 新建web工程之后，在命令行中输入
 ```
 npm i -g cnpm --registry=https://registry.npm.taobao.org
 ```
@@ -16,6 +37,8 @@ vue -V
 ```
 如图即安装成功
 ![](_v_images/_1541044886_31966.png)
+
+
 脚手架安装完成后，初始化包结构,继续输入：
 ```
 vue init webpack demo(项目名)
@@ -55,6 +78,16 @@ Documentation can be found at https://vuejs-templates.github.io/webpack
 
 ```
 ![](_v_images/_1541054307_6771.png)
+
+
+# 3. IDEA导入vue项目和配置
+![](_v_images/20191119165234722_31389.png)
+
+![](_v_images/20191119165259698_31888.png)
+
+![](_v_images/20191119165425203_6962.png)
+
+![](_v_images/20191119165606058_29035.png =2416x)
 
 
 
