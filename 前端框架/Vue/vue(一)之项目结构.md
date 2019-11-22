@@ -6,6 +6,37 @@
 - build里面保存一些webpack的初始化配置
 - index.html是我们的首页
 - 最关键的代码都在src目录中，index在很多服务器语言中都是预设为首页，像index.htm，index.php等；打开build目录中的webpack.base.conf.js，会看到这样的代码
+
+```
+├── build                      // 构建相关  
+├── config                     // 配置相关
+├── src                        // 源代码
+│   ├── api                    // 所有请求
+│   ├── assets                 // 主题 字体等静态资源
+│   ├── components             // 全局公用组件
+│   ├── directive              // 全局指令
+│   ├── filtres                // 全局 filter
+│   ├── icons                  // 项目所有 svg icons
+│   ├── lang                   // 国际化 language
+│   ├── mock                   // 项目mock 模拟数据
+│   ├── router                 // 路由
+│   ├── store                  // 全局 store管理
+│   ├── styles                 // 全局样式
+│   ├── utils                  // 全局公用方法
+│   ├── vendor                 // 公用vendor
+│   ├── views                   // view
+│   ├── App.vue                // 入口页面
+│   ├── main.js                // 入口 加载组件 初始化等
+│   └── permission.js          // 权限管理
+├── static                     // 第三方不打包资源
+│   └── Tinymce                // 富文本
+├── .babelrc                   // babel-loader 配置
+├── eslintrc.js                // eslint 配置项
+├── .gitignore                 // git 忽略项
+├── favicon.ico                // favicon图标
+├── index.html                 // html模板
+└── package.json               // package.json
+```
 # 2. 跟着代码走
 
 Vue的核心架构，按照官方解释和个人理解，主要在于组件和路由两大模块，只要理解了这两大模块的思想内容，剩下API使用就只是分分钟的事情了
@@ -209,3 +240,6 @@ export default new Router({
 
 # 5. vue的页面架构
 ![](_v_images/20191120100701284_24794.png =1386x)
+
+
+以上文章来自：https://juejin.im/post/5ba9d5cce51d450e805b59b0
