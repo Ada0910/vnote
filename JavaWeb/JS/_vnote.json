@@ -30,6 +30,16 @@
             "name": "自动刷新页面.md",
             "tags": [
             ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2019-12-06T08:47:54Z",
+            "modified_time": "2019-12-06T08:48:45Z",
+            "name": "获取屏幕的缩放比例.md",
+            "tags": [
+            ]
         }
     ],
     "sub_directories": [
