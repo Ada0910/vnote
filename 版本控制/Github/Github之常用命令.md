@@ -51,3 +51,12 @@ git branch -d <branchName>
 ```
 git branch -a
 ```
+# 3. 一个项目提交到多个远程地址上
+```
+git remote add github https://github.com/WildDarts/ace-security.git
+git push -u github master
+```
+向远程提交代码
+```
+git push all --all
+```
