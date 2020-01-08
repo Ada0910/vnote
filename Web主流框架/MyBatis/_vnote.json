@@ -84,6 +84,16 @@
             "name": "MyBatis之通用Mapper.md",
             "tags": [
             ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2020-01-02T07:46:07Z",
+            "modified_time": "2020-01-02T07:49:04Z",
+            "name": "MyBatis之返回结果类型.md",
+            "tags": [
+            ]
         }
     ],
     "sub_directories": [
