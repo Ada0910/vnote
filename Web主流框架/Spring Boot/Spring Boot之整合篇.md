@@ -1,11 +1,5 @@
-# 1. springboot的定义
-Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。用我的话来理解，就是spring boot其实不是什么新的框架，它默认配置了很多框架的使用方式，就像maven整合了所有的jar包，spring boot整合了所有的框架（不知道这样比喻是否合适）
-# 2. springboot的本质
-web应用中嵌了一个servlet容器，使得web应用程序可以转化为可执行的jar文件
-# 3. springboot的好处
-简单，快速，配置极少
-# 4. springboot整合web
-## 4.1. 整合json
+# 1. springboot整合web
+## 1.1. 整合json
 ```
 那这样就可以返回json数据
 @RestController
@@ -20,8 +14,8 @@ public class HelloController {
 }
 ```
 
-# 5. springboot整合filter
-## 5.1. 使用注解
+# 2. springboot整合filter
+## 2.1. 使用注解
 
 首先在main方法中添加如下@ServletComponentScan
 ```
@@ -57,7 +51,7 @@ public class HelloFilter implements Filter {
 
 如下图：打印成功
 ![](_v_images/_1558796645_23799.png)
-## 5.2. 使用方法
+## 2.2. 使用方法
 首先，上面的方法还是先写HelloFilter.java方法
 ```
 public class HelloFilter implements Filter {
@@ -95,14 +89,14 @@ public class DemoApplication {
 }
 ```
 
-# 6. springboot整合servlet
-## 6.1. 使用注解方式
+# 3. springboot整合servlet
+## 3.1. 使用注解方式
 main方法同上：
 定义的servlet注解改为
 ```
 @WebServlet(name="xxxx",urlPatterns="xxxx")
 ```
-## 6.2. 使用方法
+## 3.2. 使用方法
 main方法的方法改为如下，其他注解去掉：
 ```
 @Bean
@@ -114,14 +108,14 @@ main方法的方法改为如下，其他注解去掉：
 
 ```
 
-# 7. springboot整合Listener
-## 7.1. 使用注解方式
+# 4. springboot整合Listener
+## 4.1. 使用注解方式
 main方法同上：
 定义的Listener注解改为(得继承ServletContextListener)
 ```
 @WebListener
 ```
-## 7.2. 使用方法
+## 4.2. 使用方法
 main方法的方法改为如下，其他注解去掉：
 ```
 @Bean
@@ -132,7 +126,7 @@ main方法的方法改为如下，其他注解去掉：
     }
 
 ```
-# 8. springboot整合Thymeleaf
+# 5. springboot整合Thymeleaf
 首先，在pom.xml中添加依赖
 ```
  <dependency>
@@ -157,4 +151,38 @@ main方法的方法改为如下，其他注解去掉：
 </body>
 </html>
 ```
+# 6. Springboot整合mybatis
+添加依赖：
+```
+mybatis整合包
+<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.3.0</version>
+		</dependency>
+		
+mysql的驱动
+<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.35</version>
+		</dependency>
 
+连接池
+<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+
+```
+在application.properties中配置
+```
+spring.datasource.driverClassName=com.mysql.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306:/ada
+spring.datasource.username=root
+spring.datasource.password=123
+
+spring.datasource.type = com.alibaba.druid.pool.DruidDataSource
+mybatis.type-aliases-package= com.ada.demo.pojo;
+```
