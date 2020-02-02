@@ -16,13 +16,13 @@
             "name": "Maven"
         },
         {
-            "name": "SpringMVC"
+            "name": "Spring MVC"
         },
         {
             "name": "MyBatis"
         },
         {
-            "name": "SpringBoot"
+            "name": "Spring Boot"
         },
         {
             "name": "Hibernate"
