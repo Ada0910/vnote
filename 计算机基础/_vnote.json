@@ -11,6 +11,15 @@
         },
         {
             "name": "计算机基础"
+        },
+        {
+            "name": "win命令行"
+        },
+        {
+            "name": "Linux常用命令"
+        },
+        {
+            "name": "vsftpd"
         }
     ],
     "tags": [
