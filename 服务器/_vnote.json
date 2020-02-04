@@ -13,10 +13,10 @@
             "name": "Jenkins"
         },
         {
-            "name": "SVN"
+            "name": "Google"
         },
         {
-            "name": "Google"
+            "name": "Nginx"
         }
     ],
     "tags": [
