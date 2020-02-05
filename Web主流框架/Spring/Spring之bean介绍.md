@@ -8,14 +8,16 @@ bean就是spring管理的类
 - bean就是由IoC容器初始化、装配及管理的对象，除此之外，bean就与应用程序中的其他对象没有什么区别了
 - bean的定义以及bean相互间的依赖关系将通过配置元数据来描述
 ## 1.3. bean是单例
-- Spring中的bean默认都是单例的
+- Spring中的bean默认都是**单例**的
 - 这些单例Bean在多线程程序下如何保证线程安全呢？例如对于Web应用来说，Web容器对于每个用户请求都创建一个单独的Sevlet线程来处理请求，引入Spring框架之后，每个Action都是单例的，那么对于Spring托管的单例Service Bean，如何保证其安全呢？
 - Spring的单例是基于BeanFactory也就是Spring容器的，单例Bean在此容器内只有一个，Java的单例是基于JVM，每个JVM内只有一个实例
 
 # 2. bean与spring容器的关系
 ![](_v_images/_1552891698_9941.png)
 
-Bean配置信息定义了Bean的实现及依赖关系，Spring容器根据各种形式的Bean配置信息在容器内部建立Bean定义注册表，然后根据注册表加载、实例化Bean，并建立Bean和Bean的依赖关系，最后将这些准备就绪的Bean放到Bean缓存池中，以供外层的应用程序进行调用。
+- Spring容器根据Bean配置信息建立注册表实例化Bean
+Bean配置信息定义了Bean的实现及依赖关系,Spring容器根据各种形式的Bean配置信息在容器内部建立Bean定义注册表，然后根据注册表加载、实例化Bean，并建立Bean和Bean的依赖关系
+- 将这些准备就绪的Bean放到Bean缓存池中，以供外层的应用程序进行调用。
 
 # 3. bean配置
 ## 3.1. 基于xml配置Bean
@@ -59,9 +61,9 @@ public class UserDao {
 `<bean id="userDao" class="com.baobaotao.anno.UserDao"/>`
 除了@Component以外，Spring提供了3个功能基本和@Component等效的注解，它们分别用于对DAO、Service及Web层的Controller进行注解，所以也称这些注解为Bean的衍型注解：（类似于xml文件中定义Bean<bean id=" " class=" "/>
 
-@Repository：用于对DAO实现类进行标注；
-@Service：用于对Service实现类进行标注；
-@Controller：用于对Controller实现类进行标注；
+- @Repository：用于对DAO实现类进行标注；
+- @Service：用于对Service实现类进行标注；
+- @Controller：用于对Controller实现类进行标注；
 之所以要在@Component之外提供这三个特殊的注解，是为了让注解类本身的用途清晰化，此外Spring将赋予它们一些特殊的功能
 ## 3.3. 基于java类提供Bean定义信息
 在普通的POJO类中只要标注@Configuration注解，就可以为spring容器提供Bean定义的信息了，每个标注了@Bean的类方法都相当于提供了一个Bean的定义信息。
@@ -96,11 +98,12 @@ public class AppConf {
 }
 ```
 
-# 4. Bean注入
+# 4. bean注入
 一种是在XML中配置，此时分别有属性注入、构造函数注入和工厂方法注入；另一种则是使用注解的方式注入 @Autowired,@Resource,@Required。
 ## 4.1. XML方式注入
 ### 4.1.1. 属性注入
-属性注入即通过setXxx()方法注入Bean的属性值或依赖对象，由于属性注入方式具有可选择性和灵活性高的优点，因此属性注入是实际应用中最常采用的注入方式。
+- 属性注入即通过**setXxx()方法**注入Bean的属性值或依赖对象
+由于属性注入方式具有可选择性和灵活性高的优点，因此属性注入是实际应用中最常采用的注入方式。
 
 属性注入要求Bean提供一个默认的构造函数，并为需要注入的属性提供对应的Setter方法。Spring先调用Bean的默认构造函数实例化Bean对象，然后通过反射的方式调用Setter方法注入属性值。
 ```
@@ -209,7 +212,7 @@ public class LogonService implements BeanNameAware{
     
 }
 ```
-bean的配置
+- bean的配置
 
 ```
 <?xml version="1.0" encoding="UTF-8" ?>
