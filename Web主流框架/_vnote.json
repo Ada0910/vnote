@@ -7,19 +7,19 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "Spring"
+            "name": "Maven"
         },
         {
-            "name": "Maven"
+            "name": "Spring"
         },
         {
             "name": "Spring MVC"
         },
         {
-            "name": "MyBatis"
+            "name": "Spring Boot"
         },
         {
-            "name": "Spring Boot"
+            "name": "MyBatis"
         },
         {
             "name": "Hibernate"

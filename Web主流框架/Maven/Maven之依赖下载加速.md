@@ -1,6 +1,7 @@
-# 1. 步骤
-右键项目：
+# 1. Idea加载maven依赖换源
+## 1.1. 右键项目：
 ![](_v_images/20191104091800935_3281.png)
+## 1.2. 将settings.xml换成下面的内容
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
