@@ -3,20 +3,24 @@
 # 2. 特性
 事物的特性（ACID）
 ![](_v_images/_1552958749_2405.png)
-原子性： 事务是最小的执行单位，不允许分割。事务的原子性确保动作要么全部完成，要么完全不起作用；
-一致性： 执行事务前后，数据保持一致；
-隔离性： 并发访问数据库时，一个用户的事物不被其他事物所干扰，各并发事务之间数据库是独立的；
-持久性:  一个事务被提交之后。它对数据库中数据的改变是持久的，即使数据库发生故障也不应该对其有任何影响。
+
+- 原子性： 事务是最小的执行单位，不允许分割。事务的原子性确保动作要么全部完成，要么完全不起作用；
+- 一致性： 执行事务前后，数据保持一致；
+- 隔离性： 并发访问数据库时，一个用户的事物不被其他事物所干扰，各并发事务之间数据库是独立的；
+- 持久性:  一个事务被提交之后。它对数据库中数据的改变是持久的，即使数据库发生故障也不应该对其有任何影响。
 
 # 3. 事务管理接口 
 
 ## 3.1. PlatformTransactionManager：
  平台事务管理器
 （接口，是Spring用于管理事务的真正对象）
-DataSourceTransactionManager：底层使用jdbc管理事务
-HibernateTransactionManager：底层使用hibernate管理事务
 
-Spring并不直接管理事务，而是提供了多种事务管理器 ，他们将事务管理的职责委托给Hibernate或者JTA等持久化机制所提供的相关平台框架的事务来实现。 Spring事务管理器的接口是： org.springframework.transaction.PlatformTransactionManager ，通过这个接口，Spring为各个平台如JDBC、Hibernate等都提供了对应的事务管理器，但是具体的实现就是各个平台自己的事情了
+- DataSourceTransactionManager：底层使用jdbc管理事务
+- HibernateTransactionManager：底层使用hibernate管理事务
+
+Spring并不直接管理事务，而是提供了多种事务管理器 ，他们将事务管理的职责委托给Hibernate或者JTA等持久化机制所提供的相关平台框架的事务来实现
+    
+Spring事务管理器的接口是： org.springframework.transaction.PlatformTransactionManager ，通过这个接口，Spring为各个平台如JDBC、Hibernate等都提供了对应的事务管理器，但是具体的实现就是各个平台自己的事情了
 
 接口源码：
 ```
@@ -47,10 +51,11 @@ Public interface PlatformTransactionManager()...{
 
 ## 3.2. TransactionDefinition
 ### 3.2.1. 事务定义信息
-事务定义：用于定义事务的相关的信息，隔离级别、超时信息、传播行为，是否只读
+- 事务定义
+用于定义事务的相关的信息，隔离级别、超时信息、传播行为，是否只读
 事务管理器接口 PlatformTransactionManager 通过 getTransaction(TransactionDefinition definition) 方法来得到一个事务，这个方法里面的参数是 TransactionDefinition类 ，这个类就定义了一些基本的事务属性。
 
-那么什么是事务属性呢？
+- 那么什么是事务属性呢？
 
 事务属性可以理解成事务的一些基本配置，描述了事务策略如何应用到方法上。事务属性包含了5个方面
 ![](_v_images/_1552959971_15567.png)
@@ -103,30 +108,50 @@ public interface TransactionDefinition {
 
 TransactionDefinition 接口中定义了五个表示隔离级别的常量：
 
-TransactionDefinition.ISOLATION_DEFAULT:	使用后端数据库默认的隔离级别，Mysql 默认采用的 REPEATABLE_READ隔离级别 Oracle 默认采用的 READ_COMMITTED隔离级别.
-TransactionDefinition.ISOLATION_READ_UNCOMMITTED: 最低的隔离级别，允许读取尚未提交的数据变更，可能会导致脏读、幻读或不可重复读
-TransactionDefinition.ISOLATION_READ_COMMITTED: 	允许读取并发事务已经提交的数据，可以阻止脏读，但是幻读或不可重复读仍有可能发生
-TransactionDefinition.ISOLATION_REPEATABLE_READ: 	对同一字段的多次读取结果都是一致的，除非数据是被本身事务自己所修改，可以阻止脏读和不可重复读，但幻读仍有可能发生。
-TransactionDefinition.ISOLATION_SERIALIZABLE: 	最高的隔离级别，完全服从ACID的隔离级别。所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以防止脏读、不可重复读以及幻读。但是这将严重影响程序的性能。通常情况下也不会用到该级别。
+- TransactionDefinition.ISOLATION_DEFAULT:
+使用后端数据库默认的隔离级别，Mysql 默认采用的 REPEATABLE_READ隔离级别 Oracle 默认采用的 READ_COMMITTED隔离级别
+
+- TransactionDefinition.ISOLATION_READ_UNCOMMITTED: 
+最低的隔离级别，允许读取尚未提交的数据变更，可能会导致脏读、幻读或不可重复读
+
+- TransactionDefinition.ISOLATION_READ_COMMITTED: 	
+允许读取并发事务已经提交的数据，可以阻止脏读，但是幻读或不可重复读仍有可能发生
+
+- TransactionDefinition.ISOLATION_REPEATABLE_READ: 	
+对同一字段的多次读取结果都是一致的，除非数据是被本身事务自己所修改，可以阻止脏读和不可重复读，但幻读仍有可能发生
+
+- TransactionDefinition.ISOLATION_SERIALIZABLE
+最高的隔离级别，完全服从ACID的隔离级别。所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以防止脏读、不可重复读以及幻读。但是这将严重影响程序的性能。通常情况下也不会用到该级别。
 
 ### 3.2.4. 事务传播行为
 （为了解决业务层方法之间互相调用的事务问题）：
 当事务方法被另一个事务方法调用时，必须指定事务应该如何传播。例如：方法可能继续在现有事务中运行，也可能开启一个新事务，并在自己的事务中运行。在TransactionDefinition定义中包括了如下几个表示传播行为的常量：
 支持当前事务的情况：
 
-TransactionDefinition.PROPAGATION_REQUIRED： 如果当前存在事务，则加入该事务；如果当前没有事务，则创建一个新的事务。
-TransactionDefinition.PROPAGATION_SUPPORTS： 如果当前存在事务，则加入该事务；如果当前没有事务，则以非事务的方式继续运行。
-TransactionDefinition.PROPAGATION_MANDATORY： 如果当前存在事务，则加入该事务；如果当前没有事务，则抛出异常。（mandatory：强制性）
+- TransactionDefinition.PROPAGATION_REQUIRED
+如果当前存在事务，则加入该事务；如果当前没有事务，则创建一个新的事务
+
+- TransactionDefinition.PROPAGATION_SUPPORTS
+如果当前存在事务，则加入该事务；如果当前没有事务，则以非事务的方式继续运行
+
+- TransactionDefinition.PROPAGATION_MANDATORY
+如果当前存在事务，则加入该事务；如果当前没有事务，则抛出异常。（mandatory：强制性）
 
 不支持当前事务的情况：
 
-TransactionDefinition.PROPAGATION_REQUIRES_NEW： 创建一个新的事务，如果当前存在事务，则把当前事务挂起。
-TransactionDefinition.PROPAGATION_NOT_SUPPORTED： 以非事务方式运行，如果当前存在事务，则把当前事务挂起。
-TransactionDefinition.PROPAGATION_NEVER： 以非事务方式运行，如果当前存在事务，则抛出异常。
+- TransactionDefinition.PROPAGATION_REQUIRES_NEW
+创建一个新的事务，如果当前存在事务，则把当前事务挂起
+
+- TransactionDefinition.PROPAGATION_NOT_SUPPORTED
+以非事务方式运行，如果当前存在事务，则把当前事务挂起
+
+- TransactionDefinition.PROPAGATION_NEVER
+以非事务方式运行，如果当前存在事务，则抛出异常
 
 其他情况：
 
-TransactionDefinition.PROPAGATION_NESTED： 如果当前存在事务，则创建一个事务作为当前事务的嵌套事务来运行；如果当前没有事务，则该取值等价于TransactionDefinition.PROPAGATION_REQUIRED。
+- TransactionDefinition.PROPAGATION_NESTED
+如果当前存在事务，则创建一个事务作为当前事务的嵌套事务来运行；如果当前没有事务，则该取值等价于TransactionDefinition.PROPAGATION_REQUIRED。
 
 这里需要指出的是，前面的六种事务传播行为是 Spring 从 EJB 中引入的，他们共享相同的概念。而 PROPAGATION_NESTED 是 Spring 所特有的。以 PROPAGATION_NESTED 启动的事务内嵌于外部事务中（如果存在外部事务的话），此时，内嵌事务并不是一个独立的事务，它依赖于外部事务的存在，只有通过外部的事务提交，才能引起内部事务的提交，嵌套的子事务不能单独提交。如果熟悉 JDBC 中的保存点（SavePoint）的概念，那嵌套事务就很容易理解了，其实嵌套的子事务就是保存点的一个应用，一个事务中可以包括多个保存点，每一个嵌套子事务。另外，外部事务的回滚也会导致嵌套子事务的回滚。
 
@@ -141,8 +166,9 @@ TransactionDefinition.PROPAGATION_NESTED： 如果当前存在事务，则创建
 
 
 ### 3.2.7. 回滚规则
-定义事务回滚规则）
-这些规则定义了哪些异常会导致事务回滚而哪些不会。默认情况下，事务只有遇到运行期异常时才会回滚，而在遇到检查型异常时不会回滚（这一行为与EJB的回滚行为是一致的）。
+定义事务回滚规则
+
+- 这些规则定义了哪些异常会导致事务回滚而哪些不会。默认情况下，事务只有遇到运行期异常时才会回滚，而在遇到检查型异常时不会回滚（这一行为与EJB的回滚行为是一致的）
 但是你可以声明事务在遇到特定的检查型异常时像遇到运行期异常那样回滚。同样，你还可以声明事务遇到特定的异常不回滚，即使这些异常是运行期异常。
 
 
