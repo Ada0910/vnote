@@ -1,6 +1,7 @@
 # 1. OOP和POP
 ![](_v_images/_1552983927_12867.png)
-＃　例子
+# 2. AOP例子
+下面我们以例子来说明:
 ```
 public class HelloWord {
 
@@ -14,7 +15,7 @@ public class HelloWord {
 }
 
 ```
-编写AspectJ类，注意关键字为aspect(MyAspectJDemo.aj,其中aj为AspectJ的后缀)，含义与class相同，即定义一个AspectJ的类
+- 编写AspectJ类，注意关键字为aspect(MyAspectJDemo.aj,其中aj为AspectJ的后缀)，含义与class相同，即定义一个AspectJ的类
 
 ```
 
@@ -45,60 +46,72 @@ public aspect MyAspectJDemo {
 }
 
 ```
-
+- 执行结果
 ![](_v_images/_1552984671_24199.png)
 
-对于结果不必太惊讶，完全是意料之中。我们发现，明明只运行了main函数，却在sayHello函数运行前后分别进行了权限验证和日志记录，事实上这就是AspectJ的功劳了。对aspectJ有了感性的认识后，再来聊聊aspectJ到底是什么？AspectJ是一个java实现的AOP框架，它能够对java代码进行AOP编译（一般在编译期进行），让java代码具有AspectJ的AOP功能（当然需要特殊的编译器），可以这样说AspectJ是目前实现AOP框架中最成熟，功能最丰富的语言，更幸运的是，AspectJ与java程序完全兼容，几乎是无缝关联，因此对于有java编程基础的工程师，上手和使用都非常容易。在案例中，我们使用aspect关键字定义了一个类，这个类就是一个切面，它可以是单独的日志切面(功能)，也可以是权限切面或者其他，在切面内部使用了pointcut定义了两个切点，一个用于权限验证，一个用于日志记录，而所谓的切点就是那些需要应用切面的方法，如需要在sayHello方法执行前后进行权限验证和日志记录，那么就需要捕捉该方法，而pointcut就是定义这些需要捕捉的方法（常常是不止一个方法的），这些方法也称为目标方法，最后还定义了两个通知，通知就是那些需要在目标方法前后执行的函数，如before()即前置通知在目标方法之前执行，即在sayHello()方法执行前进行权限验证，另一个是after()即后置通知，在sayHello()之后执行，如进行日志记录。到这里也就可以确定，切面就是切点和通知的组合体，组成一个单独的结构供后续使用，下图协助理解。
+- 对于结果不必太惊讶，完全是意料之中。我们发现，明明只运行了main函数，却在sayHello函数运行前后分别进行了权限验证和日志记录，事实上这就是AspectJ的功劳了。
 
+- 对aspectJ有了感性的认识后，再来聊聊aspectJ到底是什么？
+AspectJ是一个java实现的AOP框架，它能够对java代码进行AOP编译（一般在编译期进行），让java代码具有AspectJ的AOP功能（当然需要特殊的编译器），可以这样说AspectJ是目前实现AOP框架中最成熟，功能最丰富的语言，更幸运的是，AspectJ与java程序完全兼容，几乎是无缝关联
 
+- 在案例中，我们使用aspect关键字定义了一个类，这个类就是一个切面，它可以是单独的日志切面(功能)，也可以是权限切面或者其他，在切面内部使用了pointcut定义了两个切点，一个用于权限验证，一个用于日志记录，而所谓的切点就是那些需要应用切面的方法，如需要在sayHello方法执行前后进行权限验证和日志记录，那么就需要捕捉该方法，而pointcut就是定义这些需要捕捉的方法（常常是不止一个方法的），这些方法也称为目标方法
+
+- 最后还定义了两个通知，通知就是那些需要在目标方法前后执行的函数，如before()即前置通知在目标方法之前执行，即在sayHello()方法执行前进行权限验证，另一个是after()即后置通知，在sayHello()之后执行，如进行日志记录
+- 切面就是切点和通知的组合体，组成一个单独的结构供后续使用(**跨越应用程序多个模块的功能，比如 日志功能**)，下图协助理解。
 ![](_v_images/_1552984695_23349.png)
 
-切入点(pointcut)和通知(advice)的概念已比较清晰，而切面则是定义切入点和通知的组合如上述使用aspect关键字定义的MyAspectJDemo，把切面应用到目标函数的过程称为织入(weaving)。在前面定义的HelloWord类中除了sayHello函数外，还有main函数，以后可能还会定义其他函数，而这些函数都可以称为目标函数，也就是说这些函数执行前后也都可以切入通知的代码，这些目标函数统称为连接点，切入点(pointcut)的定义正是从这些连接点中过滤出来的，下图协助理解。
+- 切入点(pointcut,**即作用在哪些函数上**)和通知(advice,)的概念已比较清晰，而切面则是定义切入点和通知的组合如上述使用aspect关键字定义的MyAspectJDemo，
+- 把切面应用到目标函数的过程称为织入(weaving)。
+- 在前面定义的HelloWord类中除了sayHello函数外，还有main函数，以后可能还会定义其他函数，而这些函数都可以称为目标函数，也就是说这些函数执行前后也都可以切入通知的代码，这些目标函数统称为连接点,切入点(pointcut)的定义正是从这些连接点中过滤出来的，下图协助理解。
 ![](_v_images/_1552984730_11302.png)
-# 2. AspectJ的织入方式
+- 记忆:
+比如要做一个日志功能(切面),需要add(),update(),delete()方法上加上面作用,即需要拦截这些函数(即add(),update(),delete()称为连接点),比如对add()方法中的addUser()要进行操作(addUser()称为目标函数,指我们要对哪些连接点进行拦截的定义.),需要执行权限校验,(权限校验的代码就是通知),把权限代码加到addUser()过程中叫织入.
+
+# 3. AspectJ的织入方式
 织入这个概念，可以简单理解为aspect(切面)应用到目标函数(类)的过程。
 对于这个过程，一般分为
 
-- 动态织入
-动态织入的方式是在运行时动态将要增强的代码织入到目标类中，这样往往是通过动态代理技术完成的，如Java JDK的动态代理(Proxy，底层通过反射实现)或者CGLIB的动态代理(底层通过继承实现)，Spring AOP采用的就是基于运行时增强的代理技术
-- 静态织入
-ApectJ采用的就是静态织入的方式。ApectJ主要采用的是编译期织入，在这个期间使用AspectJ的acj编译器(类似javac)把aspect类编译成class字节码后，在java目标类编译时织入，即先编译aspect类再编译目标类
+## 3.1. 动态织入
+动态织入的方式是在运行时动态将要增强的代码织入到目标类中，这样往往是通过动态代理技术完成的，如**Java JDK的动态代理(Proxy，底层通过反射实现)或者CGLIB的动态代理(底层通过继承实现)**，Spring AOP采用的就是基于运行时增强的代理技术
+## 3.2. 静态织入
+- ApectJ采用的就是静态织入的方式。
+- ApectJ主要采用的是编译期织入，在这个期间使用AspectJ的acj编译器(类似javac)把aspect类编译成class字节码后，在java目标类编译时织入，即先编译aspect类再编译目标类
 ![](_v_images/_1552985497_16913.png)
 
 关于ajc编译器，是一种能够识别aspect语法的编译器，它是采用java语言编写的，由于javac并不能识别aspect语法，便有了ajc编译器，注意ajc编译器也可编译java文件
 
 
-# 3. Spring的AOP（核心）
-## 3.1. AOP的概念
+# 4. Spring的AOP（核心）
+## 4.1. AOP的概念
 	* 面向切面编程是OOP的 扩展和延伸，解决OOP开发遇到的问题
 	* AOP采用的是横向抽取机制（代理机制）取代了传统的纵向继承
 	* 底层实现的原理：动态代理（
               JDK动态代理，只能对实现 了接口的类产生代理            
               Cglib动态代理，对没有实现接口的类产生代理对象）
               
-## 3.2. Spring的AOP开发（AspectJ的XML的方式）
+## 4.2. Spring的AOP开发（AspectJ的XML的方式）
 	* Spring的AOP的简介
 	* AspectJ是一个AOP的框架  
-## 3.3. AOP开发中的术语
+## 4.3. AOP开发中的术语
 	
-### 3.3.1. 连接点(Join point)：
+### 4.3.1. 连接点(Join point)：
 
 能够被拦截的地方：Spring AOP是基于动态代理的，所以是方法拦截的。每个成员方法都可以称之为连接点~
-### 3.3.2. 切点(Poincut)：
+### 4.3.2. 切点(Poincut)：
 
 具体定位的连接点：上面也说了，每个方法都可以称之为连接点，我们具体定位到某一个方法就成为切点。
-### 3.3.3. 增强/通知(Advice)：
+### 4.3.3. 增强/通知(Advice)：
 
 表示添加到切点的一段逻辑代码，并定位连接点的方位信息。
 简单来说就定义了是干什么的，具体是在哪干
 Spring AOP提供了5种Advice类型给我们：前置、后置、返回、异常、环绕给我们使用！
-### 3.3.4. 织入(Weaving)：
+### 4.3.4. 织入(Weaving)：
 
 将增强/通知添加到目标类的具体连接点上的过程。
-### 3.3.5. 引入/引介(Introduction)：
+### 4.3.5. 引入/引介(Introduction)：
 
 引入/引介允许我们向现有的类添加新方法或属性。是一种特殊的增强！
-### 3.3.6. 切面(Aspect)：
+### 4.3.6. 切面(Aspect)：
 
 切面由切点和增强/通知组成，它既包括了横切逻辑的定义、也包括了连接点的定义。
 在《Spring 实战 (第4版)》给出的总结是这样子的：
@@ -109,8 +122,8 @@ Spring AOP提供了5种Advice类型给我们：前置、后置、返回、异常
 
 这些术语可能翻译过来不太好理解，但对我们正常使用AOP的话影响并没有那么大~~看多了就知道它是什么意思了。
 
-# 4. Spring的AOP入门（AspectJ的XML的方式）
-## 4.1. 需要的Java包（Spring基础包加上以下几个）
+# 5. Spring的AOP入门（AspectJ的XML的方式）
+## 5.1. 需要的Java包（Spring基础包加上以下几个）
 aspectjrt.jar
 aspectjweaver.jar
 aopalliance-1.0.jar,
@@ -118,7 +131,7 @@ aopalliance-1.0.jar,
 	Spring整合Junit开发
 ![](_v_images/_1531991569_7251.png)
 
-## 4.2. Spring的通知类型
+## 5.2. Spring的通知类型
 5.2.1前置通知：在目标方法执行之前进行操作
        *可以获得切入点信息
 5.2.2后置通知：之后
@@ -127,21 +140,21 @@ aopalliance-1.0.jar,
 5.2.4异常抛出通知：在程序出现异常的时候进行操作
 5.2.5最终通知：无论代码是否有异常，总是会被执行
 
-## 4.3. 切入点表达式语法
+## 5.3. 切入点表达式语法
      #语法：（基于execution的函数完成的）
               [访问修饰符] 方法返回值 包名.类名.方法名（参数）
               #public void com.spring.aop.CustomerDao.save(...)
               #*****Dao.save()
               #*com.spring.aop.CustomerDao+.save(..)   ＋表示是子类
               #*com.spring.aop.CustormerDao.*.*(...)
-## 4.4. AOP思想
+## 5.4. AOP思想
 ![](_v_images/_1552985690_3337.png)
-# 5. Spring的AOP的基于AspectJ注解开发 
-## 5.1. 新建工程
+# 6. Spring的AOP的基于AspectJ注解开发 
+## 6.1. 新建工程
 导入相关的jar包，新建xml文件，然后在applicationContext.xml之中加入
 <aop:aspectj-autoproxy />
 
-## 5.2. Spring的注解AOP的通知类型
+## 6.2. Spring的注解AOP的通知类型
 @Before：前置通知
 ![前置通知](_v_images/_前置通知_1531839793_19074.png)
 @afeterReturning:后置通知
@@ -152,11 +165,11 @@ aopalliance-1.0.jar,
 ![异常通知](_v_images/_异常通知_1531840426_16024.png)
 @After：最终通知
 
-# 6. Spring的JDBC的模板的使用
-## 6.1. Spring提供的模板
+# 7. Spring的JDBC的模板的使用
+## 7.1. Spring提供的模板
 ![ORM持久化技术](_v_images/_orm持久化技术_1531893480_25137.png)
 
-## 6.2. 将连接池和模板交给Spring管理
+## 7.2. 将连接池和模板交给Spring管理
 在applicationContext.xml文件中配置如下
 ```
 连接池
@@ -172,11 +185,11 @@ aopalliance-1.0.jar,
 	</bean>
 ```
 
-# 7. 使用开源的数据库连接池
-## 7.1. DBCP的使用
-### 7.1.1. 引入jar包
+# 8. 使用开源的数据库连接池
+## 8.1. DBCP的使用
+### 8.1.1. 引入jar包
 ![jar包](_v_images/_jar包_1531917499_9507.png)
-### 7.1.2. 配置applicationContext.xml文件
+### 8.1.2. 配置applicationContext.xml文件
 ```<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql:///test" />
@@ -185,7 +198,7 @@ aopalliance-1.0.jar,
 	</bean>
 ```
 
-## 7.2. C3P0的使用 
+## 8.2. C3P0的使用 
 引入Jar包
 ![](_v_images/_1531917641_18985.png)
 配置applicationContext.xml文件
@@ -213,7 +226,7 @@ jdbc.password=123
 <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
 ```
 
-# 8. 通配符
+# 9. 通配符
 在定义匹配表达式时，通配符几乎随处可见，如*、.. 、+ ，它们的含义如下：
 
 .. ：匹配方法定义中的任意数量的参数，此外还匹配类定义中的任意数量包
@@ -241,11 +254,11 @@ within(com.xxx.service..*)
 execution(* set*(int))
 ```
 
-## 8.1. 类型签名表达式
+## 9.1. 类型签名表达式
 为了方便类型（如接口、类名、包名）过滤方法，Spring AOP 提供了within关键字。其语法格式如下：
 
 within(<type name>)
-## 8.2. 其他指示符
+## 9.2. 其他指示符
 bean：Spring AOP扩展的，AspectJ没有对于指示符，用于匹配特定名称的Bean对象的执行方法；
 
 //匹配名称中带有后缀Service的Bean。
@@ -275,9 +288,9 @@ private void myPointcut4(){}
 @Pointcut("@annotation(com.zejian.spring.annotation.MarkerAnnotation)")
 private void myPointcut5(){}
 
-# 9. Spring AOP的实现原理概要
+# 10. Spring AOP的实现原理概要
 前面的分析中，我们谈到Spring AOP的实现原理是基于动态织入的动态代理技术，而AspectJ则是静态织入，而动态代理技术又分为Java JDK动态代理和CGLIB动态代理，前者是基于反射技术的实现，后者是基于继承的机制实现，下面通过一个简单的例子来分析这两种技术的代码实现
-## 9.1. JDK动态代理
+## 10.1. JDK动态代理
 先看一个简单的例子，声明一个A类并实现ExInterface接口，利用JDK动态代理技术在execute()执行前后织入权限验证和日志记录，注意这里仅是演示代码并不代表实际应用。
 
 
@@ -422,7 +435,7 @@ invoke方法有三个参数：
 - Object[] args：目标对象方法的参数
 这就是Java JDK动态代理的代码实现过程，小结一下，运用JDK动态代理，被代理类(目标对象，如A类)，必须已有实现接口如(ExInterface)，因为JDK提供的Proxy类将通过目标对象的类加载器ClassLoader和Interface，以及句柄(Callback)创建与A类拥有相同接口的代理对象proxy，该代理对象将拥有接口ExInterface中的所有方法，同时代理类必须实现一个类似回调函数的InvocationHandler接口并重写该接口中的invoke方法，当调用proxy的每个方法(如案例中的proxy#execute())时，invoke方法将被调用，利用该特性，可以在invoke方法中对目标对象(被代理对象如A)方法执行的前后动态添加其他外围业务操作，此时无需触及目标对象的任何代码，也就实现了外围业务的操作与目标对象(被代理对象如A)完全解耦合的目的。当然缺点也很明显需要拥有接口，这也就有了后来的CGLIB动态代理了
 
-## 9.2. CGLIB动态代理
+## 10.2. CGLIB动态代理
 通过CGLIB动态代理实现上述功能并不要求目标对象拥有接口类，实际上CGLIB动态代理是通过继承的方式实现的，因此可以减少没必要的接口，下面直接通过简单案例协助理解（CGLIB是一个开源项目，github网址是：https://github.com/cglib/cglib）。
 
 //被代理的类即目标对象
