@@ -93,9 +93,6 @@ Java 还将一些其它基本类型的值放在缓冲池中，包含以下这些
 
 因此在使用这些基本类型对应的包装类型时，就可以直接使用缓冲池中的对象。
 
-> [Differences between new Integer(123), Integer.valueOf(123) and just 123
-](https://stackoverflow.com/questions/9030817/differences-between-new-integer123-integer-valueof123-and-just-123)
-
 ## 1.2. switch
 
 从 Java 7 开始，可以在 switch 条件判断语句中使用 String 对象。
@@ -125,5 +122,3 @@ switch 不支持 long，是因为 swicth 的设计初衷是为那些只需要对
 //                break;
 //        }
 ```
-
-> [Why can't your switch statement data type be long, Java?](https://stackoverflow.com/questions/2676210/why-cant-your-switch-statement-data-type-be-long-java)
