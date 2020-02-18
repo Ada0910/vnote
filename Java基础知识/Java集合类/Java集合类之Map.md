@@ -1,11 +1,10 @@
 # 1. Map
-key-value 的键值对，key 不允许重复，value 可以
+- key-value 的键值对，key 不允许重复，value 可以
+严格来说 Map 并不是一个集合，而是两个集合之间 的映射关系。
 
-　　严格来说 Map 并不是一个集合，而是两个集合之间 的映射关系。
+- 这两个集合没每一条数据通过映射关系，我们可以看成是一条数据。即 Entry(key,value）。Map 可以看成是由多个 Entry 组成。
 
-　　这两个集合没每一条数据通过映射关系，我们可以看成是一条数据。即 Entry(key,value）。Map 可以看成是由多个 Entry 组成。
-
-　　 因为 Map 集合即没有实现于 Collection 接口，也没有实现 Iterable 接口，所以不能对 Map 集合进行 for-each 遍历。
+- 因为 Map 集合即没有实现于 Collection 接口，也没有实现 Iterable 接口，所以不能对 Map 集合进行 for-each 遍历。
 
 ![](_v_images/_1544758510_1057.png)
 # 2. 存储形式
@@ -13,21 +12,28 @@ key-value 的键值对，key 不允许重复，value 可以
 
 ## 2.1. Map集合
 该集合存储键值对。一对一对往里存。而且要保证键的唯一性。
+
+## 2.2. 添加
 ```
-添加。
 put(K key, V value) 
 putAll(Map<? extends K,? extends V> m)
+```
 
-删除。
+## 2.3. 删除
+```
 clear() 
 remove(Object key)
+```
 
-判断。
+## 2.4. 判断
+```
 containsValue(Object value) 
 containsKey(Object key) 
 isEmpty()
 
-获取。 
+```
+## 2.5. 获取 
+```
 get(Object key) 
 size() 
 values()
@@ -35,34 +41,37 @@ entrySet()
 keySet()
 ```
 
-## 2.2. Map接口的常用子类
 
-Map
-|--HashMap：底层是哈希表数据结构，允许使用 null 值和 null 键，该集合是不同步的。将hashtable替代，jdk1.2.效率高。
-|--TreeMap：底层是二叉树数据结构。线程不同步。可以用于给map集合中的键进行排序
+## 2.6. Map接口的常用子类
+- HashMap
+底层是哈希表数据结构，允许使用 null 值和 null 键，该集合是不同步的。将hashtable替代，jdk1.2.效率高。
+- TreeMap
+底层是二叉树数据结构。线程不同步。可以用于给map集合中的键进行排序
 
 # 3. hashCode()和equals()
 ## 3.1. equals()
-equals()方法是用来判断其他的对象是否和该对象相等.
+- equals()方法是用来判断其他的对象是否和该对象相等.
 
+```
   equals()方法在object类中定义如下： 
 
 public boolean equals(Object obj) {  
     return (this == obj);  
 }  
+```
 很明显是对两个对象的地址值进行的比较（即比较引用是否相同）。但是我们知道，String 、Math、Integer、Double等这些封装类在使用equals()方法时，已经覆盖了object类的equals()方法。
 
 很明显，这是进行的内容比较，而已经不再是地址的比较。依次类推Math、Integer、Double等这些类都是重写了equals()方法的，从而进行的是内容的比较。当然，基本类型是进行值的比较。
 
 它的性质有：
 
-自反性（reflexive）。对于任意不为null的引用值x，x.equals(x)一定是true。
+- 自反性（reflexive）。对于任意不为null的引用值x，x.equals(x)一定是true。
 
-对称性（symmetric）。对于任意不为null的引用值x和y，当且仅当x.equals(y)是true时，y.equals(x)也是true。
+- 对称性（symmetric）。对于任意不为null的引用值x和y，当且仅当x.equals(y)是true时，y.equals(x)也是true。
 
-传递性（transitive）。对于任意不为null的引用值x、y和z，如果x.equals(y)是true，同时y.equals(z)是true，那么x.equals(z)一定是true。
+- 传递性（transitive）。对于任意不为null的引用值x、y和z，如果x.equals(y)是true，同时y.equals(z)是true，那么x.equals(z)一定是true。
 
-一致性（consistent）。对于任意不为null的引用值x和y，如果用于equals比较的对象信息没有被修改的话，多次调用时x.equals(y)要么一致地返回true要么一致地返回false。
+- 一致性（consistent）。对于任意不为null的引用值x和y，如果用于equals比较的对象信息没有被修改的话，多次调用时x.equals(y)要么一致地返回true要么一致地返回false。
 
 对于任意不为null的引用值x，x.equals(null)返回false。
 
@@ -70,12 +79,9 @@ public boolean equals(Object obj) {
 
 需要注意的是当equals()方法被override时，hashCode()也要被override。按照一般hashCode()方法的实现来说，相等的对象，它们的hash code一定相等
 ## 3.2. hashCode()
-1、相等（相同）的对象必须具有相等的哈希码（或者散列码）。
+- 相等（相同）的对象必须具有相等的哈希码（或者散列码）。
 
-2、如果两个对象的hashCode相同，它们并不一定相同。
-
- 
-
+- 如果两个对象的hashCode相同，它们并不一定相同。
  以下是Object对象API关于equal方法和hashCode方法的说明：
 
 ```
