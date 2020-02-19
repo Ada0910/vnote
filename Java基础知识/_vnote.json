@@ -7,19 +7,19 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "基础"
+            "name": "Java基础"
         },
         {
-            "name": "反射"
+            "name": "Java反射"
         },
         {
-            "name": "异常"
+            "name": "Java异常"
         },
         {
-            "name": "数据类型"
+            "name": "Java数据类型"
         },
         {
-            "name": "集合类"
+            "name": "Java集合类"
         },
         {
             "name": "常见类"
@@ -28,10 +28,10 @@
             "name": "String类"
         },
         {
-            "name": "类总结"
+            "name": "Java类"
         },
         {
-            "name": "Java之IO"
+            "name": "Java流"
         },
         {
             "name": "代码规范"

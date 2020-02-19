@@ -1,0 +1,78 @@
+{
+    "created_time": "2018-12-13T09:23:59Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2018-12-14T02:43:14Z",
+            "modified_time": "2020-02-18T13:42:52Z",
+            "name": "Java集合类之集合预览.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2018-12-14T02:48:38Z",
+            "modified_time": "2020-02-18T13:48:42Z",
+            "name": "Java集合类之List.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2018-12-14T02:48:51Z",
+            "modified_time": "2020-02-18T15:09:14Z",
+            "name": "Java集合类之Map.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2018-12-14T02:49:00Z",
+            "modified_time": "2020-02-18T14:01:36Z",
+            "name": "Java集合类之Set.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2018-12-17T07:50:26Z",
+            "modified_time": "2020-02-18T14:58:36Z",
+            "name": "Java集合类之Collections方法.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2019-02-22T07:43:35Z",
+            "modified_time": "2019-02-22T07:43:35Z",
+            "name": "Java集合类之常见的问题.md",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "attachments": [
+            ],
+            "created_time": "2019-07-04T06:23:54Z",
+            "modified_time": "2019-07-04T06:42:00Z",
+            "name": "Java集合类之Comparable接口.md",
+            "tags": [
+            ]
+        }
+    ],
+    "sub_directories": [
+    ],
+    "version": "1"
+}

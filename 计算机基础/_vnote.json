@@ -7,19 +7,16 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "操作系统"
-        },
-        {
             "name": "计算机基础"
         },
         {
-            "name": "win命令行"
+            "name": "Win命令行"
         },
         {
-            "name": "Linux常用命令"
+            "name": "Linux"
         },
         {
-            "name": "vsftpd"
+            "name": "Vsftpd"
         }
     ],
     "tags": [
