@@ -25,14 +25,14 @@ grant connect,resource,dba to root;
 ```
 
 # 2. 导入数据
-1.启动oracle
+- 启动oracle
 ![](_v_images/_1537237393_10238.png)
 
-2.通过图形化或者手动方式配置tns文件
-（1）手动，文件目录在F:\Oracle\win32_11gR2_client\product\11.2.0
+- 通过图形化或者手动方式配置tns文件
+- - 手动，文件目录在F:\Oracle\win32_11gR2_client\product\11.2.0
 ![](_v_images/_1537238606_15473.png)
 
-（2）启动pl/sql
+- - 启动pl/sql
 ![](_v_images/_1537322370_26188.png)
 
 
