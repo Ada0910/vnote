@@ -113,14 +113,6 @@ hidden 隐藏该属性
 code http 状态码
 message 描述
 ```
-# 4. 加入说明
-```
-@ApiOperation(value="登陆", notes="登陆请求")
-    @GetMapping({"/login"})
-    public String login() {
-        return "admin/login";
-    }
-```
-访问:http://localhost:8080/swagger-ui.html
-## 4.1. 结果
-![](_v_images/20200224231008677_1240.png)
+# 4. 结果
+访问链接：http://localhost:8080/swagger-ui.html
+![](_v_images/20200225104429761_28372.png)
