@@ -2,7 +2,6 @@ vnote_backup_file_826537664 F:/Notes/vnote/Default/计划/2020.md
 # 1. 2020年计划完成的事情
 ## 1.1. blog 博客
 - 点赞功能
-- 添加redis
 - 分享文章到微信或者朋友圈
 - 上下一篇
 - 代码下载
@@ -46,3 +45,4 @@ vnote_backup_file_826537664 F:/Notes/vnote/Default/计划/2020.md
 - [x] 完成Java集合类的笔记
 - [x] 整理好各类的笔记
 - [x]个人网站添加Swagger文档
+- [x]个人网站文章详情页添加redis缓存（重大改进20200227）
