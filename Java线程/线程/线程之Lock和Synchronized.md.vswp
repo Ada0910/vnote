@@ -1,3 +1,4 @@
+vnote_backup_file_826537664 F:/Notes/vnote/Java线程/线程/线程之Lock和Synchronized.md
 # 1. 锁的本质
 锁的本质，就是一种资源，是由操作系统维护的一种专门用于同步的资源
 # 2. 线程与进程：
