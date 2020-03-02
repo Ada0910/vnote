@@ -7,7 +7,7 @@
     "recycle_bin_folder": "_v_recycle_bin",
     "sub_directories": [
         {
-            "name": "数据库的基础操作"
+            "name": "数据库的操作"
         },
         {
             "name": "SQL"
