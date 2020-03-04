@@ -144,13 +144,19 @@ String str = stream.collect(Collectors.joining()).toString();
 接下来，当把一个数据结构包装成 Stream 后，就要开始对里面的元素进行各类操作了。常见的操作可以归类如下。
 
 - Intermediate：
-`map (mapToInt, flatMap 等)、 filter、 distinct、 sorted、 peek、 limit、 skip、 parallel、 sequential、 unordered`
+```
+map (mapToInt, flatMap 等)、 filter、 distinct、 sorted、 peek、 limit、 skip、 parallel、 sequential、 unordered
+```
 
 - Terminal：
-`forEach、 forEachOrdered、 toArray、 reduce、 collect、 min、 max、 count、 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 iterator`
+```
+forEach、 forEachOrdered、 toArray、 reduce、 collect、 min、 max、 count、 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 iterator
+```
 
 - Short-circuiting：
-`anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit`
+```
+anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
+```
 
 我们下面看一下 Stream 的比较典型用法
 ## 1.6. 常见流用法
