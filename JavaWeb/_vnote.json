@@ -35,6 +35,9 @@
         },
         {
             "name": "WebJars"
+        },
+        {
+            "name": "JQuery"
         }
     ],
     "tags": [

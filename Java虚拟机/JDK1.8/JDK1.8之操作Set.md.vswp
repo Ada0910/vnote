@@ -1,0 +1,14 @@
+vnote_backup_file_826537664 F:/Notes/vnote/Java虚拟机/JDK1.8/JDK1.8之操作Set.md
+## 1. foreach()
+例如：
+```
+/**获取Redis中所有key*/
+        Set<String> keys =  redisTemplate.keys("*");
+        /**文章点赞的key*/
+        List<String> likeKeyList = new ArrayList<>();
+        keys.forEach(key->{
+            if(key.startsWith("BLOG:LIKE:")){
+                likeKeyList.add(key);
+            }
+        });
+```
