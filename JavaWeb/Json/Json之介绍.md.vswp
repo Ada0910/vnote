@@ -1,3 +1,4 @@
+vnote_backup_file_826537664 F:/notes/JavaWeb/Json/Json之介绍.md
 # 1. json简介
 JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。
 JSON是用字符串来表示Javascript对象，例如可以在Servlet中发送一个JSON格式的字符串给客户端Javascript，Javascript可以执行这个字符串，得到一个Javascript对象。
