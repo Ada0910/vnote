@@ -1,12 +1,12 @@
 # 1. Json对象
 ## 1.1. Json对象转化为String
 ```
-JSON.stringify(obj)将JSON转为字符串。（JavaScript）
+JSON.stringify(obj)将JSON转为字符串。
 ```
 
 ## 1.2. String转化为Json
 ```
-JSON.parse(string)将字符串转为JSON格式（JavaScript）
+JSON.parse(string)将字符串转为JSON格式
 ```
 # 2. String
 ## 2.1. Json转化为String
