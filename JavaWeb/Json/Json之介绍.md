@@ -39,12 +39,3 @@ alert(person.getName());
 # 4. 把Java对象转换成JSON对象
 apache提供的json-lib小工具，它可以方便的使用Java语言来创建JSON字符串。也可以把JavaBean转换成JSON字符串。
 
-# 5. json-lib核心jar包
-json-lib的核心jar包有：　
-	json-lib.jar
-json-lib的依赖jar包有：
-	commons-lang.jar
-	commons-beanutils.jar
-	commons-logging.jar
-	commons-collections.jar
-	ezmorph.jar
