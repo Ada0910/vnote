@@ -1,4 +1,4 @@
-# 1. 是什么
+# 1. ConcurrentHashMap
 ConcurrentHashMap是线程安全且高效的HashMap
 # 2. 使用ConcurrentHashMap的原因
 - 线程不安全的HashMap
@@ -33,3 +33,6 @@ ConcurrentHashMap初始化方法是通过initialCapacity,loadFactor和concurrenc
   原因:get方法里的共享变量都是定义成volatile类型(volatile字段的写入操作优于读操作,即使两个线程同时被修改和获取volatile变量,get操作哦也能拿到最新的值,这是volatile替换锁的经典应用场景)
 ## 5.2. put
 ## 5.3. size
+# 6. ConcurrentLinkedQueue
+- 非阻塞的方式
+- 基于链接节点的无界线程安全队列
