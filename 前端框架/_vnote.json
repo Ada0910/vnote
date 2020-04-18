@@ -17,6 +17,9 @@
         },
         {
             "name": "Vuex"
+        },
+        {
+            "name": "LayUI"
         }
     ],
     "tags": [
