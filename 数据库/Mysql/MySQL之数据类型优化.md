@@ -6,5 +6,13 @@
 - 确定合适的大类型：数字，字符串，日期等
 - 选择具体类型
 # 2. 整数类型
-TINYINT(8),SMALLINT(16),MEDIUMINT(24),INT(32),BIGINT(64)
+## 2.1. 存储整数
+TINYINT(8),SMALLINT(16),MEDIUMINT(24),INT(32) ,BIGINT(64)
+备注：整数类型有可选的UNSIGNED属性，表示不允许负值，有无符号都是使用相同的存储空间
 # 3. 实数类型
+- 实数是带有小数点的数字
+FLOAT(4),DOUBLE(8)
+# 4. 字符串类型
+- VARCHAR(),CHAR()
+- varchar存储可变长字符串，节省了存储空间，所以对性能也有帮助，但是由于行是变长 ，所以在update需要做额外工作
+- char是定长的，char适合存储密码的MD5值，对于需要变更的数据，char也比varchar更好，适合非常短的数据
