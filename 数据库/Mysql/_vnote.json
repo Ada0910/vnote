@@ -45,13 +45,8 @@
             "attachment_folder": "",
             "attachments": [
             ],
-<<<<<<< HEAD
             "created_time": "2020-05-07T15:38:29Z",
-            "modified_time": "2020-05-07T15:38:29Z",
-=======
-            "created_time": "2020-05-08T03:48:46Z",
-            "modified_time": "2020-05-08T08:47:23Z",
->>>>>>> 743b7ace89507ce695797b23bca4987456dcb3de
+            "modified_time": "2020-05-10T12:34:51Z",
             "name": "MySQL之数据类型优化.md",
             "tags": [
             ]
