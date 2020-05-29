@@ -26,6 +26,9 @@
         },
         {
             "name": "Java加密"
+        },
+        {
+            "name": "Shiro"
         }
     ],
     "tags": [
