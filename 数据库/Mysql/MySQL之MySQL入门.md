@@ -1,7 +1,5 @@
-<<<<<<< HEAD
+
 # 1. 一句MySQL是如何查询的
-=======
-# 1. MySQL的架构
 ![](_v_images/20200602184804807_31313.png =698x)
 # 2. 通信协议
 ## 2.1. 通信类型
@@ -47,6 +45,4 @@ SHOW VARIABLES LIKE 'max_connections'
 那么，MySQL时采用什么通信方式？
 半双工的通信方式
 
-
->>>>>>> d9f3a02a6e1057a8ff0f4cf670be7045fbf60de7
 
