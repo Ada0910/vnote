@@ -1,6 +1,6 @@
 # 1. 修改数据库密码
 ## 1.1. 用SET PASSWORD命令 
-- 首先登录MySQL。 
+- 首先登录MySQL
 ```
 格式：mysql> set password for 用户名@localhost = password(‘新密码’); 
 例子：mysql> set password for root@localhost = password(‘123’);
@@ -13,7 +13,7 @@
 ```
 
 ## 1.3. 用UPDATE直接编辑user表 
-- 首先登录MySQL。 
+- 首先登录MySQL
 ```
 mysql> use mysql; 
 mysql> update user set password=password(‘123’) where user=’root’ and host=’localhost’; 
