@@ -47,3 +47,15 @@ SHOW GLOBAL STATUS;
 ```
 SHOW PROCESSLIST;
 ```
+## 4.2. Explain计划
+### 4.2.1. type 访问方法
+在常用的连接类型中：system>const>eq_ref>range>index>all
+
+## 4.3. 总结
+一般来说，需要保证查询至少达到range级别，最好能达到ref
+ALL（全表扫描）和index（查询全部索引）都是需要优化
+# 5. 存储引擎
+- 选择合适的存储引擎
+- 变长的情况下，varchar更省空间，但是对于varchar字段，需要一个字节来记录长度
+- 固定长度的char ，不要用varchar
+- 不要用外键，触发器，视图
